@@ -172,3 +172,5 @@ python3 tools/mobile-parity.py
 # --skip-native-build reuses existing native builds for a faster rerun.
 # PDFs, build/test logs, and result.json: dist/parity/run-*/
 ```
+
+Public release-signing key and verification commands: [keys/README.md](keys/README.md).
