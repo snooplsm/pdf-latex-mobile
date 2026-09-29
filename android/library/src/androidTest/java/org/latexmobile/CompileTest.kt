@@ -9,6 +9,26 @@ import org.json.JSONObject
 import java.io.File
 
 class CompileTest {
+    @Test fun exportsParityInvoice() {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val context = instrumentation.targetContext
+        val source = instrumentation.context.assets.open("invoice.tex").bufferedReader().use { it.readText() }
+        val directory = File(context.filesDir, "parity").apply { mkdirs() }
+        val logo = File(directory, "logo.pdf")
+        instrumentation.context.assets.open("invoice.assets/logo.pdf").use { input ->
+            logo.outputStream().use { input.copyTo(it) }
+        }
+        for (index in 1..2) {
+            val output = File(directory, "invoice-$index.pdf")
+            output.delete()
+            LatexMobile.compileWithFiles(context, source, output, mapOf("logo.pdf" to logo))
+            ParcelFileDescriptor.open(output, ParcelFileDescriptor.MODE_READ_ONLY).use { fd ->
+                PdfRenderer(fd).use { assertEquals(1, it.pageCount) }
+            }
+        }
+        assertArrayEquals(File(directory, "invoice-1.pdf").readBytes(), File(directory, "invoice-2.pdf").readBytes())
+    }
+
     @Test fun compilesEverySelectedFeature() {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val context = instrumentation.targetContext

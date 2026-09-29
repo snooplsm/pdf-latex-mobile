@@ -99,3 +99,13 @@ python3 tools/release.py --source .build/tex --abis arm64-v8a
 # For local Gradle builds using that restricted set:
 android/gradlew -p android -Pabis=arm64-v8a :harness:assembleBalancedDebug
 ```
+
+```sh
+# Build native libraries + mobile tests, compile the invoice twice on each platform,
+# retrieve all four PDFs, and require identical raw SHA-256 hashes (no normalization).
+python3 tools/mobile-parity.py
+# Optional: --ios-device <UDID> --android-serial emulator-5554 --profile full
+# --avd <name> boots an emulator when none is running.
+# --skip-native-build reuses existing native builds for a faster rerun.
+# PDFs, build/test logs, and result.json: dist/parity/run-*/
+```
