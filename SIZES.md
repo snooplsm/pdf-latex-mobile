@@ -1,4 +1,6 @@
-# AAR sizes
+# Library sizes
+
+## Android
 
 Measured compressed AAR downloads, in MB (decimal). Included CPU builds: arm64-v8a, armeabi-v7a, x86_64.
 
@@ -16,3 +18,20 @@ Maven artifacts include all CPUs. Single-CPU builds are generated only for this 
 With Android App Bundle delivery or ABI splits, each device receives only its CPU build. The universal AAR download above is not the per-device app size. Android also copies the TeX assets to app storage on first use.
 
 Choose one feature variant. `full` covers the included examples, not all of TeX Live. Tiny, small, and balanced use compact ICU data; full also includes ICU encoding tables and line-break data.
+
+## iOS
+
+Measured growth over the same app without LaTeX, in MB. ARM64 device Release builds; simulator code excluded.
+
+| Variant | Compressed app increase (MB) | Uncompressed app increase (MB) |
+|---|---:|---:|
+| tiny | 5.01 | 16.54 |
+| small | 5.23 | 17.00 |
+| balanced | 5.77 | 18.03 |
+| full | 13.27 | 33.68 |
+
+Baseline: 0.02 MB compressed, 0.09 MB uncompressed.
+
+Local unsigned builds with dead-code stripping. Compressed values use ZIP compression; uncompressed values sum app file sizes. These are measured build comparisons, not App Store download sizes or filesystem allocation. Signing, Apple processing, and app contents can change delivery sizes. See [Apple’s app-size measurement guidance](https://developer.apple.com/documentation/Xcode/reducing-your-app-s-size).
+
+Reproduce with `python3 tools/ios-sizes.py` (Xcode and XcodeGen required). The probe links and calls the compiler; the baseline uses the same UI without the library. Results include each profile’s TeX assets.
