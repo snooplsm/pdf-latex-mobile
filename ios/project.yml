@@ -1,0 +1,44 @@
+name: LaTeXMobileHarness
+options:
+  deploymentTarget:
+    iOS: '15.0'
+packages:
+  LaTeXMobile:
+    path: LaTeXMobile
+settings:
+  base:
+    SWIFT_VERSION: '5.9'
+    GENERATE_INFOPLIST_FILE: YES
+    CODE_SIGNING_ALLOWED: NO
+targets:
+  Harness:
+    type: application
+    platform: iOS
+    sources: [Harness]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.latexmobile.harness
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    dependencies:
+      - package: LaTeXMobile
+  HarnessTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: HarnessTests
+      - path: ../examples
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.latexmobile.harness.tests
+    dependencies:
+      - target: Harness
+      - package: LaTeXMobile
+schemes:
+  Harness:
+    build:
+      targets:
+        Harness: all
+    test:
+      targets: [HarnessTests]

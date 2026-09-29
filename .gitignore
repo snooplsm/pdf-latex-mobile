@@ -1,0 +1,13 @@
+/target/
+/.build/
+/dist/
+**/.gradle/
+**/build/
+**/local.properties
+**/jniLibs/
+**/Resources/texbundle/
+**/assets/texbundle/
+*.xcframework/
+*.xcodeproj/
+__pycache__/
+.DS_Store

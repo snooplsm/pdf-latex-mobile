@@ -1,0 +1,53 @@
+{
+  "presets": {
+    "tiny": [
+      "core"
+    ],
+    "small": [
+      "core",
+      "text"
+    ],
+    "balanced": [
+      "core",
+      "text",
+      "math",
+      "graphics"
+    ],
+    "full": [
+      "core",
+      "text",
+      "math",
+      "graphics",
+      "diagrams",
+      "fonts",
+      "languages",
+      "bibliography"
+    ]
+  },
+  "features": {
+    "core": [
+      "examples/core.tex"
+    ],
+    "text": [
+      "examples/text.tex"
+    ],
+    "math": [
+      "examples/math.tex"
+    ],
+    "graphics": [
+      "examples/graphics.tex"
+    ],
+    "diagrams": [
+      "examples/diagrams.tex"
+    ],
+    "fonts": [
+      "examples/fonts.tex"
+    ],
+    "languages": [
+      "examples/languages.tex"
+    ],
+    "bibliography": [
+      "examples/bibliography.tex"
+    ]
+  }
+}

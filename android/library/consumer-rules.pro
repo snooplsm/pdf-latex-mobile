@@ -1,0 +1,1 @@
+-keep class org.latexmobile.LatexMobile { native <methods>; }

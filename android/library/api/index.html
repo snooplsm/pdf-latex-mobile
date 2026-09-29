@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>LaTeX Mobile API</title>
+<h1>LaTeXMobile.compile</h1>
+<pre><code>// Run on a worker thread. Android 9 / API 28 or newer.
+val result = LatexMobile.compile(context,
+    """\documentclass{article}\begin{document}Hello!\end{document}""",
+    File(context.filesDir, "hello.pdf"))
+println(result.pdf)       // Output file, replaced only on success
+println(result.bytes)     // PDF size in bytes
+println(result.elapsedMs) // Native compilation time in milliseconds
+println(result.log)       // Engine diagnostics
+</code></pre>
+<p>The blocking call throws IllegalStateException for compiler failures. File and JNI errors also propagate to the caller. Concurrent calls are serialized. Use trusted LaTeX only; this is not a security sandbox. Package exactly one variant.</p>
+</html>
