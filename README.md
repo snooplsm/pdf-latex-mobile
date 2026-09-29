@@ -25,10 +25,10 @@ let result = try await LaTeXMobile.compile(
 |---|---|
 | tiny | Basic article, English hyphenation |
 | small | tiny + headings, bold, italic |
-| balanced | small + AMS math, graphics transforms, color |
+| balanced | small + AMS math, graphics, color, logo invoice |
 | full | balanced + TikZ, OpenType font, languages, BibTeX |
 
-Actual AAR measurements: [SIZES.md](SIZES.md). `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Examples do not yet cover external image assets or multi-file input projects.
+Actual AAR measurements: [SIZES.md](SIZES.md). `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Image and other input files can be passed in the `assets` map (relative filenames to bytes). See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
 
 ```sh
 # macOS build prerequisites: Rust, Xcode, JDK 17+, Android SDK/NDK r29,
@@ -73,4 +73,19 @@ python3 tools/central.py upload
 python3 tools/central.py status
 python3 tools/central.py publish  # after VALIDATED; verify PUBLISHED with status
 # GitHub releases are also created locally, with gh; no GitHub Actions.
+```
+
+```sh
+# Invoice example with an embedded vector PDF logo (PNG alternative also included).
+python3 tools/invoice.py
+# output/pdf/northstar-invoice.pdf; source: examples/invoice.tex
+# SVG is a design source; convert it to PDF before using it with includegraphics.
+```
+
+```sh
+# Run the invoice sample apps, then select Invoice · PDF logo or Invoice · PNG logo.
+android/gradlew -p android :harness:installBalancedDebug
+python3 tools/prepare-ios.py balanced
+(cd ios && xcodegen generate)
+open ios/LaTeXMobileHarness.xcodeproj  # Run the Harness scheme on a simulator.
 ```

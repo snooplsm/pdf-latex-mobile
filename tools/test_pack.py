@@ -9,7 +9,7 @@ class PackTests(unittest.TestCase):
         self.config = json.loads((ROOT / "profiles/features.json").read_text())
 
     def test_exclusion_and_inclusion(self):
-        self.assertEqual(select(self.config, "balanced", ["fonts"], ["graphics"]), ["core", "fonts", "math", "text"])
+        self.assertEqual(select(self.config, "balanced", ["fonts"], ["graphics"]), ["core", "fonts", "invoice", "math", "text"])
         with self.assertRaises(ValueError):
             select(self.config, "small", exclude=["core"])
         with self.assertRaises(ValueError):

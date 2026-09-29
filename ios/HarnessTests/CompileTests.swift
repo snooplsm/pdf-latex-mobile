@@ -12,8 +12,19 @@ final class CompileTests: XCTestCase {
             let source = try String(contentsOf: fixture, encoding: .utf8)
             let output = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".pdf")
             defer { try? FileManager.default.removeItem(at: output) }
-            _ = try await LaTeXMobile.compile(source, to: output)
-            XCTAssertGreaterThan(PDFDocument(url: output)?.pageCount ?? 0, 0, name)
+            var assets: [String: Data] = [:]
+            if let folder = Bundle(for: Self.self).url(forResource: "\(name).assets", withExtension: nil, subdirectory: "examples") {
+                for file in try FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil) {
+                    assets[file.lastPathComponent] = try Data(contentsOf: file)
+                }
+            }
+            let documents = name == "invoice" ? [source, source.replacingOccurrences(of: "logo.pdf", with: "logo.png")] : [source]
+            for document in documents {
+                _ = try await LaTeXMobile.compile(document, to: output, assets: assets)
+                let pages = PDFDocument(url: output)?.pageCount ?? 0
+                XCTAssertGreaterThan(pages, 0, name)
+                if name == "invoice" { XCTAssertEqual(pages, 1) }
+            }
         }
     }
 

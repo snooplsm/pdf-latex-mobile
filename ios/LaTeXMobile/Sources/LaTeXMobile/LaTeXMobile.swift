@@ -16,6 +16,7 @@ public enum LaTeXMobile {
         let source: String
         let bundle_path: String
         let output_path: String
+        let assets: [String: Data]
     }
     private struct Response: Decodable {
         let ok: Bool
@@ -24,13 +25,13 @@ public enum LaTeXMobile {
         let pdf_bytes: Int
         let elapsed_ms: Int
     }
-    public static func compile(_ source: String, to output: URL) async throws -> Result {
+    public static func compile(_ source: String, to output: URL, assets: [String: Data] = [:]) async throws -> Result {
         // The Rust side serializes its process-global engine state.
         try await Task.detached(priority: .userInitiated) {
             guard let bundle = Bundle.module.url(forResource: "texbundle", withExtension: nil) else {
                 throw Failure(message: "Missing TeX bundle")
             }
-            let data = try JSONEncoder().encode(Request(source: source, bundle_path: bundle.path, output_path: output.path))
+            let data = try JSONEncoder().encode(Request(source: source, bundle_path: bundle.path, output_path: output.path, assets: assets))
             let json = String(decoding: data, as: UTF8.self)
             let response: Response = try json.withCString { input in
                 guard let pointer = lm_compile(input) else { throw Failure(message: "Native allocation failed") }

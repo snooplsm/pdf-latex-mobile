@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="140" viewBox="0 0 640 140">
+  <rect x="0" y="10" width="112" height="112" rx="24" fill="#153744"/>
+  <path d="M56 25 65 57 97 66 65 75 56 107 47 75 15 66 47 57Z" fill="#81D8C5"/>
+  <path d="M56 46 62 60 76 66 62 72 56 86 50 72 36 66 50 60Z" fill="white"/>
+  <text x="139" y="72" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#153744">NORTHSTAR</text>
+  <text x="141" y="103" font-family="Arial,sans-serif" font-size="19" letter-spacing="4" fill="#58737D">CREATIVE STUDIO</text>
+</svg>

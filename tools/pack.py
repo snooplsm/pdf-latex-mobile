@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """python3 tools/pack.py --source .build/tex --preset balanced --exclude graphics --output dist/texbundle"""
 import argparse
+import base64
 import hashlib
 import json
 from pathlib import Path
@@ -31,9 +32,17 @@ def safe_file(root, name):
     return path
 
 
-def run(compiler, source, bundle, output):
+def example_assets(fixture):
+    folder = fixture.with_suffix(".assets")
+    if not folder.is_dir():
+        return {}
+    return {file.name: base64.b64encode(safe_file(folder, file.name).read_bytes()).decode()
+            for file in sorted(folder.iterdir())}
+
+
+def run(compiler, source, bundle, output, assets=None):
     result = subprocess.run([str(compiler)], input=json.dumps({
-        "source": source, "bundle_path": str(bundle), "output_path": str(output)
+        "source": source, "bundle_path": str(bundle), "output_path": str(output), "assets": assets or {}
     }), text=True, capture_output=True, timeout=180)
     if result.returncode:
         raise RuntimeError(result.stdout + result.stderr)
@@ -57,7 +66,7 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
         used = set()
         by_example = {}
         for fixture in fixtures:
-            response = run(compiler, fixture.read_text(), prepared, scratch / "probe.pdf")
+            response = run(compiler, fixture.read_text(), prepared, scratch / "probe.pdf", example_assets(fixture))
             used.update(response["files"])
             by_example[str(fixture.relative_to(ROOT)) if fixture.is_relative_to(ROOT) else fixture.name] = response["files"]
         used.discard("SHA256SUM")
@@ -82,7 +91,7 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
             (stage / "SHA256SUM").write_text(fingerprint + "\n")
             # Verify the exact trimmed bundle, with a fresh format cache for each document.
             for fixture in fixtures:
-                run(compiler, fixture.read_text(), stage, scratch / "verify.pdf")
+                run(compiler, fixture.read_text(), stage, scratch / "verify.pdf", example_assets(fixture))
             if notices:
                 shutil.copytree(notices, stage / "licenses", symlinks=False)
             manifest = {"schema": 1, "features": selected, "bundle_sha256": fingerprint,

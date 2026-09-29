@@ -17,9 +17,18 @@ class CompileTest {
         for (index in 0 until features.length()) {
             val name = features.getString(index)
             val source = instrumentation.context.assets.open("$name.tex").bufferedReader().use { it.readText() }
-            val result = LatexMobile.compile(context, source, File(context.cacheDir, "$name.pdf"))
-            ParcelFileDescriptor.open(result.pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { fd ->
-                PdfRenderer(fd).use { assertTrue("$name produced no pages", it.pageCount > 0) }
+            val assets = instrumentation.context.assets.list("$name.assets").orEmpty().associateWith { asset ->
+                instrumentation.context.assets.open("$name.assets/$asset").use { it.readBytes() }
+            }
+            val sources = if (name == "invoice") listOf(source, source.replace("logo.pdf", "logo.png")) else listOf(source)
+            for (document in sources) {
+                val result = LatexMobile.compile(context, document, File(context.cacheDir, "$name.pdf"), assets)
+                ParcelFileDescriptor.open(result.pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { fd ->
+                    PdfRenderer(fd).use {
+                        assertTrue("$name produced no pages", it.pageCount > 0)
+                        if (name == "invoice") assertEquals(1, it.pageCount)
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,106 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{graphicx,xcolor}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{9.75in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\topmargin}{-0.65in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\definecolor{ink}{HTML}{153744}
+\definecolor{muted}{HTML}{58737D}
+\definecolor{accent}{HTML}{187B6A}
+\definecolor{line}{HTML}{DDE7E9}
+\definecolor{pale}{HTML}{EFF6F5}
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\labeltext}[1]{{\color{muted}\scriptsize\bfseries #1}}
+\begin{document}
+\color{ink}
+\begin{minipage}[t]{0.58\textwidth}
+\vspace{0pt}\includegraphics[width=3.1in]{logo.pdf}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\vspace{6pt}\raggedleft
+{\fontsize{32}{36}\selectfont\bfseries INVOICE}\\[8pt]
+{\color{muted}INV-2026-014}
+\end{minipage}
+
+\vspace{24pt}
+{\color{line}\rule{\textwidth}{0.8pt}}
+\vspace{12pt}
+
+\begin{minipage}[t]{0.35\textwidth}
+\labeltext{FROM}\\[8pt]
+\textbf{Northstar Creative Studio}\\[4pt]
+125 Harbor Avenue, Suite 200\\
+Seattle, WA 98101\\[7pt]
+hello@northstar.example
+\end{minipage}\hfill
+\begin{minipage}[t]{0.34\textwidth}
+\labeltext{BILL TO}\\[8pt]
+\textbf{Willow \& Pine Co.}\\[4pt]
+240 Market Street\\
+Portland, OR 97205\\[7pt]
+billing@willowpine.example
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\textwidth}
+\labeltext{ISSUED}\\[5pt]
+September 29, 2026\\[12pt]
+\labeltext{DUE DATE}\\[5pt]
+October 13, 2026\\[12pt]
+\labeltext{TERMS}\quad Net 14
+\end{minipage}
+
+\vspace{24pt}
+\labeltext{PROJECT}\\[7pt]
+{\large\bfseries Brand refresh \& website launch}\\[5pt]
+{\color{muted}Design and development services for September 2026.}
+
+\vspace{16pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrr}
+\labeltext{DESCRIPTION} & \labeltext{HOURS} & \labeltext{RATE} & \labeltext{AMOUNT}\\[4pt]
+\hline
+\textbf{Product design} & 24 & \$125.00 & \$3,000.00\\[-3pt]
+{\small\color{muted}Visual direction, layouts, and component design} & & & \\[8pt]
+\textbf{Website development} & 16 & \$150.00 & \$2,400.00\\[-3pt]
+{\small\color{muted}Responsive implementation and integrations} & & & \\[8pt]
+\textbf{Quality assurance} & 6 & \$100.00 & \$600.00\\[-3pt]
+{\small\color{muted}Browser testing and launch review} & & & \\[7pt]
+\hline
+\end{tabular*}
+
+\vspace{12pt}
+\hfill\begin{minipage}{0.43\textwidth}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+Subtotal & \$6,000.00\\
+Tax & \$0.00\\
+Paid to date & \$0.00
+\end{tabular*}
+\end{minipage}
+
+\vspace{16pt}
+\begingroup
+\setlength{\fboxsep}{14pt}
+\colorbox{pale}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+\begin{minipage}{0.56\linewidth}
+\labeltext{AMOUNT DUE}\par\vspace{5pt}
+{\small Due October 13, 2026 \quad\textbar\quad USD}
+\end{minipage}\hfill
+\begin{minipage}{0.38\linewidth}\raggedleft
+{\color{accent}\fontsize{27}{30}\selectfont\bfseries \$6,000.00}
+\end{minipage}}}
+\endgroup
+
+\vfill
+\labeltext{PAYMENT DETAILS}\\[7pt]
+Please use the payment instructions supplied with your agreement.\\[3pt]
+Include \textbf{INV-2026-014} as your payment reference.
+
+\vspace{12pt}
+{\color{line}\rule{\textwidth}{0.8pt}}\\[10pt]
+\textbf{Thank you for your business.}\hfill {\small\color{muted}northstar.example}\\[8pt]
+{\scriptsize\color{muted}Sample invoice. All company and billing details are fictional.}
+\end{document}

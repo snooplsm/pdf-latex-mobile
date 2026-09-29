@@ -1,6 +1,7 @@
 package org.latexmobile
 
 import android.content.Context
+import android.util.Base64
 import org.json.JSONObject
 import java.io.File
 
@@ -11,10 +12,12 @@ object LatexMobile {
     data class Result(val pdf: File, val bytes: Long, val elapsedMs: Long, val log: String)
 
     // Call on a worker thread. The native engine serializes simultaneous requests.
-    fun compile(context: Context, source: String, output: File): Result {
+    fun compile(context: Context, source: String, output: File, assets: Map<String, ByteArray> = emptyMap()): Result {
         val bundle = installBundle(context.applicationContext)
+        val encodedAssets = JSONObject()
+        assets.forEach { (name, bytes) -> encodedAssets.put(name, Base64.encodeToString(bytes, Base64.NO_WRAP)) }
         val request = JSONObject().put("source", source)
-            .put("bundle_path", bundle.absolutePath).put("output_path", output.absolutePath)
+            .put("bundle_path", bundle.absolutePath).put("output_path", output.absolutePath).put("assets", encodedAssets)
         val response = JSONObject(compileNative(request.toString()))
         check(response.getBoolean("ok")) { "${response.optString("error")}\n${response.optString("log")}" }
         return Result(output, response.getLong("pdf_bytes"), response.getLong("elapsed_ms"), response.getString("log"))

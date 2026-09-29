@@ -1,9 +1,10 @@
+use base64::Engine as _;
 use serde::{Deserialize, Serialize};
 use std::{
-    collections::BTreeSet,
+    collections::{BTreeMap, BTreeSet},
     ffi::{CStr, CString},
     os::raw::c_char,
-    path::{Path, PathBuf},
+    path::{Component, Path, PathBuf},
     sync::{Arc, Mutex},
     time::Instant,
 };
@@ -22,6 +23,8 @@ pub struct Request {
     pub source: String,
     pub bundle_path: PathBuf,
     pub output_path: PathBuf,
+    #[serde(default)]
+    pub assets: BTreeMap<String, String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -102,6 +105,39 @@ impl Bundle for TracedBundle {
     }
 }
 
+fn write_assets(
+    root: &Path,
+    assets: &BTreeMap<String, String>,
+) -> Result<(), Box<dyn std::error::Error>> {
+    if assets.len() > 128 || assets.values().map(String::len).sum::<usize>() > 24 * 1024 * 1024 {
+        return Err("too many assets or encoded assets exceed 24 MiB".into());
+    }
+    let mut total = 0;
+    for (name, encoded) in assets {
+        let path = Path::new(name);
+        if name.is_empty()
+            || name.contains('\\')
+            || name.contains(':')
+            || name.contains('\0')
+            || !path
+                .components()
+                .all(|part| matches!(part, Component::Normal(_)))
+            || ["main.tex", "main.pdf"].contains(&name.as_str())
+        {
+            return Err(format!("invalid asset path: {name}").into());
+        }
+        let bytes = base64::engine::general_purpose::STANDARD.decode(encoded)?;
+        total += bytes.len();
+        if total > 16 * 1024 * 1024 {
+            return Err("decoded assets exceed 16 MiB".into());
+        }
+        let destination = root.join(path);
+        std::fs::create_dir_all(destination.parent().unwrap())?;
+        std::fs::write(destination, bytes)?;
+    }
+    Ok(())
+}
+
 pub fn compile(request: Request) -> Response {
     if !request.bundle_path.join("SHA256SUM").is_file() {
         return Response::error("bundle is missing SHA256SUM; run tools/pack.py");
@@ -123,6 +159,7 @@ pub fn compile_with_bundle(request: Request, bundle: Box<dyn Bundle>) -> Respons
             .lock()
             .map_err(|_| "engine lock poisoned; restart the host")?;
         let scratch = tempfile::tempdir()?;
+        write_assets(scratch.path(), &request.assets)?;
         // A fresh format cache also records every dependency needed to initialize LaTeX.
         let mut builder = ProcessingSessionBuilder::new_with_security(SecuritySettings::default());
         builder
@@ -254,10 +291,44 @@ mod tests {
             source: "hello".into(),
             bundle_path: temp.path().join("missing"),
             output_path: output.clone(),
+            assets: BTreeMap::new(),
         });
         assert!(!result.ok);
         assert_eq!(std::fs::read_to_string(output).unwrap(), "previous");
     }
+    #[test]
+    fn asset_paths_and_encoding_are_checked() {
+        let temp = tempfile::tempdir().unwrap();
+        for name in [
+            "../escape",
+            "/absolute",
+            "nested/../../escape",
+            "main.tex",
+            "",
+            "C:\\escape",
+        ] {
+            assert!(write_assets(
+                temp.path(),
+                &BTreeMap::from([(name.into(), "aGVsbG8=".into())])
+            )
+            .is_err());
+        }
+        assert!(write_assets(
+            temp.path(),
+            &BTreeMap::from([("logo.png".into(), "bad base64!".into())])
+        )
+        .is_err());
+        write_assets(
+            temp.path(),
+            &BTreeMap::from([("images/logo.png".into(), "aGVsbG8=".into())]),
+        )
+        .unwrap();
+        assert_eq!(
+            std::fs::read(temp.path().join("images/logo.png")).unwrap(),
+            b"hello"
+        );
+    }
+
     #[test]
     fn c_ownership_and_null_request() {
         unsafe {

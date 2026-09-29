@@ -8,6 +8,7 @@ license = "MIT"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [dependencies]
+base64 = "0.22"
 tectonic = { version = "=0.17.0", default-features = false }
 tectonic_bundles = { version = "0.4", default-features = false }
 tectonic_bridge_core = "0.5"

@@ -14,7 +14,11 @@ targets:
   Harness:
     type: application
     platform: iOS
-    sources: [Harness]
+    sources:
+      - path: Harness
+      - path: ../examples
+        type: folder
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: org.latexmobile.harness

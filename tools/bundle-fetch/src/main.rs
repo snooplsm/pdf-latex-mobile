@@ -1,3 +1,4 @@
+use base64::Engine as _;
 use std::{
     io::{Cursor, Read},
     path::{Path, PathBuf},
@@ -47,6 +48,30 @@ impl Bundle for Collector {
         self.inner.get_digest()
     }
 }
+fn read_assets(
+    root: PathBuf,
+) -> Result<std::collections::BTreeMap<String, String>, Box<dyn std::error::Error>> {
+    let mut assets = std::collections::BTreeMap::new();
+    if root.is_dir() {
+        // Example assets are flat; the mobile API also accepts safe nested relative paths.
+        for entry in std::fs::read_dir(root)? {
+            let entry = entry?;
+            if !entry.file_type()?.is_file() {
+                return Err("example assets must be regular files".into());
+            }
+            assets.insert(
+                entry
+                    .file_name()
+                    .to_str()
+                    .ok_or("non-UTF8 asset name")?
+                    .to_owned(),
+                base64::engine::general_purpose::STANDARD.encode(std::fs::read(entry.path())?),
+            );
+        }
+    }
+    Ok(assets)
+}
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = std::env::args().collect();
     if args.len() < 4 {
@@ -60,6 +85,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let result = latex_mobile::compile_with_bundle(
             latex_mobile::Request {
                 source: std::fs::read_to_string(fixture)?,
+                assets: read_assets(Path::new(fixture).with_extension("assets"))?,
                 bundle_path: output.clone(),
                 output_path: output.join("probe.pdf"),
             },

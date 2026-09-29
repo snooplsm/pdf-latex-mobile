@@ -11,7 +11,8 @@
       "core",
       "text",
       "math",
-      "graphics"
+      "graphics",
+      "invoice"
     ],
     "full": [
       "core",
@@ -21,7 +22,8 @@
       "diagrams",
       "fonts",
       "languages",
-      "bibliography"
+      "bibliography",
+      "invoice"
     ]
   },
   "features": {
@@ -48,6 +50,9 @@
     ],
     "bibliography": [
       "examples/bibliography.tex"
+    ],
+    "invoice": [
+      "examples/invoice.tex"
     ]
   }
 }
