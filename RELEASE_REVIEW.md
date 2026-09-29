@@ -1,6 +1,6 @@
 # Release candidate 0.1.0-alpha.2
 
-Local candidate only; not uploaded or published to Maven Central.
+Sonatype deployment `78db58a1-8597-42ad-96ac-0ffa45795a17` is VALIDATED with no errors or warnings. Publication is pending.
 Original project code remains MIT. Dependency choices are in
 [notices/DEPENDENCY-LICENSE-CHOICES.txt](notices/DEPENDENCY-LICENSE-CHOICES.txt).
 
@@ -38,15 +38,17 @@ Completed:
   the complete file inventory, hashes, payload totals, empty loader and excluded
   pattern files in all four refreshed bundles.
 
-Remaining distribution review:
+Final distribution checks:
 
 - The refreshed balanced and full profiles pass four-way raw PDF equality
   (Android/iOS, two runs each), SHA-256
   `fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7`.
   The language configuration reproduces from its retained public-domain source.
-  Complete the final packaged notice/source review and signed artifact checks.
-- Confirm final source archive, notices and signed Maven artifacts all correspond
-  to the final committed revision before publication.
+  Packaged notices and every bundle file match the verified inputs. All three
+  native libraries match for every AAR; native source JAR contents match the repository.
+  All 16 required Maven artifact signatures verify with the release public key.
+- Source archive and profile-specific Swift packages are prepared for the GitHub
+  prerelease. Maven Central publication and public download verification remain.
 
 Runtime coverage is ARM64 Android emulator and iOS simulator. ARMv7/x86-64 Android
 and physical iOS builds are verified as builds, not as physical-device runtime tests.

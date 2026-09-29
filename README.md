@@ -2,7 +2,7 @@
 
 Offline LaTeX-to-PDF library with Android/Kotlin and iOS/Swift sample apps. The production build uses **XeTeX + Krilla**, with vendored patches for deterministic mobile output.
 
-**Prerelease status:** `0.1.0-alpha.2` is staged locally, not published to Maven Central. Android/iOS PDF hash checks pass; see [release review](RELEASE_REVIEW.md) for remaining distribution checks. [Library sizes](SIZES.md) measure the current XeTeX + Krilla artifacts, including notices.
+**Prerelease status:** `0.1.0-alpha.2` has passed Sonatype validation; publication is being finalized. Android/iOS PDF hash checks pass; see [release review](RELEASE_REVIEW.md) for evidence and coverage limits. [Library sizes](SIZES.md) measure the current XeTeX + Krilla artifacts, including notices.
 
 The current source uses ICU normalization and built-in TeX punctuation instead of TECkit. Custom `.tec` font mappings are unsupported. Host comparisons and the full-profile ARM64 Android/iOS invoice hash comparison pass.
 
@@ -75,10 +75,10 @@ Run the **Harness** scheme, choose **Invoice · PDF logo**, then **Generate PDF*
 
 ```kotlin
 // Choose exactly ONE artifact from the Maven Central after publication; local staging is dist/maven.
-implementation("io.github.snooplsm:latex-mobile-tiny:0.1.0")
-// implementation("io.github.snooplsm:latex-mobile-small:0.1.0")
-// implementation("io.github.snooplsm:latex-mobile-balanced:0.1.0")
-// implementation("io.github.snooplsm:latex-mobile-full:0.1.0")
+implementation("io.github.snooplsm:latex-mobile-tiny:0.1.0-alpha.2")
+// implementation("io.github.snooplsm:latex-mobile-small:0.1.0-alpha.2")
+// implementation("io.github.snooplsm:latex-mobile-balanced:0.1.0-alpha.2")
+// implementation("io.github.snooplsm:latex-mobile-full:0.1.0-alpha.2")
 
 // On a worker thread:
 val result = LatexMobile.compile(context,
