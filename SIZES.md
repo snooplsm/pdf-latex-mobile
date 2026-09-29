@@ -8,10 +8,10 @@ Measured compressed AAR downloads, in MB (decimal). Included CPU builds: arm64-v
 
 | Variant | All CPUs | ARMv7 | ARM64 | x86-64 |
 |---|---:|---:|---:|---:|
-| tiny | 16.07 | 5.89 | 6.35 | 6.64 |
-| small | 16.30 | 6.11 | 6.57 | 6.86 |
-| balanced | 16.74 | 6.55 | 7.02 | 7.30 |
-| full | 34.93 | 13.98 | 14.43 | 14.72 |
+| tiny | 16.09 | 5.90 | 6.36 | 6.65 |
+| small | 16.31 | 6.12 | 6.59 | 6.87 |
+| balanced | 16.75 | 6.57 | 7.03 | 7.32 |
+| full | 34.95 | 13.99 | 14.45 | 14.74 |
 
 CPU columns are measured single-architecture AAR builds, including the shared TeX assets and wrapper code. They are not APK split sizes or measured app download increases. A dash means that build has not been measured.
 
@@ -27,10 +27,10 @@ Measured growth over the same app without LaTeX, in MB. ARM64 device Release bui
 
 | Variant | Compressed app increase (MB) | Uncompressed app increase (MB) |
 |---|---:|---:|
-| tiny | 6.81 | 22.16 |
-| small | 7.04 | 22.61 |
-| balanced | 7.48 | 23.63 |
-| full | 14.92 | 39.14 |
+| tiny | 6.82 | 22.20 |
+| small | 7.05 | 22.66 |
+| balanced | 7.50 | 23.67 |
+| full | 14.94 | 39.18 |
 
 Baseline: 0.02 MB compressed, 0.09 MB uncompressed.
 

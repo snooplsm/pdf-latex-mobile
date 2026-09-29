@@ -55,7 +55,14 @@ with zipfile.ZipFile(ROOT/'.build/license-sources/lm.zip') as z:
 (OUT/'latin-modern-provenance.json').write_text(json.dumps({'source':'https://mirrors.ctan.org/fonts/lm.zip','archive_sha256':hashlib.sha256((ROOT/'.build/license-sources/lm.zip').read_bytes()).hexdigest(),'identical_fonts':verified},indent=2)+'\n')
 # Distribute the exact, unmodified MPL Rust source with the notices themselves.
 option=next((Path.home()/'.cargo/registry/src').glob('*/option-ext-0.2.0'))
-shutil.copytree(option,OUT/'sources/option-ext-0.2.0',dirs_exist_ok=True)
+option_out = OUT/'sources/option-ext-0.2.0'
+shutil.copytree(option, option_out, dirs_exist_ok=True,
+                ignore=shutil.ignore_patterns('.cargo-ok', '.cargo_vcs_info.json', '.gitignore'))
+# Android omits hidden assets. Retain VCS provenance under a visible name;
+# registry-cache markers and git ignore rules are not library source inputs.
+shutil.copyfile(option/'.cargo_vcs_info.json', option_out/'cargo-vcs-info.json')
+for name in ('.cargo-ok', '.cargo_vcs_info.json', '.gitignore'):
+    (option_out/name).unlink(missing_ok=True)
 with zipfile.ZipFile(ROOT/'.build/license-sources/latex-2021-11-15-PL1/latex-base-ctan.zip') as z:
     lppl=next(n for n in z.namelist() if n.endswith('/lppl.txt'))
     (OUT/'LPPL.txt').write_bytes(z.read(lppl))

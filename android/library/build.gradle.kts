@@ -90,7 +90,10 @@ afterEvaluate {
     }
 }
 
-tasks.withType<Jar>().matching { it.name.endsWith("SourcesJar") }.configureEach {
+tasks.withType<Jar>().matching { it.name.startsWith("source") && it.name.endsWith("ReleaseJar") }.configureEach {
+    metadataCharset = "UTF-8"
+    filePermissions { unix("0644") }
+    dirPermissions { unix("0755") }
     from("../../crates") { into("native/crates") }
     from("../../vendor") { into("native/vendor") }
     from(listOf("../../Cargo.toml", "../../Cargo.lock", "../../LICENSE", "../../THIRD_PARTY.md")) { into("native") }
