@@ -12,6 +12,7 @@ import urllib.parse
 import urllib.request
 import uuid
 import zipfile
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://central.sonatype.com/api/v1/publisher"
@@ -44,6 +45,28 @@ def bundle(version, destination):
     return destination
 
 
+def read_credentials(path, server_id=None):
+    if path.stat().st_mode & 0o077:
+        raise ValueError("credentials file must be private: chmod 600 FILE")
+    if path.suffix == ".xml":
+        root = ET.parse(path).getroot()
+        servers = [node for node in root.iter() if node.tag.split("}")[-1] == "server"]
+        def field(server, name):
+            return next(((node.text or "").strip() for node in server if node.tag.split("}")[-1] == name), "")
+        if server_id:
+            servers = [server for server in servers if field(server, "id") == server_id]
+        if len(servers) != 1:
+            raise ValueError("Select exactly one Maven server with --server-id")
+        credentials = {name: field(servers[0], name) for name in ("username", "password")}
+    else:
+        credentials = json.loads(path.read_text())
+    for name in ("username", "password"):
+        value = credentials.get(name, "")
+        if not isinstance(value, str) or not value or value.startswith(("${", "{")):
+            raise ValueError("Provide a literal Central publisher token; placeholders and Maven-encrypted credentials are not supported")
+    return credentials
+
+
 def request(endpoint, body, content_type, credentials):
     # Credentials stay in memory; never pass them as command-line arguments or print them.
     auth = base64.b64encode(f'{credentials["username"]}:{credentials["password"]}'.encode()).decode()
@@ -54,23 +77,24 @@ def request(endpoint, body, content_type, credentials):
         with urllib.request.urlopen(req, timeout=180) as response:
             return response.read().decode()
     except urllib.error.HTTPError as error:
-        raise RuntimeError(f"Central returned HTTP {error.code}: {error.read().decode()}") from None
+        raise RuntimeError(f"Central returned HTTP {error.code}; response body omitted to protect credentials") from None
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["bundle", "upload", "status", "publish"])
     parser.add_argument("--version", default="0.1.0")
-    parser.add_argument("--credentials", type=Path, default=Path.home() / ".config/latex-mobile/central.json")
+    parser.add_argument("--credentials", type=Path, default=None)
+    parser.add_argument("--server-id", help="Server ID in Maven settings.xml; optional when there is one server")
     parser.add_argument("--deployment")
     args = parser.parse_args()
     path = ROOT / f"dist/central-{args.version}.zip"
     if args.action == "bundle":
         print(bundle(args.version, path))
         return
-    if args.credentials.stat().st_mode & 0o077:
-        raise ValueError("credentials file must be private: chmod 600 FILE")
-    credentials = json.loads(args.credentials.read_text())
+    settings = Path.home() / ".m2/settings.xml"
+    credentials_path = args.credentials or (settings if settings.is_file() else Path.home() / ".config/latex-mobile/central.json")
+    credentials = read_credentials(credentials_path, args.server_id)
     if args.action == "upload":
         bundle(args.version, path)
         boundary = "latex-mobile-" + uuid.uuid4().hex

@@ -133,8 +133,10 @@ See [THIRD_PARTY.md](THIRD_PARTY.md) before distributing binaries. The host-only
 
 ```sh
 # Maven Central: verify io.github.snooplsm using GitHub login in central.sonatype.com.
-# Store the portal token as {"username":"...","password":"..."} outside the repo:
-chmod 600 "$HOME/.config/latex-mobile/central.json"
+# Store the portal token in ~/.m2/settings.xml (username/password in a server entry).
+chmod 600 "$HOME/.m2/settings.xml"
+# If there are multiple servers: tools/central.py upload --server-id central
+# JSON credentials remain supported with --credentials /path/to/central.json
 export MAVEN_SIGNING_KEY_FILE="$HOME/.config/latex-mobile/signing.asc"
 # Set MAVEN_SIGNING_PASSWORD for an encrypted PGP key; publish its public key to a keyserver.
 python3 tools/release.py --source .build/tex --notices .build/notices
