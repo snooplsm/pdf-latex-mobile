@@ -19,6 +19,14 @@ android {
         consumerProguardFiles("consumer-rules.pro")
         ndk { abiFilters += providers.gradleProperty("abis").getOrElse("armeabi-v7a,arm64-v8a,x86_64").split(",") }
     }
+    packaging {
+        jniLibs {
+            val selected = providers.gradleProperty("abis").getOrElse("armeabi-v7a,arm64-v8a,x86_64").split(",")
+            listOf("armeabi-v7a", "arm64-v8a", "x86_64").filter { it !in selected }.forEach {
+                excludes += "**/$it/**"
+            }
+        }
+    }
     flavorDimensions += "content"
     productFlavors { variants.forEach { create(it) { dimension = "content" } } }
     sourceSets { getByName("androidTest").assets.srcDir("../../examples"); variants.forEach {
