@@ -138,7 +138,8 @@ chmod 600 "$HOME/.m2/settings.xml"
 # If there are multiple servers: tools/central.py upload --server-id central
 # JSON credentials remain supported with --credentials /path/to/central.json
 export MAVEN_SIGNING_KEY_FILE="$HOME/.config/latex-mobile/signing.asc"
-# Set MAVEN_SIGNING_PASSWORD for an encrypted PGP key; publish its public key to a keyserver.
+# Set MAVEN_SIGNING_PASSWORD or MAVEN_SIGNING_PASSWORD_FILE for an encrypted PGP key.
+# Publish only its public key to a keyserver.
 python3 tools/release.py --source .build/tex --notices .build/notices
 python3 tools/central.py upload
 python3 tools/central.py status

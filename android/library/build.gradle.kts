@@ -5,9 +5,12 @@ plugins {
     id("signing")
 }
 val variants = listOf("tiny", "small", "balanced", "full")
-val apiJar = tasks.register<Jar>("apiJar") {
-    archiveClassifier.set("javadoc")
-    from("api")
+val apiJars = variants.associateWith { variant ->
+    tasks.register<Jar>("${variant}ApiJar") {
+        archiveBaseName.set("latex-mobile-$variant")
+        archiveClassifier.set("javadoc")
+        from("api")
+    }
 }
 val releaseVersion = providers.gradleProperty("releaseVersion").getOrElse("0.1.0")
 android {
@@ -67,7 +70,7 @@ afterEvaluate {
                     groupId = "io.github.snooplsm"
                     artifactId = "latex-mobile-$variant"
                     version = releaseVersion
-                    artifact(apiJar)
+                    artifact(apiJars.getValue(variant))
                     pom {
                         name.set("LaTeX Mobile ($variant)")
                         description.set("Offline LaTeX to PDF for Android")
@@ -95,7 +98,10 @@ tasks.withType<Jar>().matching { it.name.endsWith("SourcesJar") }.configureEach 
 val signingKeyFile = providers.environmentVariable("MAVEN_SIGNING_KEY_FILE")
 if (signingKeyFile.isPresent) {
     signing {
-        useInMemoryPgpKeys(file(signingKeyFile.get()).readText(), providers.environmentVariable("MAVEN_SIGNING_PASSWORD").orNull)
+        val passwordFile = providers.environmentVariable("MAVEN_SIGNING_PASSWORD_FILE")
+        val password = providers.environmentVariable("MAVEN_SIGNING_PASSWORD").orNull
+            ?: passwordFile.orNull?.let { file(it).readText().trimEnd('\n', '\r') }
+        useInMemoryPgpKeys(file(signingKeyFile.get()).readText(), password)
         afterEvaluate { sign(publishing.publications) }
     }
 }
