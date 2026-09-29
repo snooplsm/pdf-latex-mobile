@@ -28,11 +28,23 @@ Completed:
 - Maven source JARs include production crates, vendored sources and build inputs.
   A separate local source archive includes upstream LaTeX/font archives and all bundles.
 
+- `tools/verify-source-provenance.py` reopens 103 pinned archives and verifies 330
+  full-profile runtime files byte for byte, including PGF, LaTeX3, fontspec, Babel,
+  graphics drivers and language patterns. Modified/generated files are explicitly
+  reported separately; this source-identity check is not license clearance.
+
+- `tools/verify-generated-bundle.py` reproduces all six converted fonts plus their
+  encoding/provenance files from the pinned AMS archive byte for byte. It verifies
+  the complete file inventory, hashes, payload totals, empty loader and excluded
+  pattern files in all four refreshed bundles.
+
 Remaining distribution review:
 
-- Finish file-level source/version coverage for remaining TeX packages beyond the
-  verified LaTeX base, AMS math, graphics, firstaid and fonts. Preserve their original
-  notices and source retrieval information with the final source distribution.
+- Confirm final notice coverage and configuration provenance. Bundles now include
+  the L3 backend modification identification; final artifact checks and refreshed
+  balanced-profile mobile parity are in progress. The refreshed full profile passes
+  four-way raw PDF equality (Android/iOS, two runs each), SHA-256
+  `fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7`.
 - Confirm final source archive, notices and signed Maven artifacts all correspond
   to the final committed revision before publication.
 

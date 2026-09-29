@@ -1,0 +1,374 @@
+[
+  {
+    "package": "xcolor",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xcolor.tar.xz",
+        "file": "xcolor.tar.xz",
+        "sha256": "4c915061b21a6edd58892f00db675e8bce6d2f710640bfc928c61443e209559e"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/xcolor.source.tar.xz",
+        "file": "xcolor.source.tar.xz",
+        "sha256": "39c8968d6d86d58aa8720fd771985d8c241540fa6aa74d09077ee21acb5a91e8"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "xcolor.sty",
+        "archive_path": "tex/latex/xcolor/xcolor.sty",
+        "sha256": "121f45cee5e0a32583909763f95b1aae2c8f0d0a086def03fd958ebdad5e5c02"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "graphics-def",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/graphics-def.tar.xz",
+        "file": "graphics-def.tar.xz",
+        "sha256": "93736f137caea9e75250a8cd9ec15b4cd22d57c1baf45aa1a8ce033992415bd6"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "xetex.def",
+        "archive_path": "tex/latex/graphics-def/xetex.def",
+        "sha256": "17273ae47424a5bdb23bdb9ee10b09f7c0ba27d2332830eb770b59e6aab5ab97"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "babel",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/babel.tar.xz",
+        "file": "babel.tar.xz",
+        "sha256": "aefb0e1d92a6e3521edccd9b19c09730a903f28f4c5eaed8a3b016f3cc6db1a5"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/babel.source.tar.xz",
+        "file": "babel.source.tar.xz",
+        "sha256": "1b49500907bc803c998ceb8aa7641464261b155897c4788d644278fe2185ab6f"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "babel.sty",
+        "archive_path": "tex/generic/babel/babel.sty",
+        "sha256": "c93694b8e033ab3592b485f9fc5740194071dee47db1bf90528435aea1aeddd7"
+      },
+      {
+        "file": "hyphen.cfg",
+        "archive_path": "tex/generic/babel/hyphen.cfg",
+        "sha256": "b68e6ae011a0a15c12f6ab72b70a0b6e3893be885a00ef3853c67fd989c9975c"
+      },
+      {
+        "file": "txtbabel.def",
+        "archive_path": "tex/generic/babel/txtbabel.def",
+        "sha256": "04c579d39644032d49bfd805eaef8bc725f1603957d34731f11ddbf6ce684e78"
+      },
+      {
+        "file": "xebabel.def",
+        "archive_path": "tex/generic/babel/xebabel.def",
+        "sha256": "95718f62527966b22816d91d433f5bb7baf5204e7d7cdb51275ace15bb8ed716"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "amsfonts",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/amsfonts.tar.xz",
+        "file": "amsfonts.tar.xz",
+        "sha256": "d146fb2489202f1dd394625c733621b8664a660c87a7d55b2a5b9b4283eaa3ad"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/amsfonts.source.tar.xz",
+        "file": "amsfonts.source.tar.xz",
+        "sha256": "28e1eb644c16bab2037256b380f24e0423dde1ce1516b8780fce10f79c41e077"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "cmex7.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/cmextra/cmex7.tfm",
+        "sha256": "373172fe340e4aede5129b89d65f576bfb1fe6932bd55c38f60bcaa84f3d1188"
+      },
+      {
+        "file": "msam10.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msam10.tfm",
+        "sha256": "3b54bde5cb0e0bd071eea7bc702ed3a1a284f786779ef8e75b06eba4104bb9f2"
+      },
+      {
+        "file": "msam5.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msam5.tfm",
+        "sha256": "c800d1dfd533040219fcc06d52e0e00c2a20fb9b0039fe9f58ccec53fd003a9f"
+      },
+      {
+        "file": "msam7.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msam7.tfm",
+        "sha256": "719d100c110fa1cfae9ad0b63e6c21753f4980f925fa516c1a04961e206f69d5"
+      },
+      {
+        "file": "msbm10.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msbm10.tfm",
+        "sha256": "d9f5f519ec718e9dbccb8527c1f5d3b4a008dfb946377f97f71611b385d3d010"
+      },
+      {
+        "file": "msbm5.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msbm5.tfm",
+        "sha256": "9e0909a297a3097e50960158d324006ddd5302db665400fa1fdf966df14e1a17"
+      },
+      {
+        "file": "msbm7.tfm",
+        "archive_path": "fonts/tfm/public/amsfonts/symbols/msbm7.tfm",
+        "sha256": "361b5530a4b410c6274e9330c11e993843c62e394323aeaa6e0aee61e8042444"
+      },
+      {
+        "file": "amsfonts.sty",
+        "archive_path": "tex/latex/amsfonts/amsfonts.sty",
+        "sha256": "dab8b0e621267acfd89736cf97bdcc02647c545c0719c4997be8a7d1bf98f9c3"
+      },
+      {
+        "file": "amssymb.sty",
+        "archive_path": "tex/latex/amsfonts/amssymb.sty",
+        "sha256": "70838b061b56569dd3ed9f339b1bdd1c78ba185de49f27ceae331c97f48b5986"
+      },
+      {
+        "file": "umsa.fd",
+        "archive_path": "tex/latex/amsfonts/umsa.fd",
+        "sha256": "48355e960333be747dd7b4500e76fde7c3ef0b1fa9c74ec0f1438af0d3a661a4"
+      },
+      {
+        "file": "umsb.fd",
+        "archive_path": "tex/latex/amsfonts/umsb.fd",
+        "sha256": "e20f21f6ed631cbe3a627d5da5fef82367732a7d51207f8df5ee7e9c77ee342e"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "cm",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/cm.tar.xz",
+        "file": "cm.tar.xz",
+        "sha256": "ebedd3dc7ece433d366d848ea8bd9cd2642a0f49c000c46a2ed1dde5b1cebc1c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "cmex10.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmex10.tfm",
+        "sha256": "0890bccea1dd4d27f001ac30e86c63af35bc803e0557c35aafb1903c8d208e92"
+      },
+      {
+        "file": "cmmi10.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmmi10.tfm",
+        "sha256": "e442c5487f84df70218ff37f775c87060856f5b6e04c011b6cadbbadfcf46645"
+      },
+      {
+        "file": "cmmi5.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmmi5.tfm",
+        "sha256": "8839e40838381a0a3c976bdd5becf72afd60bde5a965c3d9b985c3479c6cf75e"
+      },
+      {
+        "file": "cmmi7.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmmi7.tfm",
+        "sha256": "ce55681703aae565f17286d800ea9780223132589bdbaeda1751b869aba26a38"
+      },
+      {
+        "file": "cmr10.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmr10.tfm",
+        "sha256": "87f2d8981927644cbecaf3d639e96e348ea4e7be49d8804468bd8ba9ff3f5244"
+      },
+      {
+        "file": "cmr5.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmr5.tfm",
+        "sha256": "581be818f67bd11a1792d05e129abe3ea30c5cbdfce3bed8da7c5fb50f5ba95b"
+      },
+      {
+        "file": "cmr7.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmr7.tfm",
+        "sha256": "28f9f4d237bdae4babef4a59d90f17686a09d6f9df0b2c3c23b2ba15f20eee82"
+      },
+      {
+        "file": "cmsy10.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmsy10.tfm",
+        "sha256": "0ca13d421ac7133271aed7c935099ecf3d1d08ac9e15f81acb34a16564ab8a46"
+      },
+      {
+        "file": "cmsy5.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmsy5.tfm",
+        "sha256": "6b7dc18cba9ca8996d7b146f1ed78d9227577b26248083310fec227692198ca5"
+      },
+      {
+        "file": "cmsy7.tfm",
+        "archive_path": "fonts/tfm/public/cm/cmsy7.tfm",
+        "sha256": "4f59bbf683e947c807158641621982dc83f55fec042fea7963d8ce9f9da98256"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "latex-fonts",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/latex-fonts.tar.xz",
+        "file": "latex-fonts.tar.xz",
+        "sha256": "c542058e4dc1dfedc36bd65c44b472f69cf1d85bf271090cb10f698e901ebdbf"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "lcircle10.tfm",
+        "archive_path": "fonts/tfm/public/latex-fonts/lcircle10.tfm",
+        "sha256": "f5aaff47e226ff644ae94765b8d6012e0ffb6d62956993acac2f2dd4ad589929"
+      },
+      {
+        "file": "lcirclew10.tfm",
+        "archive_path": "fonts/tfm/public/latex-fonts/lcirclew10.tfm",
+        "sha256": "7906e4c5d770db4002740cba4d8194281b06d6fe7edd9d9949b60a291b753646"
+      },
+      {
+        "file": "line10.tfm",
+        "archive_path": "fonts/tfm/public/latex-fonts/line10.tfm",
+        "sha256": "250200d9efa885fecff118d72e5239adacd0783ccb00c4fb96fa677708ce5217"
+      },
+      {
+        "file": "linew10.tfm",
+        "archive_path": "fonts/tfm/public/latex-fonts/linew10.tfm",
+        "sha256": "925de632e8afb641692c58bf6c464fb1aa79782212523532590dd6b91b78c40f"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "unicode-data",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/unicode-data.tar.xz",
+        "file": "unicode-data.tar.xz",
+        "sha256": "f02921270fc834dcbd0a455e777f6381c2a5dc58b076cbf5c343f9636ba5b596"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "CaseFolding.txt",
+        "archive_path": "tex/generic/unicode-data/CaseFolding.txt",
+        "sha256": "a566cd48687b2cd897e02501118b2413c14ae86d318f9abbbba97feb84189f0f"
+      },
+      {
+        "file": "SpecialCasing.txt",
+        "archive_path": "tex/generic/unicode-data/SpecialCasing.txt",
+        "sha256": "c667b45908fd269af25fd55d2fc5bbc157fb1b77675936e25c513ce32e080334"
+      },
+      {
+        "file": "UnicodeData.txt",
+        "archive_path": "tex/generic/unicode-data/UnicodeData.txt",
+        "sha256": "36018e68657fdcb3485f636630ffe8c8532e01c977703d2803f5b89d6c5feafb"
+      },
+      {
+        "file": "load-unicode-data.tex",
+        "archive_path": "tex/generic/unicode-data/load-unicode-data.tex",
+        "sha256": "399edc983618f5e9dfa2877ec9f99b6c3b082358f278a492f8178243aa2f11ed"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "bibtex",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/bibtex.tar.xz",
+        "file": "bibtex.tar.xz",
+        "sha256": "5ea2877dfeb1b67d9ac0b4e0c745808839f131156f38cfc5a1b9630fd6888c3b"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "plain.bst",
+        "archive_path": "texmf-dist/bibtex/bst/base/plain.bst",
+        "sha256": "19f2cf88686b86aaa8e65d5f0313a92499815761e04b42e84ea2c3dc3685ada9"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "lm",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/lm.tar.xz",
+        "file": "lm.tar.xz",
+        "sha256": "6ebed6d30e83956392059620c7082ceea3169b3997ca3f8ae3a21b796b7cc835"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "lmroman10-bold.otf",
+        "archive_path": "fonts/opentype/public/lm/lmroman10-bold.otf",
+        "sha256": "102fe06c430a8b681b2bf6876b7cd967ae4d47b4b6b41d915eb7913b726d9fb1"
+      },
+      {
+        "file": "lmroman10-italic.otf",
+        "archive_path": "fonts/opentype/public/lm/lmroman10-italic.otf",
+        "sha256": "c1fce25075567bb8dbf2151658c3b442690041db17a2d49fc9e55905ea5b7169"
+      },
+      {
+        "file": "lmroman10-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmroman10-regular.otf",
+        "sha256": "1aa18cfefa58132c52ce5de70db1fd1154201c19cd2b2cdaffba4906a33e6852"
+      },
+      {
+        "file": "lmroman12-bold.otf",
+        "archive_path": "fonts/opentype/public/lm/lmroman12-bold.otf",
+        "sha256": "28c8782ac2b6486958b5dc7610ada7800c53546ff7f36bc65909a876e1cd338e"
+      },
+      {
+        "file": "lmroman12-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmroman12-regular.otf",
+        "sha256": "e6be218ae83e61aa8a29990d3cdc401c678c1962188cb9a4a8b6359e4f5e5870"
+      },
+      {
+        "file": "lmsans10-bold.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans10-bold.otf",
+        "sha256": "a597b710326c1a8a2c7238d808e5d38711638a72a32383478db4829d63afd687"
+      },
+      {
+        "file": "lmsans10-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans10-regular.otf",
+        "sha256": "d431b786b9b603662718e79cfe9b441f47a8b0b3e854dde89d5acb3ed7cfd682"
+      },
+      {
+        "file": "lmsans12-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans12-regular.otf",
+        "sha256": "f87ebdea035a96e8787e2c663cfcc78ce73205d37800eafe7948278e2cc7666a"
+      },
+      {
+        "file": "lmsans17-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans17-regular.otf",
+        "sha256": "f6c395a436e4fa7e88bbf1445e64b9c78ce4effba3668b13cc433077fc71a984"
+      },
+      {
+        "file": "lmsans8-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans8-regular.otf",
+        "sha256": "04f0d25ca474494cb707e752170f6c22cdcb8ae2b5fb80872143e18d5cc463f8"
+      },
+      {
+        "file": "lmsans9-regular.otf",
+        "archive_path": "fonts/opentype/public/lm/lmsans9-regular.otf",
+        "sha256": "80ef596460b7b402621780f7cd73a348efedc4cd2c6deca37da58f07ee61b85d"
+      },
+      {
+        "file": "ts1lmr.fd",
+        "archive_path": "tex/latex/lm/ts1lmr.fd",
+        "sha256": "ecda20924242346d91d241e19c89a9a36c7423dc76b1c94e4a3d4d8b51d235d7"
+      }
+    ],
+    "different_files": []
+  }
+]

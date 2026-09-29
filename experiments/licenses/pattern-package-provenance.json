@@ -1,0 +1,1550 @@
+[
+  {
+    "package": "hyphen-afrikaans",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-afrikaans.tar.xz",
+        "file": "hyphen-afrikaans.tar.xz",
+        "sha256": "2642b2e2a03f572b29f263c3f6b71d65d950f66975ada820a1aebe809ff880a3"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-af.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-af.tex",
+        "sha256": "a5aad224dd2c22e9e7d001c212b0a8684903efc6cf7860516614aca10afc42ce"
+      },
+      {
+        "file": "hyph-quote-af.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-af.tex",
+        "sha256": "80a2d5493c62f62f9df6959d4b7867d5a8158efc958d252235e00db81836b0e2"
+      },
+      {
+        "file": "hyph-af.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-af.tex",
+        "sha256": "9c413b121d989ad8f0c95c0a4e4fa3bb78d412404919e04b71f609e10a85099f"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-ancientgreek",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-ancientgreek.tar.xz",
+        "file": "hyphen-ancientgreek.tar.xz",
+        "sha256": "0d40114272be52fcc847358f0176d0567c50f26fe760ce813765fe07ecb26b22"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-grc.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-grc.tex",
+        "sha256": "08c7932549bf7f6c6fd2913feb6772706575824b24616f546afeabfc1f492ac6"
+      },
+      {
+        "file": "hyph-grc.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-grc.tex",
+        "sha256": "dee55cf442ba4f4c5655622571ee796bede243a65ef2286858b28db7f1b40d78"
+      },
+      {
+        "file": "ibyhyph.tex",
+        "archive_path": "tex/generic/hyphen/ibyhyph.tex",
+        "sha256": "b12db81b0c101b38b5570c21a560e71236dc16ea5540012394a6f700f9b9d59d"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-basque",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-basque.tar.xz",
+        "file": "hyphen-basque.tar.xz",
+        "sha256": "fbda5ccdc9869e1839af39330569bbbec34695a1e5b6905eb9ac44aff955c0ef"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-basque.source.tar.xz",
+        "file": "hyphen-basque.source.tar.xz",
+        "sha256": "e17e843c96dcdae0f32acb89a2d0f49df62d1ff73a4f26a9e1beb41bb9c4f931"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-eu.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-eu.tex",
+        "sha256": "eccbeaaad617afff54fad6bb35c3294982ff4ac3720b06c4c66d577adc174d99"
+      },
+      {
+        "file": "hyph-eu.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-eu.tex",
+        "sha256": "e080a1e42ac443d8451df46d9d6628e64e8317aa53d826f99099652aaba613d0"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-belarusian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-belarusian.tar.xz",
+        "file": "hyphen-belarusian.tar.xz",
+        "sha256": "63d5c1575d9a84b6fe871fada4dcf465d413843a64ab4e565b6e4415f6c96441"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-be.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-be.tex",
+        "sha256": "a019fb953181b941c4ff71f04c86ff9d0e3e178f7b2e7ccfa111b48370a2659a"
+      },
+      {
+        "file": "hyph-quote-be.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-be.tex",
+        "sha256": "9a055ed4d781da3111e6522862ac51d50f6670de7cf823de646f1b3bf1676b9f"
+      },
+      {
+        "file": "hyph-be.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-be.tex",
+        "sha256": "ce0c69d86e03c40bdd0ab9f4535cee2503fe2894590380e45a99974f029cea6f"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-bulgarian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-bulgarian.tar.xz",
+        "file": "hyphen-bulgarian.tar.xz",
+        "sha256": "8b6c4e8b7f4b943659d79d6643b607ae0d6df82bcb16731c7a01b3e593bbdd60"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-bg.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-bg.tex",
+        "sha256": "840416a612b28a8c7e7487dc12c81328c9133a51a86f86f01c925041354ea98f"
+      },
+      {
+        "file": "hyph-bg.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-bg.tex",
+        "sha256": "d37886f8cecea60bf829e4dd9dc1107aea8e8ee3eb92425423534bafac5f59b0"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-catalan",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-catalan.tar.xz",
+        "file": "hyphen-catalan.tar.xz",
+        "sha256": "04286e828f1c54f4c4099c142cbdf086330a5589574d7f79439c9454d9d9c791"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ca.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ca.tex",
+        "sha256": "175daa786bb191aef9312d53d47bd93edf44e5df6dd0cb0cb15736ad42c41444"
+      },
+      {
+        "file": "hyph-ca.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ca.tex",
+        "sha256": "153b51e2a9f8afdd87a8848f73f4462a902c58d597aa55c66506af65c5596e7a"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-chinese",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-chinese.tar.xz",
+        "file": "hyphen-chinese.tar.xz",
+        "sha256": "ee7bd361dbc08843733d8cee279bfd3aec5e610fd3a4b7c439668c1d3a4e1e37"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-zh-latn-pinyin.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-zh-latn-pinyin.tex",
+        "sha256": "eef5be5a705fa50598f5759017987f35b2e31334c5972042c446e5824900dc71"
+      },
+      {
+        "file": "hyph-zh-latn-pinyin.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-zh-latn-pinyin.tex",
+        "sha256": "c007e61bd59a16a00e12603b9a97968d730b955627d1aed5d856c5e425f7970e"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-churchslavonic",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-churchslavonic.tar.xz",
+        "file": "hyphen-churchslavonic.tar.xz",
+        "sha256": "9703522dac71c08b415afa4502ef7ec3d4918fc0d8aaeec48fac7c53167f80bc"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-cu.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-cu.tex",
+        "sha256": "b39d8195b52b2dffcf1a88eb81a79f6191b691c90511beda29a2e5b14b81ea6b"
+      },
+      {
+        "file": "hyph-cu.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-cu.tex",
+        "sha256": "f4636573f2e35ac367159d286bf4b8f65fb68d3bc2712b3e763ad53d498a56ca"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-coptic",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-coptic.tar.xz",
+        "file": "hyphen-coptic.tar.xz",
+        "sha256": "66983c62dd1b2413154addf32af945798ec3dd683104b5bfd454c1a2782ffbb1"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-cop.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-cop.tex",
+        "sha256": "81035bc2f5e9599b8bc50ba9d5bcd41240b948eb320b9b5c24b80c74e58f66b3"
+      },
+      {
+        "file": "hyph-cop.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-cop.tex",
+        "sha256": "e66cbaa15da902f47cf955bd654f2eb0afe2abe5d1c819db1fd8186b98c7bb40"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-croatian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-croatian.tar.xz",
+        "file": "hyphen-croatian.tar.xz",
+        "sha256": "f383cac35abbc18eb848f53c128cdd870ab3c15fb57e094e0d431a66b821af3b"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-hr.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-hr.tex",
+        "sha256": "0baadea799304f1b80dfa08c97a99d5cf58293b625293846080f94343ca0538f"
+      },
+      {
+        "file": "hyph-hr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-hr.tex",
+        "sha256": "69d684289c626c2576678112699c960d5821b52e7addbd473c0e8d0ef0c1694e"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-danish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-danish.tar.xz",
+        "file": "hyphen-danish.tar.xz",
+        "sha256": "80372bc2940eb93a75e2f4bd0dcd0ce93538ad3f287ec1c50881a01c3814c2ef"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-da.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-da.tex",
+        "sha256": "5e57a6f6d2ab2bbbf34ea213487ae1e76031516427c5a9ef8d15fa54c5c9d50d"
+      },
+      {
+        "file": "hyph-da.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-da.tex",
+        "sha256": "23e0a50f0c20d632be06f973e700323463961eac737bb14f6c3787675a4f5575"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-dutch",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-dutch.tar.xz",
+        "file": "hyphen-dutch.tar.xz",
+        "sha256": "2df4c48a5b5c9808aba62a4e5a61e2ce1dcbf0a0f6fb59abb259d1385b03df7d"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-nl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-nl.tex",
+        "sha256": "bcb8585191394743e5a391a211ef520b59ebdcc99846a4c0bfab7cf99070f1ef"
+      },
+      {
+        "file": "hyph-nl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-nl.tex",
+        "sha256": "c3749c79c435edc8273b701148462dc3751f38f4d4e4381f7850ae4432a0a5f4"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-english",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-english.tar.xz",
+        "file": "hyphen-english.tar.xz",
+        "sha256": "ae3816ae053dbcebda45195d5df0063aaf9162878dc1efc2dfadf9b9a6b33ddc"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-en-gb.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-en-gb.tex",
+        "sha256": "f79b49f8146271eab67a01e568262ebe0d817bfc13f8aec25ce311d6177b624f"
+      },
+      {
+        "file": "loadhyph-en-us.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-en-us.tex",
+        "sha256": "fc9ed1c52e4e909a31d0a42c0c0f423c9e7b622ae7878ed47f1883e48ac53d21"
+      },
+      {
+        "file": "hyph-en-gb.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-en-gb.tex",
+        "sha256": "e95bb4ab350f620c41c231c4785d7bdb4f91949d3e631b30e08b3ead3c340a52"
+      },
+      {
+        "file": "hyph-en-us.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-en-us.tex",
+        "sha256": "f4ffcd96c5cbc886bdad23f95dcae8edc3cd3620eae62f7946eceda97c4e68f8"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-esperanto",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-esperanto.tar.xz",
+        "file": "hyphen-esperanto.tar.xz",
+        "sha256": "6c1ba466b0aaf557e9aa94cba3be3634585f5e95300389dcd7a9e4c12a817e42"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-eo.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-eo.tex",
+        "sha256": "5e7c2ccef97aecd22dd3deb4c677912de6678da05764d4ba4e3ccf06e3a49068"
+      },
+      {
+        "file": "hyph-eo.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-eo.tex",
+        "sha256": "6892e3758fd35a1cb509556bb06fcb008eda3e975a867ee87eb828f204460d18"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-estonian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-estonian.tar.xz",
+        "file": "hyphen-estonian.tar.xz",
+        "sha256": "230bbbc695b2c5b0232fa2fe8e79f32193e3c3b7a26fc18469d208b04fe88a9e"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-et.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-et.tex",
+        "sha256": "c766f3e9cbb65ad0b11f7beb3c84c02115f7c4686dad3be08332874f4eaa8fbb"
+      },
+      {
+        "file": "hyph-et.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-et.tex",
+        "sha256": "617abc528446e33c1690a3d13ae7629292d2f00557b1b4ec96cb2a1d790ac090"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-ethiopic",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-ethiopic.tar.xz",
+        "file": "hyphen-ethiopic.tar.xz",
+        "sha256": "c0d8c7da8afc978c8aa2ae18791e9b1f12a7ebc4e00c11f632293752584a058e"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-ethiopic.source.tar.xz",
+        "file": "hyphen-ethiopic.source.tar.xz",
+        "sha256": "78fda8ac4e519ded07aff9dff67c41d9621f056ba3b5ace01cdf9eb1cba4a44e"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-mul-ethi.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-mul-ethi.tex",
+        "sha256": "98122d76bbf7597db51c8d34557d678de5cead25eb55d17a4736596be027b284"
+      },
+      {
+        "file": "hyph-mul-ethi.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-mul-ethi.tex",
+        "sha256": "df702eec647db16b37056d7850b066fb7e006a0c9753006e2cd761f19f642bff"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-finnish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-finnish.tar.xz",
+        "file": "hyphen-finnish.tar.xz",
+        "sha256": "5d95566b63abbc2f0dff76aa54d4382e38fd994eb055fb2887275433f50b44c7"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-fi-x-school.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-fi-x-school.tex",
+        "sha256": "8affc6e962e8ec85a08e478e31ac503ddcb7b8a75dcaf7fb2cf48400b2c94465"
+      },
+      {
+        "file": "loadhyph-fi.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-fi.tex",
+        "sha256": "6ee635777b5ce280e323aeaef1fac8be8fb4f6492f4d5faa5b08d6a4252bb7c9"
+      },
+      {
+        "file": "hyph-fi-x-school.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-fi-x-school.tex",
+        "sha256": "264a2ba2ab5237246f0bd902c7b3f111b03662ddd55c4dab03a9897e47e5491c"
+      },
+      {
+        "file": "hyph-fi.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-fi.tex",
+        "sha256": "cf68be5eb003d299f85f2b7185f31d8ff5799c19dfad3f0300eaf9843e9cc8d3"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-french",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-french.tar.xz",
+        "file": "hyphen-french.tar.xz",
+        "sha256": "2364840c0774c675f22a49453cf555b7b7988cc3a9a02e408c6c196b601e62f8"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-fr.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-fr.tex",
+        "sha256": "a6180a6456b37c37fd80e5fed6c8366c7694c0816f75b71464ddad5e062bed05"
+      },
+      {
+        "file": "hyph-quote-fr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-fr.tex",
+        "sha256": "708975d63ba0777eed42b57046d4514c88170c1c924ec714837870d753bd794d"
+      },
+      {
+        "file": "hyph-fr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-fr.tex",
+        "sha256": "526cad6fe8f52fcd3caa3fcaf667cb1740cfc14bca198680e00dc343a84594de"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-friulan",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-friulan.tar.xz",
+        "file": "hyphen-friulan.tar.xz",
+        "sha256": "b68fb719b04df9d0d2d9b8a8f0768c84cdb94d0f0f72ae8401326e8ed3c76aa6"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-fur.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-fur.tex",
+        "sha256": "6540ab775fb5fccb2bcfe490ec1d2a5e0a77bc4d506ec05d04d7b505651bae81"
+      },
+      {
+        "file": "hyph-quote-fur.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-fur.tex",
+        "sha256": "6d50da6af4bb9aaf13d4bb26692421056c7af508d71f5e9940eb5b85959182f5"
+      },
+      {
+        "file": "hyph-fur.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-fur.tex",
+        "sha256": "1987a744179d443677258f9ac0ef941fd2673e235aa576c20da64e352c95f6aa"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-galician",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-galician.tar.xz",
+        "file": "hyphen-galician.tar.xz",
+        "sha256": "46d98d15ed22b0770818900535c3938518ddb7a0162d6c3ea4acfa8645b7446f"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-galician.source.tar.xz",
+        "file": "hyphen-galician.source.tar.xz",
+        "sha256": "8c19a7e7decb06f225af3f09457f10aee0015473d306e8232b68fa62ce9011ed"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-gl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-gl.tex",
+        "sha256": "5d99aee8b934fe80ee6bdfb227ddff0051959fa4742300061f90eb7e1e8bdb39"
+      },
+      {
+        "file": "hyph-gl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-gl.tex",
+        "sha256": "a0756f747765a075edd1ee7d2be8fcf9ff8068f554166a79f5a760659307fde3"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-georgian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-georgian.tar.xz",
+        "file": "hyphen-georgian.tar.xz",
+        "sha256": "9f955cb6c2fb6b217503b53e9b3120f842c801798181eb5fbbd100921404189f"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ka.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ka.tex",
+        "sha256": "af388325534fb4fd9f43dbd93e104afb1003b35b6df57ce4183031244e7fac48"
+      },
+      {
+        "file": "hyph-ka.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ka.tex",
+        "sha256": "8044f2b27b802b996209cdbf8594f4c2fbf6f7a3cbb142eb529ddf2a50bc1e3b"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-german",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-german.tar.xz",
+        "file": "hyphen-german.tar.xz",
+        "sha256": "5949664e1e6b8d959d19145e1f2fb38ae46ba4c2af54adfe8b91c709f3200221"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-de-1901.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-de-1901.tex",
+        "sha256": "dd90647d1078f6de0dd48228518f531fddd0414658333996c889137257b3ce3d"
+      },
+      {
+        "file": "loadhyph-de-1996.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-de-1996.tex",
+        "sha256": "0ad838f07ef23416d4b8ced7f4c230563f3a0959f0b6f81cfd66e88a2c675733"
+      },
+      {
+        "file": "loadhyph-de-ch-1901.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-de-ch-1901.tex",
+        "sha256": "2c5757bab22bdbf1e82a33b79d47784f179e6961bea445a994c1867133d21d22"
+      },
+      {
+        "file": "hyph-de-1901.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-de-1901.tex",
+        "sha256": "0ddaf40840131da550564a606d9f806f001ca3e72e67475ef3c4f79a1ab1e9c9"
+      },
+      {
+        "file": "hyph-de-1996.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-de-1996.tex",
+        "sha256": "162ae879d2e61112bf7ab37b2bf47027e3df409f2641fb9b8cd6e6388c6d547d"
+      },
+      {
+        "file": "hyph-de-ch-1901.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-de-ch-1901.tex",
+        "sha256": "8ec39fd63d22fc935fe2a2839dd73c88d061b51225e7218a6b90e67be7c2f937"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-greek",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-greek.tar.xz",
+        "file": "hyphen-greek.tar.xz",
+        "sha256": "7f8b8c1ef2cb1c7e6af4aef760f81a302c94357090d727d8f9f938df4107e4da"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-el-monoton.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-el-monoton.tex",
+        "sha256": "ed2fbc731e08e263959548008e9c39288c93bde48a39ab3f8613c74b55f8ff65"
+      },
+      {
+        "file": "loadhyph-el-polyton.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-el-polyton.tex",
+        "sha256": "f64a7db14ed565fcfbec6acad4dee8faac4cc5a3f8197f9229715547cb69820e"
+      },
+      {
+        "file": "hyph-el-monoton.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-el-monoton.tex",
+        "sha256": "abfd086443070d6c7e89710dc87429dce51bda1b55a6afd03e43f1d1cd04ff4a"
+      },
+      {
+        "file": "hyph-el-polyton.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-el-polyton.tex",
+        "sha256": "716cc8bd2e46a52e66a5d86ebe2f886a222d1ce0941378c7a5ab56bd8eee43f7"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-hungarian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-hungarian.tar.xz",
+        "file": "hyphen-hungarian.tar.xz",
+        "sha256": "81f05d43c9cbb566f37b183c5fd538824f094057699741bf0fa6194d958b2dcb"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-hu.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-hu.tex",
+        "sha256": "ed49bb9f763b55360c671b9619a43c207e8c2e36710d21ee55e739fdaece3f3e"
+      },
+      {
+        "file": "hyph-hu.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-hu.tex",
+        "sha256": "c6f02d2b6f49d5068035f7bbc91aaeefd0b691ff806c17539a033a716c374692"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-icelandic",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-icelandic.tar.xz",
+        "file": "hyphen-icelandic.tar.xz",
+        "sha256": "acb73bef21ffcd370147c24f2ecea766538b10def93bf86c139ce74ae2044ddb"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-is.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-is.tex",
+        "sha256": "82e2a9411d09cdd8086b810f630aff051bb2b9bd13af92eccb6a42254b5f4729"
+      },
+      {
+        "file": "hyph-is.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-is.tex",
+        "sha256": "2707969ebe34a9ddfd861aaef40619e75ac78453718a56401aed91c5cbdcfcec"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-indic",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-indic.tar.xz",
+        "file": "hyphen-indic.tar.xz",
+        "sha256": "d3438525989cbd30a91ed12372384a6ba46b0fd7db09611016634be4afedb9f3"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-as.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-as.tex",
+        "sha256": "417ff8e76faddd7154db8f9360b3244c091216d9003ee8527cc8045ec2c66f7e"
+      },
+      {
+        "file": "loadhyph-bn.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-bn.tex",
+        "sha256": "34718be2d55b622cb30614f3730073386bf319403b05e52420ec615a95e54d05"
+      },
+      {
+        "file": "loadhyph-gu.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-gu.tex",
+        "sha256": "453f8ae9517d7f19de52f69ca7873e595be14cec8f2f92f3c596566bca4df2f6"
+      },
+      {
+        "file": "loadhyph-hi.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-hi.tex",
+        "sha256": "b5e50dcef1a49ff2acb8cc57f046ce34817bcf9789011147af86ca7dd6b7dcc1"
+      },
+      {
+        "file": "loadhyph-kn.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-kn.tex",
+        "sha256": "feb851c91571c86b264f5206f78591fea29be7086b13008a0917ece05f18e11b"
+      },
+      {
+        "file": "loadhyph-ml.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ml.tex",
+        "sha256": "2f778adae962bd27184780ebc8f075a22f0d5d9b8235089fdad4ab6f04cc1142"
+      },
+      {
+        "file": "loadhyph-mr.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-mr.tex",
+        "sha256": "b22f6ba8e4e25b58eb0641ec54f398e9f11e3f394f923d986484a5c7ad4d6f23"
+      },
+      {
+        "file": "loadhyph-or.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-or.tex",
+        "sha256": "940d94d70e19ca0403a5311f7c5b3ef834542025915766b9abdf15c5788488ee"
+      },
+      {
+        "file": "loadhyph-pa.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-pa.tex",
+        "sha256": "e742577a3ab4fed70d0dd972d1890ff7f75659e844ffa7b99a20951b4e88da5f"
+      },
+      {
+        "file": "loadhyph-pi.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-pi.tex",
+        "sha256": "cf13042fa65c08101e4cb6b4cbfc5da94db0d84cd4f4147979cfc9b2ed9c3ce4"
+      },
+      {
+        "file": "loadhyph-ta.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ta.tex",
+        "sha256": "1c55fab31c1d6642864b542b8b9acaaf1d3bd29bccea193f0f48d34279f32538"
+      },
+      {
+        "file": "loadhyph-te.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-te.tex",
+        "sha256": "46e6c837db5cb8c2c14dc747fd6b5997a26a320dffa905ba3364913aca02261f"
+      },
+      {
+        "file": "hyph-as.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-as.tex",
+        "sha256": "c0d23a0364983038ee73fdc9ee54dc8faa23d38111991b7c5c2b31833f22a050"
+      },
+      {
+        "file": "hyph-bn.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-bn.tex",
+        "sha256": "b44ca65373a702020d5ffbf1acdffa78f5b4d3259b4f18a12a88b2a71ae2445d"
+      },
+      {
+        "file": "hyph-gu.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-gu.tex",
+        "sha256": "7b9f11a5fb0ab27bad7ed3a0b9dbb1ef33d67050069610cc7630de35d2a34cda"
+      },
+      {
+        "file": "hyph-hi.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-hi.tex",
+        "sha256": "a55a2766d7e1c2d36991f4fccfef639016721b41593029043c2d13bc340ef632"
+      },
+      {
+        "file": "hyph-kn.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-kn.tex",
+        "sha256": "2f88ea093e99239f7c22a2b26455fcebec7a9dbcbfbfd73683582ea3af5fc99c"
+      },
+      {
+        "file": "hyph-ml.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ml.tex",
+        "sha256": "b37b1446d79587003d85887731df822aa01afea2f6d8cc5728d55e00a92edb8d"
+      },
+      {
+        "file": "hyph-mr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-mr.tex",
+        "sha256": "dd033b789f381081fbf05a976e34790b566f40ddcd276790f581b15b62eca844"
+      },
+      {
+        "file": "hyph-or.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-or.tex",
+        "sha256": "a028fb9f5554f709cbc3f073873e5771b2b669e3725c9888d917c38152d8ea0b"
+      },
+      {
+        "file": "hyph-pa.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-pa.tex",
+        "sha256": "7582a5ac2e6959d64c13b3f2cee41222c810f1e0ed6b29c870da657fee09442a"
+      },
+      {
+        "file": "hyph-pi.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-pi.tex",
+        "sha256": "d27f9141dc55bfff0a00a204fd8af2031a1fd23ead83836ffec61debf4eb9033"
+      },
+      {
+        "file": "hyph-ta.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ta.tex",
+        "sha256": "7154ee4519ae5fcebbb2c1d05fd7f19820b53db8b84dbaea34e6a6f6a8fd4642"
+      },
+      {
+        "file": "hyph-te.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-te.tex",
+        "sha256": "101a8f1664ea5a7520e06f07f0275c9bdf6ad3de63d6f74c4f44fd1369396ccd"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-interlingua",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-interlingua.tar.xz",
+        "file": "hyphen-interlingua.tar.xz",
+        "sha256": "cbe7e1e53e2ec23cedb1f843c3fff43832c8455806aefd1c6e2c00abf1d6f7cb"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ia.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ia.tex",
+        "sha256": "cd3b533cf647edafde5bdeedb193003cdd8b2c1480a5a1785bc75664db34589c"
+      },
+      {
+        "file": "hyph-ia.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ia.tex",
+        "sha256": "c2e570831d02831f2c2c26e17ebe68d81c02a1c2cfbf4ac9d182610d6a0c6e3d"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-irish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-irish.tar.xz",
+        "file": "hyphen-irish.tar.xz",
+        "sha256": "0002065a95d76652d6a162f7cbd8f33b087ef3a9c2120580cf6e1d36220e42c4"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ga.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ga.tex",
+        "sha256": "73ebe8a7770b2d7862e96c588f656f78699b9ada41d79a64c0ecfa4579e632d1"
+      },
+      {
+        "file": "hyph-ga.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ga.tex",
+        "sha256": "7856cb341fd978b910c3807aa6918b39791e2f507d803253daccb5c71bbc02c6"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-italian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-italian.tar.xz",
+        "file": "hyphen-italian.tar.xz",
+        "sha256": "7b9f2a6984dee9c0c1e8d07c365b0bb88442eaa4d49b179f88016782e7006942"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-it.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-it.tex",
+        "sha256": "9e1497131da40926e9a1b5b70635bf6dccaea012509c8dbc0245489cd3df48b7"
+      },
+      {
+        "file": "hyph-quote-it.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-it.tex",
+        "sha256": "063fe294c0389c1b17383135a2d109fef2bb9bdc8e018e18113ae615576a60bd"
+      },
+      {
+        "file": "hyph-it.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-it.tex",
+        "sha256": "6ce56ed6ed2ca7c0688838e366e6595e0429f984f4fc6e96ec045cebb1e76a47"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-kurmanji",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-kurmanji.tar.xz",
+        "file": "hyphen-kurmanji.tar.xz",
+        "sha256": "cf371914edc6b827650fdafa27be4e7c0c210fa5e7a20694a5e4c075460e9480"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-kmr.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-kmr.tex",
+        "sha256": "3fc2dcc231fdcf1fbea89dd678cefccc2c7446cd1a56358aa36d298bc888b841"
+      },
+      {
+        "file": "hyph-kmr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-kmr.tex",
+        "sha256": "2299d69ff2e093291338275b20fa85a35c62abc156835647d5d91a9dfad476eb"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-latin",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-latin.tar.xz",
+        "file": "hyphen-latin.tar.xz",
+        "sha256": "f7aef7cb8a8cca061d5f95a5ca00a40a862381989695320ce17d1bcbc508d04c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-la-x-classic.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-la-x-classic.tex",
+        "sha256": "ecd5b7d5572a0032cea6ff682be89169fed4eab8b9db97709ff176b47b661d9c"
+      },
+      {
+        "file": "loadhyph-la-x-liturgic.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-la-x-liturgic.tex",
+        "sha256": "9fbeb42d27f532d77a8841f22a62f6a11f7a9cf865447cae2fecf6eb3f85aed9"
+      },
+      {
+        "file": "loadhyph-la.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-la.tex",
+        "sha256": "71ff015d8acdab67451e3cc2322f756b30eedf0dd9bb42857f52f9c09e350a98"
+      },
+      {
+        "file": "hyph-la-x-classic.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-la-x-classic.tex",
+        "sha256": "68257e2ce6ee077f635e38c700734ede7d1ebb4f4708546b878a0bee68bd7d8f"
+      },
+      {
+        "file": "hyph-la-x-liturgic.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-la-x-liturgic.tex",
+        "sha256": "60fea9390492d86bf701f77da8ac818a027da7ea9badb2965e9889ddeb95a5d0"
+      },
+      {
+        "file": "hyph-la.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-la.tex",
+        "sha256": "84e0be1877beaf6d1d7a83d5639fb65a0e0645cd2447b0dbccfa5e63565abdfd"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-lithuanian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-lithuanian.tar.xz",
+        "file": "hyphen-lithuanian.tar.xz",
+        "sha256": "9c30ad6dfa5cddd512630071f0b9f28170dc2ae92d6c30cff61053c3feb89cb1"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-lt.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-lt.tex",
+        "sha256": "912c29539d3298e221a1c68b8348dbe772be79570b2a193bc1131f46423e5e70"
+      },
+      {
+        "file": "hyph-lt.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-lt.tex",
+        "sha256": "6162b566620367abb827ba1457567e7a79680596919886a7138e48b346e983d1"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-mongolian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-mongolian.tar.xz",
+        "file": "hyphen-mongolian.tar.xz",
+        "sha256": "af02f6617dd3e49e0bb7c399b9f0a94159af56fe2e492cc954c5982db6f9799c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-mn-cyrl-x-lmc.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-mn-cyrl-x-lmc.tex",
+        "sha256": "365268856ade0363c499273fd3585f1d5fe9cdd0fb4705ed4bdd0c4d21f539a0"
+      },
+      {
+        "file": "loadhyph-mn-cyrl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-mn-cyrl.tex",
+        "sha256": "93d1eddd54976804afc9f8ceb4d9bd472955cc3445f47031ecfe3ffc3af7e2df"
+      },
+      {
+        "file": "hyph-mn-cyrl-x-lmc.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-mn-cyrl-x-lmc.tex",
+        "sha256": "fd41a62b83e0229b188756eb0afe27555bf425f94354a8adeadc23406676c238"
+      },
+      {
+        "file": "hyph-mn-cyrl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-mn-cyrl.tex",
+        "sha256": "22903e12e25e5348d7c2285f8d3173215540296e1b47f38515936618993988fa"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-norwegian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-norwegian.tar.xz",
+        "file": "hyphen-norwegian.tar.xz",
+        "sha256": "25cc1ce8b355fdffc97cb734608e98044aa53fc3374556bda3a88ed7f528f7de"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-nb.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-nb.tex",
+        "sha256": "3391a46e9a38de1c515df413627ba5578c3fd330fe970192612a5652a12e5f41"
+      },
+      {
+        "file": "loadhyph-nn.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-nn.tex",
+        "sha256": "c2bbeb64f76afcf813ea2bc81da05137e02975623e01bae7fbf5b8ee3f1367dc"
+      },
+      {
+        "file": "hyph-nb.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-nb.tex",
+        "sha256": "b111264f46d59089d4cf96691c66b637166f5aae5b86719a5b9fe32737cc0169"
+      },
+      {
+        "file": "hyph-nn.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-nn.tex",
+        "sha256": "f217dca0e815443bc9feac27d9eb48cf795b3f4f222afacf7f87fb6c2b0e196e"
+      },
+      {
+        "file": "hyph-no.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-no.tex",
+        "sha256": "05a2ac5fbf88bdc78c580e5cb8a158e6aa760d13756604f9523aa99feec3ec65"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-occitan",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-occitan.tar.xz",
+        "file": "hyphen-occitan.tar.xz",
+        "sha256": "c7ce8fecebfc75812146e5c39c4127c0a30802903288b5c0924868718df04286"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-oc.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-oc.tex",
+        "sha256": "1a316945c723748b56d74a44d6d656750c83185407fb5e66f3b0f684401862e5"
+      },
+      {
+        "file": "hyph-quote-oc.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-oc.tex",
+        "sha256": "063fe294c0389c1b17383135a2d109fef2bb9bdc8e018e18113ae615576a60bd"
+      },
+      {
+        "file": "hyph-oc.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-oc.tex",
+        "sha256": "0a968a3588697da7c0ef13f219f45973fc75c08e8ee9253ff1a4bf567167c8fb"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-piedmontese",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-piedmontese.tar.xz",
+        "file": "hyphen-piedmontese.tar.xz",
+        "sha256": "96403e9d04add9e2b8d2b1dbac577a54db7ddb63f7bcd8e7c59e9b88196db239"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-pms.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-pms.tex",
+        "sha256": "3825f71105f9b7b51b2c4e000204970622ea6755326759867079bab74d233024"
+      },
+      {
+        "file": "hyph-quote-pms.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-pms.tex",
+        "sha256": "bbdf4a6a82ffcb11fd4e155c132250bad1815bdd1958f65b0ce8a8b16faeb941"
+      },
+      {
+        "file": "hyph-pms.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-pms.tex",
+        "sha256": "a5af2db65a7bc27318c3d0300d1a3ef332997a6d447a572aa728e0710ac3243e"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-polish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-polish.tar.xz",
+        "file": "hyphen-polish.tar.xz",
+        "sha256": "92d73411b2a1865f2bab8074e00029e9ebbd1f934c927ed4efb8eec6ad40f0cc"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-pl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-pl.tex",
+        "sha256": "6a0d24ab87f1b6da2d5ec92d48f26a6e9847d49c8d4b158040feef0e860831b0"
+      },
+      {
+        "file": "hyph-pl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-pl.tex",
+        "sha256": "83ddbbd21bc06a44bc4f4a4c49c38782e809cff5f026b764c044daa29e818843"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-portuguese",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-portuguese.tar.xz",
+        "file": "hyphen-portuguese.tar.xz",
+        "sha256": "e50623de9b1b585fb9774c25fcf81630eb90e96223e0076b8ee236fa3bf54fdc"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-pt.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-pt.tex",
+        "sha256": "87c3428d0bae37568adc07479dacbea5a4ba0bb422d52ab82fc3c8823d7c5eb8"
+      },
+      {
+        "file": "hyph-pt.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-pt.tex",
+        "sha256": "59fe5ef9929d5f82fb6fff2df4119ba30fcbb9c6a119953f8561679193e3c53d"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-romanian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-romanian.tar.xz",
+        "file": "hyphen-romanian.tar.xz",
+        "sha256": "aba5914693d200e37b78cf667a9d213a462577fdeda7d692b959e3bee9bf6e16"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ro.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ro.tex",
+        "sha256": "2688729d0648204273954d5ee044fe37aa0388414c1d49918727457db2749a0f"
+      },
+      {
+        "file": "hyph-ro.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ro.tex",
+        "sha256": "6f09c53cc65cb6fcf4435396371c49bf50aaa88e40af7931a9e6bccc405f1fab"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-romansh",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-romansh.tar.xz",
+        "file": "hyphen-romansh.tar.xz",
+        "sha256": "a9e3a13a162b0d7e3d9eee9395af403af989cfc19d0612014f0f9f557c3c9c87"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-rm.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-rm.tex",
+        "sha256": "14fff5ecc58d1a7e1fa644bc79a72465821716e8afed9de7afe67a239dffae1b"
+      },
+      {
+        "file": "hyph-quote-rm.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-rm.tex",
+        "sha256": "3af69b37f4b4b0f524d92fbe51262b9983fb4b3ecd62bdabdc4ea70c85167f76"
+      },
+      {
+        "file": "hyph-rm.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-rm.tex",
+        "sha256": "c413cce7a61040348c271775786c63005050a716b69b11d2483a379d1cf44726"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-russian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-russian.tar.xz",
+        "file": "hyphen-russian.tar.xz",
+        "sha256": "5acf3b40939181a6244c30986c5a283015f8dae8cc249b6f499f8e7169d454f2"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-ru.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-ru.tex",
+        "sha256": "c98ac4dfaed22d86afb806bf876641db4c7dc9b02b8e40dd265654c978bd7b81"
+      },
+      {
+        "file": "hyph-ru.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-ru.tex",
+        "sha256": "ce988fcc66e5e29d7474df5ab5b489d3f52a50ebccf570997f992d84221b922a"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-sanskrit",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-sanskrit.tar.xz",
+        "file": "hyphen-sanskrit.tar.xz",
+        "sha256": "79e76551df4e2f38fd2ed85b6c36e17653c3d765a9a5b126de2df3c6baf2718c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-sa.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sa.tex",
+        "sha256": "466259ac8ef63d0443f4b0ea8d2d9a9af9bfe117bf59f55fd6c448c264d918e4"
+      },
+      {
+        "file": "hyph-sa.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sa.tex",
+        "sha256": "7f895b18be9ef598dfbc490ed19a24200712652eb0c5068f5c6fd88c363759c8"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-serbian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-serbian.tar.xz",
+        "file": "hyphen-serbian.tar.xz",
+        "sha256": "4317b164ea9044a4a37ac52d1a85d19e04818c44eff14f37c0c1259536fe7f84"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-sr-cyrl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sr-cyrl.tex",
+        "sha256": "c53cf8518364a0a6f86c202a13127adbb5b147b5c7f7a8a595ea160f1310aed3"
+      },
+      {
+        "file": "loadhyph-sr-latn.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sr-latn.tex",
+        "sha256": "7a9f055b2d900f8ced36dd2c2d3ff629aecec34be726f98682069402bf4b4c43"
+      },
+      {
+        "file": "hyph-sh-cyrl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sh-cyrl.tex",
+        "sha256": "9b0f8f489868d3f98d4dec8a5d71f465ad5a70afde6857c6c2d79ec0344618fc"
+      },
+      {
+        "file": "hyph-sh-latn.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sh-latn.tex",
+        "sha256": "5aea49c845df3c21b95e417abfc28349909a4c9565523702055a122153486a4a"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-slovak",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-slovak.tar.xz",
+        "file": "hyphen-slovak.tar.xz",
+        "sha256": "09f82b9d0f455100b3b965bbaaefe8fe03a774735f9119fac6b36e810e9542b8"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-sk.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sk.tex",
+        "sha256": "cc5a71990cd3967880ed0bd8b8302af509f743f9d6b8cb4b92f868e0dfa45def"
+      }
+    ],
+    "different_files": [
+      {
+        "file": "hyph-sk.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sk.tex",
+        "sha256": "55b51962da5ad3f48ff62007006ecb7768bf2665e407c920e968d08b10b40369"
+      }
+    ]
+  },
+  {
+    "package": "hyphen-slovenian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-slovenian.tar.xz",
+        "file": "hyphen-slovenian.tar.xz",
+        "sha256": "3b270124593ae8ddff6a8294c3961982129431103d6e6cf722d7b8a091796d18"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-sl.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sl.tex",
+        "sha256": "03414b763c952ed508e7486bdaddc0745af8bb3bcdead33f767938f4feb0a9d5"
+      },
+      {
+        "file": "hyph-sl.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sl.tex",
+        "sha256": "27da982d03b881fe84f1c4fb42ba0948f33e01a3a44eaa5ebd07e01d20c72691"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-spanish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-spanish.tar.xz",
+        "file": "hyphen-spanish.tar.xz",
+        "sha256": "f2d373c7cee77463483ef6840b10e31c6f9915fa8c1acf25d2d263996a928823"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-spanish.source.tar.xz",
+        "file": "hyphen-spanish.source.tar.xz",
+        "sha256": "6b1a56d93e0b9aa14d5a35e6741b67584db6c56702e9f02bc1282486d5a4f905"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-es.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex",
+        "sha256": "503984db3fd0c1a8167aebf6cde8de8dadb6d5a24c153963cae5f8138e6c24ad"
+      },
+      {
+        "file": "hyph-es.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-es.tex",
+        "sha256": "6a2e5f39a991a23d1cd8a23dbd0f6fe96a9f07561a6695f4f3320f47030e236c"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-swedish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-swedish.tar.xz",
+        "file": "hyphen-swedish.tar.xz",
+        "sha256": "d8d7f2a0d5b200bc22e67a15a6bd11027d65351f35c826a4760bac4920676bee"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-sv.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-sv.tex",
+        "sha256": "257938b3f7233ccf186e4d66cfa1b68f27d98bddc3188a81b7d7c8e5e98102cb"
+      },
+      {
+        "file": "hyph-sv.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-sv.tex",
+        "sha256": "102253382bd91cdb7535de5c20744254c9ac9aaa4ca12ed420eb835e5004c0b3"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-thai",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-thai.tar.xz",
+        "file": "hyphen-thai.tar.xz",
+        "sha256": "36db22eb096429d4175273bb2a92cbc915e44e6813ad733737e0206d8be1421f"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-th.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-th.tex",
+        "sha256": "8832d0d3991c1024760682da8c709deb27132cba44a74f9d197df8037b2f41fb"
+      },
+      {
+        "file": "hyph-th.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-th.tex",
+        "sha256": "2d59071f549c68419362e9489044f67cc94bd395c004479afce9dc37338fc0c5"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-turkish",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-turkish.tar.xz",
+        "file": "hyphen-turkish.tar.xz",
+        "sha256": "ab86a1ff47aaf43c70c2387045630d7842893993af8bdd4f0986d2f34b588889"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-turkish.source.tar.xz",
+        "file": "hyphen-turkish.source.tar.xz",
+        "sha256": "5aa24e8fab6a19d044ad2dfe62ca0f8ac139751e34e5f02b3af08433e86f531e"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-tr.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-tr.tex",
+        "sha256": "e8ff56c073a30d5e3b068313a15bafb0a12c9be609eeed483de72074d2aa54eb"
+      },
+      {
+        "file": "hyph-tr.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-tr.tex",
+        "sha256": "9243b6fc1426b07dae71c6136bd7d4a907e01a36ab6326f349ee6c310e6bb2b5"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-turkmen",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-turkmen.tar.xz",
+        "file": "hyphen-turkmen.tar.xz",
+        "sha256": "66cf28832cac10373e5ff007e938bc70eeabe6a25b88fd9984276d92204e369e"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-turkmen.source.tar.xz",
+        "file": "hyphen-turkmen.source.tar.xz",
+        "sha256": "8d69972c7bd41717cfc80bf9a8433d07c1c5e7d21bd73c2d96a9b9b38fe69bd9"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-tk.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-tk.tex",
+        "sha256": "fa2d534858fad7b9f10b60111bc22871f51ab847f2406812a98b8920b434b037"
+      },
+      {
+        "file": "hyph-tk.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-tk.tex",
+        "sha256": "801ef59c14dab4fec0a9ae178632e63b8ef9f0362dcea74f4a3689a4a7908690"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-ukrainian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-ukrainian.tar.xz",
+        "file": "hyphen-ukrainian.tar.xz",
+        "sha256": "6f0774bce6ee3e037e6829518a6d7a6594473d5b396b68e7ecb7d2ce7fb453c2"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-uk.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-uk.tex",
+        "sha256": "8067154e77d85980b4010d876d23e02ce2e3b7b25751bb6603ca82ff3656f928"
+      },
+      {
+        "file": "hyph-quote-uk.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/quote/hyph-quote-uk.tex",
+        "sha256": "e41dcb8e394702c3958128cbfe5a9e50ffd22a4a3de72809720fba5b6f8fe73e"
+      },
+      {
+        "file": "hyph-uk.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-uk.tex",
+        "sha256": "05fdacf5a771f5c528dd65f6f67b63fedb6f6caf768902c24ec81676e500966f"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-uppersorbian",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-uppersorbian.tar.xz",
+        "file": "hyphen-uppersorbian.tar.xz",
+        "sha256": "40e61a32fd65ab769283a6fed20ffbb61982f134cae3f30ac48dda614aab1cac"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-hsb.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-hsb.tex",
+        "sha256": "bd15223abf31b7729286a4ffc70d5c0a5414abbed054a91bdb6f7a38c01519fd"
+      },
+      {
+        "file": "hyph-hsb.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-hsb.tex",
+        "sha256": "0b961d89317523960f41b2f32742abf807a253717200d9756b8d69c12f895fcf"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-welsh",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/hyphen-welsh.tar.xz",
+        "file": "hyphen-welsh.tar.xz",
+        "sha256": "0d3b61db2ef0f956d39f7c5a07234b6dc3023bd0c456ff53279ad3aac781eb46"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "loadhyph-cy.tex",
+        "archive_path": "tex/generic/hyph-utf8/loadhyph/loadhyph-cy.tex",
+        "sha256": "b7c20c72b80d07f2f99571c952c3e51b68013492cd7d5fb0a8ff1f41c4c53914"
+      },
+      {
+        "file": "hyph-cy.tex",
+        "archive_path": "tex/generic/hyph-utf8/patterns/tex/hyph-cy.tex",
+        "sha256": "22c4d441e790c035bd208c4cccbe9a8254ab81c3da0ca0a8b062f8ed34f3e14c"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "dehyph-exptl",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/archive/dehyph-exptl.tar.xz",
+        "file": "dehyph-exptl.tar.xz",
+        "sha256": "e63c0440f0929481f03c9179afdd55efe801843d78da4fd40d0d4d657c13c52f"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "dehyphn-x-2022-03-16.pat",
+        "archive_path": "tex/generic/dehyph-exptl/dehyphn-x-2022-03-16.pat",
+        "sha256": "72e371729891000698d0e29b5514625733e5529ca5d619bc706f69c81778052f"
+      },
+      {
+        "file": "dehyphn-x-2022-03-16.tex",
+        "archive_path": "tex/generic/dehyph-exptl/dehyphn-x-2022-03-16.tex",
+        "sha256": "2909d9b18ab2a94854c5c8270eae7b51788d0edb849985fd04fa602d7aa0adc6"
+      },
+      {
+        "file": "dehypht-x-2022-03-16.pat",
+        "archive_path": "tex/generic/dehyph-exptl/dehypht-x-2022-03-16.pat",
+        "sha256": "063c15918921ad5d4a95a73853453929a14df34ced1bd8b9ae1113fc34831e12"
+      },
+      {
+        "file": "dehypht-x-2022-03-16.tex",
+        "archive_path": "tex/generic/dehyph-exptl/dehypht-x-2022-03-16.tex",
+        "sha256": "a25d30636a6b342c6dfd41bde80ab38e500e28236166fc8f1a061a0a4e9f709d"
+      }
+    ],
+    "different_files": []
+  }
+]

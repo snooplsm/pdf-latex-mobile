@@ -13,8 +13,11 @@ for name in paths:
     files['project/'+name]=p
 for p in (ROOT/'.build/release-notices').rglob('*'):
     if p.is_file():files['notices/'+str(p.relative_to(ROOT/'.build/release-notices'))]=p
-for p in (ROOT/'.build/license-sources/latex-2021-11-15-PL1').glob('*-ctan.zip'):
+for p in (ROOT/'.build/license-sources/latex-2021-11-15-PL1').glob('*.zip'):
     files['upstream/'+p.name]=p
+for folder in ['pgf-3.1.9a','fontspec-2.8a','latex3-2022-02-07','latex3-2022-02-24','latex3-2022-01-12','texlive-2022-final','texlive-2021-final','texlive-2021-patterns']:
+    for p in (ROOT/'.build/license-sources'/folder).glob('*'):
+        if p.is_file():files['upstream/'+folder+'/'+p.name]=p
 for name in ['lm.zip','amsfonts.zip','ibycus-babel.zip','hyph-utf8.zip','hyphen-base.tar.xz']:
     files['upstream/'+name]=ROOT/'.build/license-sources'/name
 for profile in ['tiny','small','balanced','full']:

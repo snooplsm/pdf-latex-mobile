@@ -1,0 +1,56 @@
+[
+  {
+    "package": "l3backend",
+    "release": "2022-02-07",
+    "archive_sha256": "c3ffb32d5a4225d4e946a4c3419b7095baf8c7b827bc527dac260f531f976257",
+    "exact_files": [],
+    "modified_files": [
+      {
+        "file": "l3backend-xetex.def",
+        "upstream_path": "tex/latex/l3backend/l3backend-xetex.def",
+        "upstream_sha256": "4df8d38806861e033674c5f78b96abdd7bef3f515fd4edc9f2bec85d29af46aa",
+        "bundled_sha256": "47e2f4fc8bda65ba3f5d295145da3f7bb783b71f2a07f11a4038e84b2fd5cd13"
+      }
+    ]
+  },
+  {
+    "package": "l3kernel",
+    "release": "2022-02-24",
+    "archive_sha256": "d5c34213e3a55f49e1ff38ef670352fac1d93679e6dbd8b4f133bfe96b9b8209",
+    "exact_files": [
+      {
+        "file": "expl3.sty",
+        "upstream_path": "tex/latex/l3kernel/expl3.sty",
+        "upstream_sha256": "d25966b6774e1153ada51b5c52eb5084b76708181861fa090844a18c2092a905",
+        "bundled_sha256": "d25966b6774e1153ada51b5c52eb5084b76708181861fa090844a18c2092a905"
+      },
+      {
+        "file": "expl3.ltx",
+        "upstream_path": "tex/latex/l3kernel/expl3.ltx",
+        "upstream_sha256": "5a61e07f882337465d24c17e9d3865d1849e3baf37a12e2b7956af4dacf745ab",
+        "bundled_sha256": "5a61e07f882337465d24c17e9d3865d1849e3baf37a12e2b7956af4dacf745ab"
+      },
+      {
+        "file": "expl3-code.tex",
+        "upstream_path": "tex/latex/l3kernel/expl3-code.tex",
+        "upstream_sha256": "496aa058ffd3c379d77df9d842ae931575f1ea12db5f806cbeea1634d505b6a1",
+        "bundled_sha256": "496aa058ffd3c379d77df9d842ae931575f1ea12db5f806cbeea1634d505b6a1"
+      }
+    ],
+    "modified_files": []
+  },
+  {
+    "package": "l3packages",
+    "release": "2022-01-12",
+    "archive_sha256": "b4b34a3d7c2870b1b16bac6dda785700301c716508f5636efc8d8188b0e1847d",
+    "exact_files": [
+      {
+        "file": "xparse.sty",
+        "upstream_path": "tex/latex/l3packages/xparse/xparse.sty",
+        "upstream_sha256": "c10bc5df2c6dc10c1e796988a4095d3a8a2728e33e0d0e7230e4a5d999d3a5ec",
+        "bundled_sha256": "c10bc5df2c6dc10c1e796988a4095d3a8a2728e33e0d0e7230e4a5d999d3a5ec"
+      }
+    ],
+    "modified_files": []
+  }
+]

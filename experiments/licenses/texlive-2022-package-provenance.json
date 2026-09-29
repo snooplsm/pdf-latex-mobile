@@ -1,0 +1,288 @@
+[
+  {
+    "package": "fontspec",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/fontspec.tar.xz",
+        "file": "fontspec.tar.xz",
+        "sha256": "33761aa72153a1173d54f40650fa55fa87ce2a4d531269ac67d146fdbeeb51f6"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/fontspec.source.tar.xz",
+        "file": "fontspec.source.tar.xz",
+        "sha256": "170e470ce978915357a2575c17246f0dc8a061595b8009361cec44cd66660f1c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "fontspec-xetex.sty",
+        "archive_path": "tex/latex/fontspec/fontspec-xetex.sty",
+        "sha256": "7d9dbc9c795bcfe13930a88fc0d6066f064eea04fb1006c6ded73d54c863e12b"
+      },
+      {
+        "file": "fontspec.cfg",
+        "archive_path": "tex/latex/fontspec/fontspec.cfg",
+        "sha256": "f31d038ca5322ef4fc3fbe391f42695bf1305567a04b6ac1005964703dd1232a"
+      },
+      {
+        "file": "fontspec.sty",
+        "archive_path": "tex/latex/fontspec/fontspec.sty",
+        "sha256": "a13fef368454be939bc947e688700508adbf75b2b3d3dbe9730521808945fe7e"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "atbegshi",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/atbegshi.tar.xz",
+        "file": "atbegshi.tar.xz",
+        "sha256": "ac947bb1ba592750a8ff5743d74a58e0ae53ce8a226e8c57d77b8525ab61a785"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/atbegshi.source.tar.xz",
+        "file": "atbegshi.source.tar.xz",
+        "sha256": "c935ec34733e24e9689616c843b8413cf68fe6b14859f42a8924ed67e983c479"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "atbegshi.sty",
+        "archive_path": "tex/generic/atbegshi/atbegshi.sty",
+        "sha256": "a73003b4bb2dc8a814533ddbd31600e6626827799c2a465d03ef42e7a33fa71b"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "atveryend",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/atveryend.tar.xz",
+        "file": "atveryend.tar.xz",
+        "sha256": "5423bfe7c4b78445434141b6e0c1ac9fcd7d99422da544f032f3d094fc76fac7"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/atveryend.source.tar.xz",
+        "file": "atveryend.source.tar.xz",
+        "sha256": "2604061eddb355bcb699b4aae9dd4bb0c4ef366fe5d5ac93abb4677933269db2"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "atveryend.sty",
+        "archive_path": "tex/latex/atveryend/atveryend.sty",
+        "sha256": "a62143db8b3bf1e52082c32e3feb7450bc90c000c6c48a38fa51cf96a6075eae"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "xcolor",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/xcolor.tar.xz",
+        "file": "xcolor.tar.xz",
+        "sha256": "e52c5ff8ab3912cc721c5636fa4bc6a08d8003a851a9a4da34af01cac73e6d72"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/xcolor.source.tar.xz",
+        "file": "xcolor.source.tar.xz",
+        "sha256": "f7e9ec208cbed93626e2836efae3a11bdbde5c3ba7c2410fab91f3544ac20e59"
+      }
+    ],
+    "exact_files": [],
+    "different_files": [
+      {
+        "file": "xcolor.sty",
+        "archive_path": "tex/latex/xcolor/xcolor.sty",
+        "sha256": "121f45cee5e0a32583909763f95b1aae2c8f0d0a086def03fd958ebdad5e5c02"
+      }
+    ]
+  },
+  {
+    "package": "babel",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel.tar.xz",
+        "file": "babel.tar.xz",
+        "sha256": "ce2fecba9c11a7e3f5e595475b840e9d5f3d895614b4973a24ca293fc3de7305"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel.source.tar.xz",
+        "file": "babel.source.tar.xz",
+        "sha256": "0139459a47a3141974e23e09a967507edc76359099f938d1764569ea4f8289dd"
+      }
+    ],
+    "exact_files": [],
+    "different_files": [
+      {
+        "file": "babel.sty",
+        "archive_path": "tex/generic/babel/babel.sty",
+        "sha256": "c93694b8e033ab3592b485f9fc5740194071dee47db1bf90528435aea1aeddd7"
+      },
+      {
+        "file": "hyphen.cfg",
+        "archive_path": "tex/generic/babel/hyphen.cfg",
+        "sha256": "b68e6ae011a0a15c12f6ab72b70a0b6e3893be885a00ef3853c67fd989c9975c"
+      },
+      {
+        "file": "txtbabel.def",
+        "archive_path": "tex/generic/babel/txtbabel.def",
+        "sha256": "04c579d39644032d49bfd805eaef8bc725f1603957d34731f11ddbf6ce684e78"
+      },
+      {
+        "file": "xebabel.def",
+        "archive_path": "tex/generic/babel/xebabel.def",
+        "sha256": "95718f62527966b22816d91d433f5bb7baf5204e7d7cdb51275ace15bb8ed716"
+      }
+    ]
+  },
+  {
+    "package": "babel-english",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel-english.tar.xz",
+        "file": "babel-english.tar.xz",
+        "sha256": "9e22f853a3e4dc389742e9351a6b685527bce559e9dd68b86c4ae5a916614bbe"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel-english.source.tar.xz",
+        "file": "babel-english.source.tar.xz",
+        "sha256": "32684bcd1730ff26dc83c89e68e7ae2ed44bd33de45fb2351c662c9ca74280dc"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "english.ldf",
+        "archive_path": "tex/generic/babel-english/english.ldf",
+        "sha256": "5a636696c3bb3c13820ebbcf667d5d38756109ac50247533c1b8608a4c9dd030"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "babel-german",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel-german.tar.xz",
+        "file": "babel-german.tar.xz",
+        "sha256": "2f846d74eacb7c1dc9b29955609e97b601656a8cf5f557fc9014298a9e194a38"
+      },
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/babel-german.source.tar.xz",
+        "file": "babel-german.source.tar.xz",
+        "sha256": "f0e98b1d47970338f66ca3ee63ac2c62f0d6e316fd384dcfae6d533a68f57d75"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "german.ldf",
+        "archive_path": "tex/generic/babel-german/german.ldf",
+        "sha256": "2d4abfa8329041d26e6979de747d44fe80ceeebd44a97b93c8ed7940501b8d1c"
+      },
+      {
+        "file": "germanb.ldf",
+        "archive_path": "tex/generic/babel-german/germanb.ldf",
+        "sha256": "062a9283a7137d465e07a6034604f83a815c145d3a786fcefe927520993e8d0f"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "graphics-def",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/graphics-def.tar.xz",
+        "file": "graphics-def.tar.xz",
+        "sha256": "d9ea778c6b4c5e44e005d75b69912d9fa3eb9775d81ddbcea9e73b0d875327af"
+      }
+    ],
+    "exact_files": [],
+    "different_files": [
+      {
+        "file": "xetex.def",
+        "archive_path": "tex/latex/graphics-def/xetex.def",
+        "sha256": "17273ae47424a5bdb23bdb9ee10b09f7c0ba27d2332830eb770b59e6aab5ab97"
+      }
+    ]
+  },
+  {
+    "package": "graphics-cfg",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/graphics-cfg.tar.xz",
+        "file": "graphics-cfg.tar.xz",
+        "sha256": "f49fd69ee7b03442e3ce16837e846d1e108e8a71db098fe8eb707c0e3d8e2c6c"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "color.cfg",
+        "archive_path": "tex/latex/graphics-cfg/color.cfg",
+        "sha256": "a3529ccdadc8248b4c5d7c34ceea53bdc1509b54f18a192ad51b924bd297d8df"
+      },
+      {
+        "file": "graphics.cfg",
+        "archive_path": "tex/latex/graphics-cfg/graphics.cfg",
+        "sha256": "feb91e48789a21e4acced98e952c77a2e2cf4a77e01bf147b59fa56a1b3f2008"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "latex-fonts",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/latex-fonts.tar.xz",
+        "file": "latex-fonts.tar.xz",
+        "sha256": "c542058e4dc1dfedc36bd65c44b472f69cf1d85bf271090cb10f698e901ebdbf"
+      }
+    ],
+    "exact_files": [],
+    "different_files": []
+  },
+  {
+    "package": "tex-ini-files",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/tex-ini-files.tar.xz",
+        "file": "tex-ini-files.tar.xz",
+        "sha256": "6569ec35c603a770f762e1783f79cfd8171b0eb919d06d806d2280829a6582bd"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "xelatex.ini",
+        "archive_path": "tex/generic/tex-ini-files/xelatex.ini",
+        "sha256": "1f0fd8f63b3244b8d56f245aae51f1003b9fe56599b9a60aa28bd1a9fb8b8628"
+      }
+    ],
+    "different_files": []
+  },
+  {
+    "package": "hyphen-base",
+    "archives": [
+      {
+        "url": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/archive/hyphen-base.tar.xz",
+        "file": "hyphen-base.tar.xz",
+        "sha256": "65490a2b32ab125772671016c88aa39f710b2357d84dd8dd1a7623daa24bdf5a"
+      }
+    ],
+    "exact_files": [
+      {
+        "file": "hyphen.tex",
+        "archive_path": "tex/generic/hyphen/hyphen.tex",
+        "sha256": "2c18acdc04c1a066aeb1759905e7ca449f0616c314b5ed6aebe55b9d4a89b8d4"
+      }
+    ],
+    "different_files": [
+      {
+        "file": "language.dat",
+        "archive_path": "tex/generic/config/language.dat",
+        "sha256": "1781d32faa3ea29a93f8f6284fc1a94e9581b09fa7c2e1fad333894426da19ec"
+      }
+    ]
+  }
+]

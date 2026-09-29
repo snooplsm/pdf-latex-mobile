@@ -36,3 +36,14 @@ Do not attribute support for these modifications to the LaTeX Project.
 
 This notice addresses the changes above; it is not a statement that all
 third-party distribution obligations have been completed.
+
+l3backend-xetex.def is based on the upstream l3backend 2022-02-07 release.
+An inherited Tectonic patch replaces the extractbb shell version query with
+constant 20210318. LaTeX Mobile retains that compatibility value for XDV
+specials, adds a modification header, and identifies the modified backend in
+its package description. This does not mean the PDF renderer is xdvipdfmx.
+The exact inherited difference is recorded in
+experiments/licenses/l3backend-xetex.def.patch.
+Complete unmodified upstream source:
+https://github.com/latex3/latex3/releases/download/2022-02-07/l3backend-ctan.zip
+The source archive and its checksum accompany the release source materials.

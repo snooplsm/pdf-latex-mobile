@@ -1,0 +1,329 @@
+{
+  "version": "3.1.9a",
+  "source": "https://github.com/pgf-tikz/pgf/releases/download/3.1.9a/pgf_3.1.9a.tds.zip",
+  "archive_sha256": "f2774ce4731694e74a4d5e5d61ff0ec464483c441e19e98c47837491be08c835",
+  "license_choice": "LPPL-1.3c",
+  "exact_files": [
+    {
+      "file": "pgfcoretransparency.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex",
+      "sha256": "ea5e14f7fade556cee79636a6824710e97db928542fc1b23dfa618ff6448688e"
+    },
+    {
+      "file": "pgfrcs.code.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgfrcs.code.tex",
+      "sha256": "123c47446b645169403ca67d70501dbdb02698a9ea1091bd4db08a9bc9ca2b5a"
+    },
+    {
+      "file": "tikzlibrarytopaths.code.tex",
+      "archive_path": "tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex",
+      "sha256": "992706da31e055cdbecf5b1bf1b9c267383e3b4d4385773448f868e1cabf17f2"
+    },
+    {
+      "file": "pgfsyssoftpath.code.tex",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex",
+      "sha256": "6ea4caeea5bcb6cd60b80ef4607e8a79824ec0cdcebb47424c1bdbe0c2ea6671"
+    },
+    {
+      "file": "pgfmoduleplot.code.tex",
+      "archive_path": "tex/generic/pgf/modules/pgfmoduleplot.code.tex",
+      "sha256": "f5454a5037c902bf21166d9592d5d15790f4b70c00a636d2b2fc47b76c8ccb21"
+    },
+    {
+      "file": "pgfmodulematrix.code.tex",
+      "archive_path": "tex/generic/pgf/modules/pgfmodulematrix.code.tex",
+      "sha256": "9d0cbd834f5e4f38532dbe23011a2505666a652264ea62425ec926d572a52ba5"
+    },
+    {
+      "file": "pgfcore.sty",
+      "archive_path": "tex/latex/pgf/basiclayer/pgfcore.sty",
+      "sha256": "aedcbd99a6d92c35c94021afc85f9eef63ec2cdfccb9b761ef3b039e425efd8c"
+    },
+    {
+      "file": "pgfcorepoints.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorepoints.code.tex",
+      "sha256": "7533dd80c95a5124726b0a617a5f458226d4a7490bcd209e3fd7e717e24dc127"
+    },
+    {
+      "file": "pgfmathfunctions.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.code.tex",
+      "sha256": "06988bee6690c3eab67ea9d80070cf4462696dec186a1d8d8b1345ea6e427b8e"
+    },
+    {
+      "file": "pgfsys.sty",
+      "archive_path": "tex/latex/pgf/systemlayer/pgfsys.sty",
+      "sha256": "cc7121c5706c5c52807aea879ca0a9083a8dc81b04d96303d0d398804d9d3d52"
+    },
+    {
+      "file": "pgfcorearrows.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorearrows.code.tex",
+      "sha256": "1668608078204a627d6e67a853f8a904e6149b901607ae177741c650b143a94e"
+    },
+    {
+      "file": "pgfmathutil.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathutil.code.tex",
+      "sha256": "cda208d98bdc556a06f5915571c6ce4d98c18aa639c4782a56c6d32a6ba68055"
+    },
+    {
+      "file": "pgf.cfg",
+      "archive_path": "tex/generic/pgf/systemlayer/pgf.cfg",
+      "sha256": "eb308ac3d665db8dd3c03b18328c551609346c659c2ce0e5029223fbcc339cb3"
+    },
+    {
+      "file": "pgffor.sty",
+      "archive_path": "tex/latex/pgf/utilities/pgffor.sty",
+      "sha256": "5ae03317ea221a6f68d807775bd06a10625aa9fb1f590dbe2114688f735c447d"
+    },
+    {
+      "file": "pgffor.code.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgffor.code.tex",
+      "sha256": "4d67b61b092f41f5a9b0ff6e781ccbb87af008e0c67ae0279380d43119dff758"
+    },
+    {
+      "file": "pgflibraryplothandlers.code.tex",
+      "archive_path": "tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex",
+      "sha256": "b3db772dd8eb595d8a5c8ef8d232862f9cef97d4ac9dedee283ad7b6e83361dd"
+    },
+    {
+      "file": "pgf.revision.tex",
+      "archive_path": "tex/generic/pgf/pgf.revision.tex",
+      "sha256": "5cc371cd73a94c45ecbd228bf13061519bdb2d7d832b023f17b42446798deb64"
+    },
+    {
+      "file": "pgf.sty",
+      "archive_path": "tex/latex/pgf/basiclayer/pgf.sty",
+      "sha256": "99e08946749446e0b9b7faa985f8202740a94476f9e99bab5286cca5ce4766e9"
+    },
+    {
+      "file": "pgfsys.code.tex",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsys.code.tex",
+      "sha256": "493a92ee584b170e9893b856d83d951c633cc124c897116e9d62bb57d72d303d"
+    },
+    {
+      "file": "pgfint.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfint.code.tex",
+      "sha256": "95f8053efeeb2267d543d8d1afb10195d6114765eea7b90755b4e0c359324d64"
+    },
+    {
+      "file": "pgfcorepathconstruct.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex",
+      "sha256": "64b0b4193616b937a2b4520c678f8863ae06ab38385bb58db437b39a8f27719b"
+    },
+    {
+      "file": "pgfkeysfiltered.code.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgfkeysfiltered.code.tex",
+      "sha256": "1d9d95de8b45811859942e439f2e1fcc64471a865f83709ae1666cf24df7f326"
+    },
+    {
+      "file": "pgfcoreobjects.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex",
+      "sha256": "541e41626d66e0e8bc8b5249805c9efbb134dfe0dc85c63102eea3c2d21da6f0"
+    },
+    {
+      "file": "tikz.code.tex",
+      "archive_path": "tex/generic/pgf/frontendlayer/tikz/tikz.code.tex",
+      "sha256": "09a0c11293f21df6f4a984738376fc6acd8c1ff884e546aaecb71fcde95721d8"
+    },
+    {
+      "file": "pgfmath.sty",
+      "archive_path": "tex/latex/pgf/math/pgfmath.sty",
+      "sha256": "4abed7d8c88642201dd1a932a435ae05a1f2659f1f7e95c72d6b5347c83d232a"
+    },
+    {
+      "file": "pgfmathfunctions.basic.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.basic.code.tex",
+      "sha256": "c94abbd89ad0556546d9e5053af16b58ce7f38d19c379b27309e5fefd23908f8"
+    },
+    {
+      "file": "pgfcorequick.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorequick.code.tex",
+      "sha256": "6143371709342ea83dcdb1744a229d18f4c1ee670e1e31b496046a708bfa3e66"
+    },
+    {
+      "file": "pgfsysprotocol.code.tex",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex",
+      "sha256": "818b8e3cd0606bdb8ac7fbaccc5f80033672fa817537536f76bc67bc3942928c"
+    },
+    {
+      "file": "pgfcorepathprocessing.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex",
+      "sha256": "ebcf9d5dec1714b575ffef09be6cdf03eaf1501f511204d7efae5d73b07b2221"
+    },
+    {
+      "file": "pgfsys-xetex.def",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsys-xetex.def",
+      "sha256": "3738251bd32ac408cd0223b560fa6adefbcd0755c7b7d14f8e3215e1636a0c24"
+    },
+    {
+      "file": "pgfcorerdf.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorerdf.code.tex",
+      "sha256": "0bc32a855862a83b7ece27d2ebf6bfeace759d6b64fb776394eee13d62401350"
+    },
+    {
+      "file": "pgfcorelayers.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorelayers.code.tex",
+      "sha256": "743e89ac1e529af45751fa85fde4b3438284a63dfd53ff52c94c2f229b20beff"
+    },
+    {
+      "file": "pgfmoduleshapes.code.tex",
+      "archive_path": "tex/generic/pgf/modules/pgfmoduleshapes.code.tex",
+      "sha256": "cb1367d6cf995bc715a100646bb0be7fe13dce7c96860a4fd9cc380340cc06d5"
+    },
+    {
+      "file": "pgfsys-common-pdf.def",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsys-common-pdf.def",
+      "sha256": "5643eed1101dbfbeb7e81ed4d4c4d03048b27eaf6b0c7b4b9c7cb63349149a7a"
+    },
+    {
+      "file": "pgfsys-dvipdfmx.def",
+      "archive_path": "tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def",
+      "sha256": "bba6dd22807721d71d9ab54ffd061676556a3df9e2dbaaac25f96a0b2389def6"
+    },
+    {
+      "file": "pgfcoreexternal.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex",
+      "sha256": "545c4616f93c5f5d25bc04090a0b7ef869bab84b3952fadfd539d71187c83fe0"
+    },
+    {
+      "file": "pgfrcs.sty",
+      "archive_path": "tex/latex/pgf/utilities/pgfrcs.sty",
+      "sha256": "9653b8fae6bba95bec40ffbedd7d6c2b8f3be4a85b8b39580ab3ee6c3590041a"
+    },
+    {
+      "file": "pgfkeys.code.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgfkeys.code.tex",
+      "sha256": "34363e741734268afff76b31b486413257297c86d4b39811a99dc35640b8b66c"
+    },
+    {
+      "file": "pgfmathfunctions.random.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.random.code.tex",
+      "sha256": "9308151b47cfe8144a60110976fa68acdede9c49fb5567a204271c7ac5d535b4"
+    },
+    {
+      "file": "pgfmathfunctions.misc.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.misc.code.tex",
+      "sha256": "51038be668b2083ac5e8ae38a1da6f75091ee9471d71f33749d01a8bff1a9aa6"
+    },
+    {
+      "file": "pgfcorescopes.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorescopes.code.tex",
+      "sha256": "cc91bb4b62f7ecb72d216b13f5f9c92252164ed73196faf8783e1d4e5770aec6"
+    },
+    {
+      "file": "pgfmathparser.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathparser.code.tex",
+      "sha256": "70468cf91fe751c5d7468a9a74ab4f256ec085da35da5950a6590f2ad2b3cd63"
+    },
+    {
+      "file": "tikz.sty",
+      "archive_path": "tex/latex/pgf/frontendlayer/tikz.sty",
+      "sha256": "6e39ff4fdf9f126aff28880a7dd59fccc0e6735409d92ca455cdd2a4f2b4db53"
+    },
+    {
+      "file": "pgfmathfloat.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfloat.code.tex",
+      "sha256": "93709f80d66aa216e51fd5183d8016c39e0a408ad650e4a88c6dbb552bb7d7db"
+    },
+    {
+      "file": "pgfmath.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmath.code.tex",
+      "sha256": "3b7d8bc80eb5e56235d9bab97a6b6ee4c8880e026617642f016154bc61ade968"
+    },
+    {
+      "file": "pgfmathfunctions.base.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.base.code.tex",
+      "sha256": "f83601dd74e8c166162cb3daf926744c44ccf15a0122e17613658f82fa64c6a9"
+    },
+    {
+      "file": "pgfmathfunctions.comparison.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex",
+      "sha256": "ea5ff35778088d94d8d2f1a20075ec57cc4ecd22844f9c288625a6db59ba7818"
+    },
+    {
+      "file": "pgfcoreshade.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoreshade.code.tex",
+      "sha256": "b111efaa8b7c0905870b1ce9bcf400cd59c8db3cfa8d7ae91e7d63c1bac747cc"
+    },
+    {
+      "file": "pgfmathcalc.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathcalc.code.tex",
+      "sha256": "316c8d9bba11debc9cceeebad99eb8a30953fda79b9657824b86bc935cde6b56"
+    },
+    {
+      "file": "pgfmathfunctions.trigonometric.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex",
+      "sha256": "1c8834abe00807467a52d31ef96032d5084b2560eea45995018084d13a3cde3c"
+    },
+    {
+      "file": "pgfcoretransformations.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex",
+      "sha256": "1efc14583bc87ba3e08f0e4d7d82191ca1ddeb6e982573d9520d26f13d8ad4eb"
+    },
+    {
+      "file": "pgfutil-common-lists.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgfutil-common-lists.tex",
+      "sha256": "4137a4adb5e8b7f2800f8dc28b80aea2c19db57e4ac02d3b2fee37c6eff74b7f"
+    },
+    {
+      "file": "pgfcoreimage.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoreimage.code.tex",
+      "sha256": "921b5d811b3e0e27b7af84d48ef23730466d2b9f2a2905e9b3a17d98a158b5e2"
+    },
+    {
+      "file": "pgfcorepathusage.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex",
+      "sha256": "165569c2ffb6a80272d2853c3d3c4373c386391e8cbb81ed9683ae2a810dd28c"
+    },
+    {
+      "file": "pgfutil-latex.def",
+      "archive_path": "tex/generic/pgf/utilities/pgfutil-latex.def",
+      "sha256": "5fcde4bb08efbdfbcbfcf95fdde4cb467b799d541699aac05ae2f46dec08a2fc"
+    },
+    {
+      "file": "pgfutil-common.tex",
+      "archive_path": "tex/generic/pgf/utilities/pgfutil-common.tex",
+      "sha256": "4dcfd1ab88afdb5d0a1343aff7942b3e92f243fd2d0ac924c09d4fbb3cd83363"
+    },
+    {
+      "file": "pgfmathfunctions.round.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.round.code.tex",
+      "sha256": "9b980e1373f9451da75cc6030a5b4c1671b88a1b14b45ed172cfb7cf2607fe1f"
+    },
+    {
+      "file": "pgfkeys.sty",
+      "archive_path": "tex/latex/pgf/utilities/pgfkeys.sty",
+      "sha256": "b90072b20d0590f23fd0ad273d059e3b7737319b3fb61e3bea6102fd77f24b3d"
+    },
+    {
+      "file": "pgfcomp-version-0-65.sty",
+      "archive_path": "tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty",
+      "sha256": "7df38d1bb03d0bf642b3f53c38d86641765d950f82d481ebd63c67838bc78ee7"
+    },
+    {
+      "file": "pgfcomp-version-1-18.sty",
+      "archive_path": "tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty",
+      "sha256": "b5a95ba245bb51ce01e5ead16e818a0024f16cd208df3386b30ba0798a911344"
+    },
+    {
+      "file": "pgfcoregraphicstate.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex",
+      "sha256": "81862c3425e8aa2a82e605eb8fde07b1b7b47862b981922393d4f54ca9fa6250"
+    },
+    {
+      "file": "pgfcore.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcore.code.tex",
+      "sha256": "8fc49d574a99abb77941c2487363af43bca0010f3d239fddfe79d692a5476579"
+    },
+    {
+      "file": "pgfcorepatterns.code.tex",
+      "archive_path": "tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex",
+      "sha256": "786f07d8be461aa13ed5c150a62b85d9f15bf9efc0addba029c5119ac440d705"
+    },
+    {
+      "file": "pgfmathfunctions.integerarithmetics.code.tex",
+      "archive_path": "tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex",
+      "sha256": "6e9383c1e63a6dbcfd2d95369905df566bdb6e7374c06e28c15a25eb782dc46b"
+    }
+  ],
+  "unmatched": []
+}

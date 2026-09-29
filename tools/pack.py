@@ -114,6 +114,15 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
             kernel.write_bytes(header + original.replace(b"{\\fmtname", b"{LaTeX Mobile modified \\fmtname"))
             shutil.copyfile(ROOT / "notices/LATEX-MODIFICATIONS.txt", prepared / "LATEX-MODIFICATIONS.txt")
             used.add("LATEX-MODIFICATIONS.txt")
+        if "l3backend-xetex.def" in used:
+            backend = prepared / "l3backend-xetex.def"
+            header = b"% LaTeX Mobile modified distribution: see LATEX-MODIFICATIONS.txt.\n"
+            original = backend.read_bytes().removeprefix(header).replace(
+                b"LaTeX Mobile modified L3 backend support: XeTeX", b"L3 backend support: XeTeX")
+            if hashlib.sha256(original).hexdigest() != "47e2f4fc8bda65ba3f5d295145da3f7bb783b71f2a07f11a4038e84b2fd5cd13":
+                raise ValueError("l3backend-xetex.def changed: update its source review and modification notice")
+            backend.write_bytes(header + original.replace(
+                b"L3 backend support: XeTeX", b"LaTeX Mobile modified L3 backend support: XeTeX"))
         used.discard("SHA256SUM")
         output.parent.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=output.parent, prefix=".pack-") as stage:

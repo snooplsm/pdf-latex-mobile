@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Assemble pinned notices and source evidence for a local release candidate."""
 import hashlib,json,re,shutil,subprocess,zipfile
+from urllib.request import urlopen
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.build/release-notices'
@@ -20,7 +21,17 @@ retain(ROOT/'LICENSE','LaTeX Mobile MIT notice')
 for name in ('AMSFonts-OFL.txt','UNICODE-LICENSE.txt','SLOVAK-MIT.txt','PROJECT-LICENSE-MIT.txt'):
     retain(ROOT/'experiments/licenses'/name,name)
 for p in (ROOT/'notices').glob('*.txt'):retain(p,p.name)
-shutil.copyfile(ROOT/'experiments/licenses/legacy-pattern-provenance.json', OUT/'legacy-pattern-provenance.json')
+for source in sorted((ROOT/'experiments/licenses').glob('*provenance.json')):
+    if source.name != 'teckit-provenance.json':
+        shutil.copyfile(source, OUT/source.name)
+(OUT/'teckit-provenance.json').unlink(missing_ok=True)
+# Pin the license text too; do not rely on a stale previous output directory.
+mpl_url = 'https://www.mozilla.org/media/MPL/1.1/index.0c5913925d40.txt'
+with urlopen(mpl_url, timeout=60) as response:
+    mpl = response.read()
+if hashlib.sha256(mpl).hexdigest() != 'f849fc26a7a99981611a3a370e83078deb617d12a45776d6c4cada4d338be469':
+    raise ValueError('MPL 1.1 license text changed')
+(OUT/'MPL-1.1.txt').write_bytes(mpl)
 with zipfile.ZipFile(ROOT/'.build/license-sources/lm.zip') as z:
     for name in ['lm/doc/fonts/lm/GUST-FONT-LICENSE.TXT','lm/doc/fonts/lm/README-Latin-Modern.TXT']:
         dest=OUT/Path(name).name;dest.write_bytes(z.read(name))
