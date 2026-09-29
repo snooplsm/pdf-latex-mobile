@@ -1,0 +1,168 @@
+{
+  "scope": "Host imported PDF page selection and transparency compatibility with original xdvipdfmx backend",
+  "policy": "Explicit xdvipdfmx-compatibility feature omits source page groups, matching the original backend. This can differ from source-PDF transparency semantics. Upstream Hayro behavior remains when the feature is off.",
+  "renderer_sha256": "0eb48f69dc452b1c769c9291efe3fcef1804f44862b64619247d5fa71a227de6",
+  "results": [
+    {
+      "case": "default",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "6cdd224c7ed638ca3e2a537a36e1a0c33ac4f60aef83fcc664db9bc255653e96",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "first",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "6cdd224c7ed638ca3e2a537a36e1a0c33ac4f60aef83fcc664db9bc255653e96",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "second",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "5b166c7b713a408a55df5ba06d216b411f50288c64fe9dd1b0d85f9986fa8685",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "third",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "b3fdaa047868cfbd963b9edfa28f8617f3f038ba1e4937113794b8b933b150d0",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "negative",
+      "xdv_matches": true,
+      "both_reject_and_preserve_output": true
+    },
+    {
+      "case": "out-of-range",
+      "xdv_matches": true,
+      "both_reject_and_preserve_output": true
+    },
+    {
+      "case": "no-group",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "efcb9567d3e4dac5e1f4e92920a3c27741ab14038886f21e9c5ce0afb7a27791",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "isolated",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "efcb9567d3e4dac5e1f4e92920a3c27741ab14038886f21e9c5ce0afb7a27791",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "nonisolated",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "efcb9567d3e4dac5e1f4e92920a3c27741ab14038886f21e9c5ce0afb7a27791",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "knockout",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "efcb9567d3e4dac5e1f4e92920a3c27741ab14038886f21e9c5ce0afb7a27791",
+      "different_pixels_144dpi": 0
+    }
+  ],
+  "preserving_source_groups_experiment": [
+    {
+      "case": "default",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "6cdd224c7ed638ca3e2a537a36e1a0c33ac4f60aef83fcc664db9bc255653e96",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "first",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "6cdd224c7ed638ca3e2a537a36e1a0c33ac4f60aef83fcc664db9bc255653e96",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "second",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "5b166c7b713a408a55df5ba06d216b411f50288c64fe9dd1b0d85f9986fa8685",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "third",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "b3fdaa047868cfbd963b9edfa28f8617f3f038ba1e4937113794b8b933b150d0",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "negative",
+      "xdv_matches": true,
+      "both_reject_and_preserve_output": true
+    },
+    {
+      "case": "out-of-range",
+      "xdv_matches": true,
+      "both_reject_and_preserve_output": true
+    },
+    {
+      "case": "no-group",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "efcb9567d3e4dac5e1f4e92920a3c27741ab14038886f21e9c5ce0afb7a27791",
+      "different_pixels_144dpi": 0
+    },
+    {
+      "case": "isolated",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "d407039fc1856d6e3a775d44f009f0602f6ea8744700e495be387303d46d438e",
+      "different_pixels_144dpi": 15459
+    },
+    {
+      "case": "nonisolated",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "3a94d57b5fd807b97361a0919bac04f942965d3bbf635f665fd6bf4fba5ce1ca",
+      "different_pixels_144dpi": 798
+    },
+    {
+      "case": "knockout",
+      "xdv_matches": true,
+      "selected_page_text_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "5d27f3830f9fb10b60eb8e09eeacacd301a4bdddf248292efd137ae55cc32554",
+      "different_pixels_144dpi": 15459
+    }
+  ],
+  "remaining": "Original-engine rendering/text mismatches and licensing work remain. This verifies native processes, not updated Kotlin/Swift wrappers or physical devices.",
+  "mobile_verification": {
+    "report": "../xetex-native/mobile-results.json",
+    "platforms": [
+      "host ARM64",
+      "Android ARM64 emulator",
+      "iOS ARM64 simulator"
+    ],
+    "runs_per_case": 2,
+    "raw_pdf_hashes_match": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Replacement configuration files only; does not relicense original files or clear referenced TeX inputs",
+  "overrides": {
+    "ckx.map": {
+      "replaces_sha256": "52859584f1baa4aea9e5c6318ded82b1b5bfa713dcdc945bda7e26b206c8bdc4",
+      "sha256": "4697178e7f1e0462053a105e5a2f966c1ba9b688e62bb9e59b93d8b32dc0b1e0",
+      "origin": "Project-authored configuration; no upstream descriptive comments copied",
+      "license": "MIT",
+      "semantic_check": "Non-comment tokens identical to existing configuration"
+    },
+    "tectonic-format-latex.tex": {
+      "replaces_sha256": "86d8d12cfdfbe74a81b9df7c5b38a766303a772d57e7cb0d228e1e7b9294cf34",
+      "sha256": "9b17211dfa3e2716db3255d4979763debc1b84e985fc4b2e5f4422a21fcdce3c",
+      "origin": "Project-authored configuration; no upstream descriptive comments copied",
+      "license": "MIT",
+      "semantic_check": "Non-comment tokens identical to existing configuration"
+    }
+  },
+  "license_file": "PROJECT-LICENSE-MIT.txt",
+  "license_sha256": "19931a4e0a4aa669b44bbdb4946066e25c6640036828e9f3c49a135380ed1f69"
+}

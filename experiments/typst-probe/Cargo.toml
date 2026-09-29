@@ -1,0 +1,21 @@
+[package]
+name = "typst-mobile-probe"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[lib]
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[dependencies]
+typst = "=0.15.1"
+typst-pdf = "=0.15.1"
+typst-layout = "=0.15.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "s"
+strip = "debuginfo"

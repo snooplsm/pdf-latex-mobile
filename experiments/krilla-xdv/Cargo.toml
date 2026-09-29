@@ -1,0 +1,18 @@
+[package]
+name = "krilla-xdv-probe"
+version = "0.0.0"
+edition = "2024"
+publish = false
+license = "MIT"
+[workspace]
+[dependencies]
+krilla = { version = "=0.8.2", path = "../../.build/krilla-vendor", default-features = false, features = ["pdf", "raster-images"] }
+tectonic_xdv = { version = "=0.3.0", path = "../../.build/xdv-parser-vendor" }
+anyhow = "1"
+ttf-parser = "=0.25.1"
+serde_json = "1"
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "s"
+strip = "debuginfo"

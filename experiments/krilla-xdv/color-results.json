@@ -1,0 +1,157 @@
+{
+  "scope": "Host XDV backend, LaTeX color stack and pdf:bcolor specials; 144 DPI pixel comparison",
+  "renderer_sha256": "fd17c8367edfac67929787cd28f9edbde29245a157c867912e9d6f49d724eeb4",
+  "cases": [
+    {
+      "case": "named",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "7fb9b0b6442f86c3b7e0b968ae3c8882b21db1b8a00b0deba680552021aec64b",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "fractional",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "2723f09ec457db110fc4537bbc5036a97097fe41c0267d97ac1848e6298f088b",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "nested",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "0415ce9be24a17aaf63e62bb492933c9ef7a16ba5b59d49ef4351d86aeb325fd",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "special-cmyk",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "2723f09ec457db110fc4537bbc5036a97097fe41c0267d97ac1848e6298f088b",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "special-rgb",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "1ce56a20bb994dcdfc61eb681ff4ca45d0d73466b75f1cf5a014be35c6ed2ae3",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "multipage",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "8b48d0cb07a339319a5756eeeaf6d18db33330cc52422c54d56807a5fb39ade2",
+      "different_pixels_144dpi_per_page": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "path-fill",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "eee451fd8a0bbaf663f01e028f133f9ee83d0fca3cc2d0b74ea5506ea0669b3c",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "path-stroke",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "9d371dab98d80ae5914668763f150a82c6014ba2f05a23b08f0e134f4395d955",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    },
+    {
+      "case": "path-nested",
+      "xdv_matches": true,
+      "repeat_hash_matches": true,
+      "sha256": "75d12de39b2d42cf71ac589a777ff5e24b70e03eb4dd01ed6e1650d99e42a9f2",
+      "different_pixels_144dpi_per_page": [
+        0
+      ]
+    }
+  ],
+  "regression": [
+    {
+      "case": "bibliography",
+      "unchanged": true,
+      "sha256": "1c4cdcb0db51226dcb77cecadf84932bf0f0bd7771c346138b83b89684fa6613"
+    },
+    {
+      "case": "core",
+      "unchanged": true,
+      "sha256": "97449d6141953b01ef72fa4668ae9bd5929e98c6a525bd1387d7dcd751def28e"
+    },
+    {
+      "case": "diagrams",
+      "unchanged": true,
+      "sha256": "8422370d5b952eba9120a686b12a07ed400d2762ee0742090d3fc155453dc98b"
+    },
+    {
+      "case": "fonts",
+      "unchanged": true,
+      "sha256": "2f6a271acef7c62d7d468e47557b5bd462f9ebcf2fcfa895c48f2c9e40dfa638"
+    },
+    {
+      "case": "graphics",
+      "unchanged": true,
+      "sha256": "45ee82c7049c03d56e0844c7d2ed00089e878fb27130df9dc011d1c3e9983e9c"
+    },
+    {
+      "case": "invoice-png",
+      "unchanged": true,
+      "sha256": "2d12365993a9db6668fff429d974379891745d77f387726b807d73f3d1b1fa55"
+    },
+    {
+      "case": "invoice",
+      "unchanged": true,
+      "sha256": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7"
+    },
+    {
+      "case": "languages",
+      "unchanged": true,
+      "sha256": "76ffe21b2f1d3702ce5730f282f7ee64a4fee9059a1894ed50b4675e67707e9c"
+    },
+    {
+      "case": "math",
+      "unchanged": true,
+      "sha256": "07a62435df23e6a937e4cd3c10410ce4b2bf5c41d4abbe3c5a1ea27d21d73c92"
+    },
+    {
+      "case": "multipage",
+      "unchanged": true,
+      "sha256": "550a7e9bafcdf43922bd25401793391b2366fc7d75219b6d4d0f1141685b4468"
+    },
+    {
+      "case": "text",
+      "unchanged": true,
+      "sha256": "8712f58ca84501280dadc124ac662bd17c311c5d63f9335cc814f29c14461f90"
+    }
+  ],
+  "remaining": "Three new raw PDF CMYK path cases pass on host but still need mobile verification. Other original-engine rendering/text mismatches and licensing work remain.",
+  "mobile_verification": {
+    "report": "../xetex-native/mobile-results.json",
+    "platforms": [
+      "host ARM64",
+      "Android ARM64 emulator",
+      "iOS ARM64 simulator"
+    ],
+    "runs_per_case": 2,
+    "raw_pdf_hashes_match": true,
+    "scope": "Original six color cases only; path-fill, path-stroke and path-nested are not included in the prior mobile run."
+  }
+}

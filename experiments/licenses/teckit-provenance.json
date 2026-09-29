@@ -1,0 +1,57 @@
+{
+  "upstream": "https://github.com/silnrsi/teckit",
+  "license_revision": "41c20be2793e1afcbb8de6339af89d1eeab84fe8",
+  "tag": "2.5.6",
+  "source_comparisons": [
+    {
+      "vendored": "teckit-Engine.cpp",
+      "upstream": "source/Engine.cpp",
+      "identical": false,
+      "upstream_sha256": "33cd460f3f5514530aae08d3dde61d6128e4ade41eb99182b3661ea8b00be00a",
+      "vendored_sha256": "707befff4b320ea0bba1fb548798de39a28f9899717fc325939baa962b39f8b3"
+    },
+    {
+      "vendored": "teckit-cxx-Engine.h",
+      "upstream": "source/Engine.h",
+      "identical": false,
+      "upstream_sha256": "e5221b582ce62e737800d035146a26d49c836a20a434f74aa07ab414776fdf10",
+      "vendored_sha256": "2773012c442c658ce097cfa1301a415c1bdb9bd0c5c06e5f0da783b0d6b16991"
+    },
+    {
+      "vendored": "teckit-c-Engine.h",
+      "upstream": "source/Public-headers/TECkit_Engine.h",
+      "identical": false,
+      "upstream_sha256": "e5c9532c789939cda424087d06caf16fbb2791018564197ccd363429fc31e5ce",
+      "vendored_sha256": "89f239df5a46b9a1d1062b323d85f0176bd550a25dbd2c86ec5285866567deaf"
+    },
+    {
+      "vendored": "teckit-Common.h",
+      "upstream": "source/Public-headers/TECkit_Common.h",
+      "identical": false,
+      "upstream_sha256": "4dc6cde2f199f609036aded188181d7ac0e782a706d97b63404d1b5ddc122664",
+      "vendored_sha256": "bbc9079b26e121b009b596c29d7b9f0cca9e2370ac7a0e3bc3cc6b072d63ae38"
+    },
+    {
+      "vendored": "teckit-Compiler.h",
+      "upstream": "source/Public-headers/TECkit_Compiler.h",
+      "identical": false,
+      "upstream_sha256": "29ba73665d91eb70170830306086305f4185d9217e78f2605c08b1786cb239e0",
+      "vendored_sha256": "9ed9cdfc3cd6781164b02eeb410f48fec40d3a8b3e87e39d1ccf00243366dac6"
+    },
+    {
+      "vendored": "teckit-Format.h",
+      "upstream": "source/TECkit_Format.h",
+      "identical": false,
+      "upstream_sha256": "079313355f654a2098dd315dec8208f36f225cf2a82ce6431940a1911e7824d1",
+      "vendored_sha256": "5d62b9d21f0352eccd030956ebd8e7a88eea47dfac6a239049293cd3c54bf7aa"
+    },
+    {
+      "vendored": "teckit-NormalizationData.c",
+      "upstream": "source/NormalizationData.c",
+      "identical": false,
+      "upstream_sha256": "5fe12307eed896521ef717c3eeae728f3e90fc399256fe6723d1cd968bd79701",
+      "vendored_sha256": "fe6d43c6c6d3be3dbedb9537e8ed1593cfc843b2a9c52fa5fa30f6d6dbb448a6"
+    }
+  ],
+  "status": "CPL-0.5-or-later OR LGPL-2.1-or-later; modified/source-mapping differences still need review"
+}

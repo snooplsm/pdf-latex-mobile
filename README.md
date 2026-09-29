@@ -1,6 +1,10 @@
 # LaTeX Mobile
 
-Offline Tectonic library with Android/Kotlin and iOS/Swift harnesses. MIT project code. Only compile trusted LaTeX; shell escape and HTTP are disabled, but this is not a filesystem or CPU sandbox.
+Offline LaTeX-to-PDF library with Android/Kotlin and iOS/Swift sample apps. **XeTeX + Krilla is the selected replacement backend.** It is currently available as an experimental integration; the default production build still uses the original Tectonic PDF backend.
+
+**Prerelease status:** not ready for Maven Central publication. The current mobile wrapper tests pass, but original-renderer parity, dependency licensing, production integration, and all four replacement profiles are incomplete. See [final checks](experiments/FINAL_CHECKS.md) and [replacement build examples](experiments/xetex-native/README.md). [Library sizes](SIZES.md) currently describe the original backend.
+
+Project-authored code is MIT-licensed; bundled components have their own licenses. Only compile trusted LaTeX; shell escape and HTTP are disabled, but this is not a filesystem or CPU sandbox.
 
 ## Invoice example
 

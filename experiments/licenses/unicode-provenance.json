@@ -1,0 +1,12 @@
+{
+  "version": "14.0.0",
+  "files": {
+    "UnicodeData.txt": "36018e68657fdcb3485f636630ffe8c8532e01c977703d2803f5b89d6c5feafb",
+    "SpecialCasing.txt": "c667b45908fd269af25fd55d2fc5bbc157fb1b77675936e25c513ce32e080334"
+  },
+  "upstream": "https://www.unicode.org/Public/14.0.0/ucd/",
+  "license_url": "https://www.unicode.org/license.txt",
+  "terms_url": "https://www.unicode.org/copyright.html",
+  "license_sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+  "verified": "Both data files byte-identical to the official versioned distribution."
+}

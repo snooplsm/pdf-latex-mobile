@@ -1,0 +1,14 @@
+{
+  "archive_url": "https://mirrors.ctan.org/fonts/amsfonts.zip",
+  "archive_sha256": "aaab3930b952128b7ed65260144493eb3d88cb063b50da1f90272e23c7e08ba2",
+  "verified_identical_files": {
+    "cmr10.pfb": "fdcede8794018df5f2b58f0905fb20a2b418ed8f67b73ee12445855dfbe5b1be",
+    "cmex10.pfb": "791b31aa1db8608d0144b3a40fc0fe53383a60f6b00d0e8fd9f06ac4a11df8cb",
+    "cmmi10.pfb": "e3661061e8aa474d6de5ffa916edceb0e3d8b998862018c147f0357fce00bcd7",
+    "msbm10.pfb": "d2121de7e7c14490a2d352e3b62e62882d6c300235464bfa577e6055696e6e62",
+    "cmr7.pfb": "b37e8671820b0753c6e233eaa3230c6ab9cff04e6c4baee312d60ae261e5aba1",
+    "cmmi7.pfb": "5b293a581ddb937b02559c3ce1a60184cc434295533204a2cd3864a6ad8a1f53"
+  },
+  "license": "OFL-1.1",
+  "license_file": "AMSFonts-OFL.txt"
+}

@@ -1,0 +1,21 @@
+{
+  "upstream_commit": "5684c0f51c0b81133db2efbe60a408b4155a3ff5",
+  "overrides": {
+    "hyph-sk.tex": {
+      "source_url": "https://raw.githubusercontent.com/hyphenation/tex-hyphen/5684c0f51c0b81133db2efbe60a408b4155a3ff5/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-sk.tex",
+      "sha256": "55b51962da5ad3f48ff62007006ecb7768bf2665e407c920e968d08b10b40369",
+      "replaces_sha256": "a3d18dada329f0893c55d56b456877472234304ce9c63480325dfe9ce211e257",
+      "non_comment_token_sha256": "76e8c1d70647d539179e61fdea11d2888a426f72d15c2c5e216901bba19df5c8",
+      "declared_license": "MIT",
+      "non_comment_tokens_identical": true
+    }
+  },
+  "remaining_gpl_only_headers": [
+    "hyph-cs.tex",
+    "hyph-id.tex",
+    "hyph-mk.tex"
+  ],
+  "remaining_lgpl_or_gpl_headers": [
+    "hyph-lv.tex"
+  ]
+}

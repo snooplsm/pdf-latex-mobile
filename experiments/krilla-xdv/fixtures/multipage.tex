@@ -1,0 +1,24 @@
+\documentclass[a5paper]{article}
+\setlength{\textwidth}{110mm}
+\setlength{\textheight}{150mm}
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\topmargin}{-12mm}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\begin{document}
+\begingroup
+\color[rgb]{0.1,0.3,0.7}
+{\large\bfseries First page}\par
+A blue paragraph and a rule before a forced page break.
+\par\noindent\rule{70mm}{1pt}
+\newpage
+{\large\bfseries Second page}\par
+This text retains the blue color across the page break.
+\[ \int_0^1 x^2\,dx = \frac{1}{3} \]
+\endgroup
+\par This sentence returns to black on the same page.
+\newpage
+{\large\bfseries Third page}\par
+Black text after the color group has ended.
+\textbf{Bold text}, \textit{italic text}, and regular text reuse fonts.
+\end{document}

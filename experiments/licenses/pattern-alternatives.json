@@ -1,0 +1,20 @@
+{
+  "findings": [
+    {
+      "candidate": "ytiurin/hyphen",
+      "file": "hyph-id.tex",
+      "source_url": "https://raw.githubusercontent.com/ytiurin/hyphen/86a09f1c1282dea8708b9b6f6bde7ad58e7d7c17/tex/hyph-id.tex",
+      "sha256": "95bb9f56044f5f4bcceb838224a13d560df0188f0d91543c8d3b4c9a2abfc032",
+      "finding": "Source patterns retain GPL declaration; not a permissive replacement."
+    },
+    {
+      "candidate": "ytiurin/hyphen",
+      "file": "hyph-mk.tex",
+      "source_url": "https://raw.githubusercontent.com/ytiurin/hyphen/86a09f1c1282dea8708b9b6f6bde7ad58e7d7c17/tex/hyph-mk.tex",
+      "sha256": "3cd8cf3ad015adec006523ba0c087069ee262f06625275ad4a332d3051f655fd",
+      "finding": "Source patterns retain GPL declaration; not a permissive replacement."
+    }
+  ],
+  "czech_candidate_report": "czech-alternative-results.json",
+  "czech_libreoffice_notice": "https://github.com/LibreOffice/dictionaries/blob/master/cs_CZ/README_en.txt"
+}

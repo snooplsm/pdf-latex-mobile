@@ -1,5 +1,7 @@
 # Library sizes
 
+These measurements describe the original Tectonic production backend. XeTeX + Krilla is selected for the replacement, but its latest release artifacts and all four profiles have not yet been measured.
+
 ## Android
 
 Measured compressed AAR downloads, in MB (decimal). Included CPU builds: arm64-v8a, armeabi-v7a, x86_64.

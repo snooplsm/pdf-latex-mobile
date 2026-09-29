@@ -1,0 +1,109 @@
+{
+  "scope": "Exact matched runtime files and complete upstream source package archives; does not cover separate graphics drivers/configuration, AMS fonts, xcolor or other packages",
+  "release": "release-2021-11-15-PL1",
+  "commit": "6c71902738ec896e508cb580bb2b3152b7ad8bec",
+  "packages": [
+    {
+      "name": "amsmath",
+      "archives": [
+        {
+          "name": "latex-amsmath-ctan.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-amsmath-ctan.zip",
+          "sha256": "ba9c1bbffe2f5e729300ed2e8bd56c856f3f4389eb32537e4fc0bbd11e883439"
+        },
+        {
+          "name": "latex-amsmath.tds.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-amsmath.tds.zip",
+          "sha256": "4f622949bfe813d1b8a686676addc26e49c1db0455206a33a6be51ba8a71d7f3"
+        }
+      ],
+      "exact_files": [
+        {
+          "file": "amsbsy.sty",
+          "upstream_path": "tex/latex/amsmath/amsbsy.sty",
+          "sha256": "7f25c33d4010066ff2eed0286f62854867698b06d10ebad93b1b1ab96d12f936"
+        },
+        {
+          "file": "amsgen.sty",
+          "upstream_path": "tex/latex/amsmath/amsgen.sty",
+          "sha256": "d90cfa74087e9f8678fb81bde57f809f0d4043f2674cb23b73a85958ec4a0fb6"
+        },
+        {
+          "file": "amsmath.sty",
+          "upstream_path": "tex/latex/amsmath/amsmath.sty",
+          "sha256": "027b292408d989f370f160c9b5f5b89641f69cd19027b0342beb022dd74d7c83"
+        },
+        {
+          "file": "amsopn.sty",
+          "upstream_path": "tex/latex/amsmath/amsopn.sty",
+          "sha256": "18c28b99321d0f4576cb42e2793d2654828b273700224cd9ee27047f803e99f5"
+        },
+        {
+          "file": "amstext.sty",
+          "upstream_path": "tex/latex/amsmath/amstext.sty",
+          "sha256": "49426425d82407dc702c77236fdeb4b82568ebb9566b8dd849bcfbf9eb9644de"
+        }
+      ]
+    },
+    {
+      "name": "graphics",
+      "archives": [
+        {
+          "name": "latex-graphics-ctan.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-graphics-ctan.zip",
+          "sha256": "4a94887b124e0c41bc0ce5de2b699991e4b5f596a57c948606f297656b74a428"
+        },
+        {
+          "name": "latex-graphics.tds.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-graphics.tds.zip",
+          "sha256": "64c876be42e758e57b8fcbf73b1ce39c16fe112edadfaa5cc316798f265c5783"
+        }
+      ],
+      "exact_files": [
+        {
+          "file": "graphics.sty",
+          "upstream_path": "tex/latex/graphics/graphics.sty",
+          "sha256": "63cb7c6ae98653209d8f77ee842849676930fd694bc45a771309e0486c1cd9b5"
+        },
+        {
+          "file": "graphicx.sty",
+          "upstream_path": "tex/latex/graphics/graphicx.sty",
+          "sha256": "da1e0ad80baeea2859059307358257c506069c91bdd29fde9e12ee957cc5db44"
+        },
+        {
+          "file": "keyval.sty",
+          "upstream_path": "tex/latex/graphics/keyval.sty",
+          "sha256": "cdac603619a4c129511ef8a3abfbb4d2068b1bb67626cb30568baa0ceb26aea2"
+        },
+        {
+          "file": "trig.sty",
+          "upstream_path": "tex/latex/graphics/trig.sty",
+          "sha256": "4af1b021af86649d926eb025a92fa4a3603f0d65893ccdb6fb756b5a16810a51"
+        }
+      ]
+    },
+    {
+      "name": "firstaid",
+      "archives": [
+        {
+          "name": "latex-firstaid-ctan.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-firstaid-ctan.zip",
+          "sha256": "dc8544072df0815aa217846e469cfad89939c45d77c29da3ac75ebd051a9611d"
+        },
+        {
+          "name": "latex-firstaid.tds.zip",
+          "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-firstaid.tds.zip",
+          "sha256": "7c0db2b26b0719d853bfe8f64daa310ea971c4a8ca3e9e5319495cd4999fffbc"
+        }
+      ],
+      "exact_files": [
+        {
+          "file": "latex2e-first-aid-for-external-files.ltx",
+          "upstream_path": "tex/latex/firstaid/latex2e-first-aid-for-external-files.ltx",
+          "sha256": "1519a32708089df30c05e2ecbb61584dcb6bd325a485e4bfb90b79b46f097a27"
+        }
+      ]
+    }
+  ],
+  "release_distribution": "Source archives retained locally and included in experimental review collection; public release integration remains pending"
+}

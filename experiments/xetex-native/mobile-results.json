@@ -1,0 +1,16 @@
+{
+  "scope": "ARM64 native processes, not Kotlin/Swift wrappers or original-engine pixel parity",
+  "documents_per_platform": 30,
+  "runs_per_document": 2,
+  "matching_pdf_hashes": 180,
+  "reports": {
+    "host": "5a30089c1c586a7e6ba79ffc79cee5dc559104af9b7f411ccbc41b865513b515",
+    "android": "7f8851fcc85deca52119ada6596fc5eab322aadb1c3d0be4877208c1edaa08b3",
+    "ios": "ab2d1935fcdb2dff9c5bd254c81eb3def29385500ad174110f6a1706daf8ee24"
+  },
+  "binaries_sha256": {
+    "host": "5bd65767e92e752f743723679dfe04838c7a430027847a37ae0ccc1b05f3bc9f",
+    "android": "e4c19db0255a7f31daccfb0773ec3f2880d96e1577d1bc0fafac39b1ed02dcb5",
+    "ios": "fabd7578ef59655a079424104ea19944666bbf3f3ececc5207e8d40893bcced6"
+  }
+}

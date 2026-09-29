@@ -1,0 +1,247 @@
+{
+  "scope": "Matched LaTeX base distribution and bundled kernel patch; not full TeX bundle clearance",
+  "release": "release-2021-11-15-PL1",
+  "commit": "6c71902738ec896e508cb580bb2b3152b7ad8bec",
+  "archives": [
+    {
+      "name": "latex-base-ctan.zip",
+      "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-base-ctan.zip",
+      "sha256": "6cf4bd15187ae9c3d430e95376b8fc360eed85985e2bab00b5a85a9f109e0e61"
+    },
+    {
+      "name": "latex-base.tds.zip",
+      "url": "https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-base.tds.zip",
+      "sha256": "b3c42666960317d5389fb40d197bec93ad5694a60e308d1b3ec267244cfcbc10"
+    }
+  ],
+  "files": [
+    {
+      "file": "article.cls",
+      "upstream_path": "tex/latex/base/article.cls",
+      "upstream_sha256": "988fb3e599df7e5b545e4253829dab11f0c7bd7827b79d32c2aaadfb52db6f6c",
+      "bundled_sha256": "988fb3e599df7e5b545e4253829dab11f0c7bd7827b79d32c2aaadfb52db6f6c",
+      "identical": true
+    },
+    {
+      "file": "atbegshi-ltx.sty",
+      "upstream_path": "tex/latex/base/atbegshi-ltx.sty",
+      "upstream_sha256": "815582a920087c3a3c7dbf4d357b22db05e087f87b7fdcadf606d9f1fe750cb4",
+      "bundled_sha256": "815582a920087c3a3c7dbf4d357b22db05e087f87b7fdcadf606d9f1fe750cb4",
+      "identical": true
+    },
+    {
+      "file": "atveryend-ltx.sty",
+      "upstream_path": "tex/latex/base/atveryend-ltx.sty",
+      "upstream_sha256": "5cf523f1f8f87a365b9b2d16d79e62e0363a833dfdfa889e99f5251064661e83",
+      "bundled_sha256": "5cf523f1f8f87a365b9b2d16d79e62e0363a833dfdfa889e99f5251064661e83",
+      "identical": true
+    },
+    {
+      "file": "fontenc.sty",
+      "upstream_path": "tex/latex/base/fontenc.sty",
+      "upstream_sha256": "d088c75e16c3c9f6b979a59571b96e5dd9e487a720bc74591580878388b82918",
+      "bundled_sha256": "d088c75e16c3c9f6b979a59571b96e5dd9e487a720bc74591580878388b82918",
+      "identical": true
+    },
+    {
+      "file": "fontmath.cfg",
+      "upstream_path": "tex/latex/base/fontmath.cfg",
+      "upstream_sha256": "d3f100870b4ddd3f7b31fc799d01fbfb3bfa125d6fc473e64ce273901555b0c4",
+      "bundled_sha256": "d3f100870b4ddd3f7b31fc799d01fbfb3bfa125d6fc473e64ce273901555b0c4",
+      "identical": true
+    },
+    {
+      "file": "fontmath.ltx",
+      "upstream_path": "tex/latex/base/fontmath.ltx",
+      "upstream_sha256": "f16b8c352292d9bb9ae82fa6764651e7f61d21e7bb5fdb039c18dca704700855",
+      "bundled_sha256": "f16b8c352292d9bb9ae82fa6764651e7f61d21e7bb5fdb039c18dca704700855",
+      "identical": true
+    },
+    {
+      "file": "fonttext.cfg",
+      "upstream_path": "tex/latex/base/fonttext.cfg",
+      "upstream_sha256": "2d7fcaf04dba33fb4344c3f8b0be1f200379f8f08fbe14b412a461c1d3578736",
+      "bundled_sha256": "2d7fcaf04dba33fb4344c3f8b0be1f200379f8f08fbe14b412a461c1d3578736",
+      "identical": true
+    },
+    {
+      "file": "fonttext.ltx",
+      "upstream_path": "tex/latex/base/fonttext.ltx",
+      "upstream_sha256": "adb63677a08ed1904346996fa43c165f6c2ed2a869661b37f24ead11c23e0dad",
+      "bundled_sha256": "adb63677a08ed1904346996fa43c165f6c2ed2a869661b37f24ead11c23e0dad",
+      "identical": true
+    },
+    {
+      "file": "latex.ltx",
+      "upstream_path": "tex/latex/base/latex.ltx",
+      "upstream_sha256": "f3a5c1045083b60eee6d98b6772fcfbaf17d18e3c3c10941bb3c949fdadc23a5",
+      "bundled_sha256": "70ba1d0d113a986e4966e5a7ebb5afa3fbb17843ec4395bd0187d2aa266b5646",
+      "identical": false
+    },
+    {
+      "file": "omlcmm.fd",
+      "upstream_path": "tex/latex/base/omlcmm.fd",
+      "upstream_sha256": "64c6d721bd82e1b1d0cdae0041737e473e7ae4b6a2ef30be5a4cb58504c2bf27",
+      "bundled_sha256": "64c6d721bd82e1b1d0cdae0041737e473e7ae4b6a2ef30be5a4cb58504c2bf27",
+      "identical": true
+    },
+    {
+      "file": "omlenc.def",
+      "upstream_path": "tex/latex/base/omlenc.def",
+      "upstream_sha256": "1a82bddbbad0234be439dffccefc2fe26ea9216520be7f1fb888293d9bbd63a4",
+      "bundled_sha256": "1a82bddbbad0234be439dffccefc2fe26ea9216520be7f1fb888293d9bbd63a4",
+      "identical": true
+    },
+    {
+      "file": "omscmsy.fd",
+      "upstream_path": "tex/latex/base/omscmsy.fd",
+      "upstream_sha256": "2b7223030a17cc25d00f47cc7fe8bb503049acfce8899f0ae409e79949123ae1",
+      "bundled_sha256": "2b7223030a17cc25d00f47cc7fe8bb503049acfce8899f0ae409e79949123ae1",
+      "identical": true
+    },
+    {
+      "file": "omsenc.def",
+      "upstream_path": "tex/latex/base/omsenc.def",
+      "upstream_sha256": "b2ac48b774931de1988b88bcfff6076c72ba0a739420a6fdbf1378cddf2c8482",
+      "bundled_sha256": "b2ac48b774931de1988b88bcfff6076c72ba0a739420a6fdbf1378cddf2c8482",
+      "identical": true
+    },
+    {
+      "file": "omxcmex.fd",
+      "upstream_path": "tex/latex/base/omxcmex.fd",
+      "upstream_sha256": "18ef86924d2a8f33abe9fa92aac9416e73bf9cc92b05e964535abb8ae23816fe",
+      "bundled_sha256": "18ef86924d2a8f33abe9fa92aac9416e73bf9cc92b05e964535abb8ae23816fe",
+      "identical": true
+    },
+    {
+      "file": "ot1cmr.fd",
+      "upstream_path": "tex/latex/base/ot1cmr.fd",
+      "upstream_sha256": "bcc3699050bd2e0c4214ba93cf28a129f63332a0dea665c2dece1f4a9a1dd57f",
+      "bundled_sha256": "bcc3699050bd2e0c4214ba93cf28a129f63332a0dea665c2dece1f4a9a1dd57f",
+      "identical": true
+    },
+    {
+      "file": "ot1cmss.fd",
+      "upstream_path": "tex/latex/base/ot1cmss.fd",
+      "upstream_sha256": "b997a943a79bcad7b88db340e380d87fe4f668de544e1eb76081b929024c0165",
+      "bundled_sha256": "b997a943a79bcad7b88db340e380d87fe4f668de544e1eb76081b929024c0165",
+      "identical": true
+    },
+    {
+      "file": "ot1cmtt.fd",
+      "upstream_path": "tex/latex/base/ot1cmtt.fd",
+      "upstream_sha256": "ed73ac7c8ad40924be86b895ec3bc762fb57e58963ea87d267122b98ceb9f942",
+      "bundled_sha256": "ed73ac7c8ad40924be86b895ec3bc762fb57e58963ea87d267122b98ceb9f942",
+      "identical": true
+    },
+    {
+      "file": "ot1enc.def",
+      "upstream_path": "tex/latex/base/ot1enc.def",
+      "upstream_sha256": "3b1c1cb3b065751f28a59223c3cdcbd1639549ed5a57c960f22a033d7d4799fa",
+      "bundled_sha256": "3b1c1cb3b065751f28a59223c3cdcbd1639549ed5a57c960f22a033d7d4799fa",
+      "identical": true
+    },
+    {
+      "file": "preload.cfg",
+      "upstream_path": "tex/latex/base/preload.cfg",
+      "upstream_sha256": "26b89597c49af2ab6b8fda1a3dffc5cd8edb6259a23b9b57c7892bae07b75e5c",
+      "bundled_sha256": "26b89597c49af2ab6b8fda1a3dffc5cd8edb6259a23b9b57c7892bae07b75e5c",
+      "identical": true
+    },
+    {
+      "file": "preload.ltx",
+      "upstream_path": "tex/latex/base/preload.ltx",
+      "upstream_sha256": "05d0c64b1212bb3e6d733290a504773f64ce030f64ee91b0daf9992f20815404",
+      "bundled_sha256": "05d0c64b1212bb3e6d733290a504773f64ce030f64ee91b0daf9992f20815404",
+      "identical": true
+    },
+    {
+      "file": "size10.clo",
+      "upstream_path": "tex/latex/base/size10.clo",
+      "upstream_sha256": "dee88bc30609ea53e4004f8baf91a2951050a635751fecf1c9b1eb7cf471302e",
+      "bundled_sha256": "dee88bc30609ea53e4004f8baf91a2951050a635751fecf1c9b1eb7cf471302e",
+      "identical": true
+    },
+    {
+      "file": "t1cmr.fd",
+      "upstream_path": "tex/latex/base/t1cmr.fd",
+      "upstream_sha256": "90dce135f4859c6e3276b9a19a08b8af76457881dbf9523d2313fa23d973af7c",
+      "bundled_sha256": "90dce135f4859c6e3276b9a19a08b8af76457881dbf9523d2313fa23d973af7c",
+      "identical": true
+    },
+    {
+      "file": "t1enc.def",
+      "upstream_path": "tex/latex/base/t1enc.def",
+      "upstream_sha256": "537d0535c1eb3d4ff06f28398b4e3ec3c2a7b66d0ad046441e6856bddd6c8871",
+      "bundled_sha256": "537d0535c1eb3d4ff06f28398b4e3ec3c2a7b66d0ad046441e6856bddd6c8871",
+      "identical": true
+    },
+    {
+      "file": "texsys.cfg",
+      "upstream_path": "tex/latex/base/texsys.cfg",
+      "upstream_sha256": "a0986d94c81fd7ce2251695a1affc58060055ccc9430483e64a73f4aa5e53306",
+      "bundled_sha256": "a0986d94c81fd7ce2251695a1affc58060055ccc9430483e64a73f4aa5e53306",
+      "identical": true
+    },
+    {
+      "file": "ts1cmr.fd",
+      "upstream_path": "tex/latex/base/ts1cmr.fd",
+      "upstream_sha256": "c919034d96da20aecccb01a4401a6a52a487aba86db9a354afc4d82b99a8c2b4",
+      "bundled_sha256": "c919034d96da20aecccb01a4401a6a52a487aba86db9a354afc4d82b99a8c2b4",
+      "identical": true
+    },
+    {
+      "file": "ts1enc.def",
+      "upstream_path": "tex/latex/base/ts1enc.def",
+      "upstream_sha256": "0cb1bfd59bf0af4f46eb9b48af25331a9583d186fff93810a6204ebc4cb45659",
+      "bundled_sha256": "0cb1bfd59bf0af4f46eb9b48af25331a9583d186fff93810a6204ebc4cb45659",
+      "identical": true
+    },
+    {
+      "file": "tuenc.def",
+      "upstream_path": "tex/latex/base/tuenc.def",
+      "upstream_sha256": "9893474e5e84d8015aebe5094efbc9383ad4adee1a41553f80dfc468c8e483c6",
+      "bundled_sha256": "9893474e5e84d8015aebe5094efbc9383ad4adee1a41553f80dfc468c8e483c6",
+      "identical": true
+    },
+    {
+      "file": "tulmr.fd",
+      "upstream_path": "tex/latex/base/tulmr.fd",
+      "upstream_sha256": "043558fa61747653d027ba166253292ef24348c1ebe393792f5e1d93f5ed64d7",
+      "bundled_sha256": "043558fa61747653d027ba166253292ef24348c1ebe393792f5e1d93f5ed64d7",
+      "identical": true
+    },
+    {
+      "file": "tulmss.fd",
+      "upstream_path": "tex/latex/base/tulmss.fd",
+      "upstream_sha256": "ef1e9b4bd9b66df17293e552ecbb60401cdb8fb394e60ae79d30990d1c8297cb",
+      "bundled_sha256": "ef1e9b4bd9b66df17293e552ecbb60401cdb8fb394e60ae79d30990d1c8297cb",
+      "identical": true
+    },
+    {
+      "file": "tulmtt.fd",
+      "upstream_path": "tex/latex/base/tulmtt.fd",
+      "upstream_sha256": "f73aad3758a44b0bb462d99b3dad4232ef1a8fbbb31808cbfa75ca0c1f669fa2",
+      "bundled_sha256": "f73aad3758a44b0bb462d99b3dad4232ef1a8fbbb31808cbfa75ca0c1f669fa2",
+      "identical": true
+    },
+    {
+      "file": "ucmr.fd",
+      "upstream_path": "tex/latex/base/ucmr.fd",
+      "upstream_sha256": "85f78f04e6a9625407f86d519344d3135ff5225f18ef624665a4c0b2e1befdd3",
+      "bundled_sha256": "85f78f04e6a9625407f86d519344d3135ff5225f18ef624665a4c0b2e1befdd3",
+      "identical": true
+    }
+  ],
+  "modified_kernel": {
+    "file": "latex.ltx",
+    "patch": "latex-base-latex.ltx.patch",
+    "description": "Tectonic-labeled missing-file handler replaces interactive filename prompting with a fatal error",
+    "attribution_evidence": "Comment in bundled file identifies Tectonic; historical patch commit not yet identified"
+  },
+  "distribution_remaining": [
+    "Include versioned upstream source archive and exact modified kernel with release source distribution",
+    "Review modified-work identification, change notices and support attribution under LPPL",
+    "Review remaining TeX packages separately"
+  ]
+}

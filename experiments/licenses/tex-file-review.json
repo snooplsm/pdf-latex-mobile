@@ -1,0 +1,175 @@
+{
+  "scope": "Manual review of actual bundled file headers; corrects ambiguous catalogue/basename matches, not a full license clearance",
+  "files": [
+    {
+      "file": "hyph-zh-latn-pinyin.tex",
+      "sha256": "c007e61bd59a16a00e12603b9a97968d730b955627d1aed5d856c5e425f7970e",
+      "header_declaration": "MIT",
+      "evidence": [
+        "name: MIT",
+        "Permission is hereby granted"
+      ],
+      "note": "Package-level CJK GPL label does not describe this file.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-sh-cyrl.tex",
+      "sha256": "9b0f8f489868d3f98d4dec8a5d71f465ad5a70afde6857c6c2d79ec0344618fc",
+      "header_declaration": "LPPL 1 or later",
+      "evidence": [
+        "name: LPPL",
+        "version: 1",
+        "or_later: true"
+      ],
+      "note": "File declares LPPL despite package-level GPL label.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-sh-latn.tex",
+      "sha256": "5aea49c845df3c21b95e417abfc28349909a4c9565523702055a122153486a4a",
+      "header_declaration": "LPPL 1 or later",
+      "evidence": [
+        "name: LPPL",
+        "version: 1",
+        "or_later: true"
+      ],
+      "note": "File declares LPPL despite package-level GPL label.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-hu.tex",
+      "sha256": "c6f02d2b6f49d5068035f7bbc91aaeefd0b691ff806c17539a033a716c374692",
+      "header_declaration": "MPL 1.1 OR GPL 2.0 OR LGPL 2.1",
+      "evidence": [
+        "at your option",
+        "name: MPL",
+        "version: 1.1"
+      ],
+      "note": "MPL alternative exists; its source/distribution requirements remain to implement.",
+      "release_clearance": false
+    },
+    {
+      "file": "fonttext.cfg",
+      "sha256": "2d7fcaf04dba33fb4344c3f8b0be1f200379f8f08fbe14b412a461c1d3578736",
+      "header_declaration": "LPPL 1.3c or later",
+      "evidence": [
+        "LaTeX Project Public License, either version 1.3c"
+      ],
+      "note": "Exact byte match to official LaTeX base 2021-11-15 PL1. Full upstream source archive retained in review collection; modified kernel and release-distribution obligations are tracked in latex-base-provenance.json.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyphen.cfg",
+      "sha256": "b68e6ae011a0a15c12f6ab72b70a0b6e3893be885a00ef3853c67fd989c9975c",
+      "header_declaration": "LPPL 1.3 or later",
+      "evidence": [
+        "part of the Babel system",
+        "LaTeX Project Public License, either version 1.3"
+      ],
+      "note": "Header identifies Babel, not the ambiguous cslatex/antomega basename matches.",
+      "release_clearance": false
+    },
+    {
+      "file": "pgfkeysfiltered.code.tex",
+      "sha256": "1d9d95de8b45811859942e439f2e1fcc64471a865f83709ae1666cf24df7f326",
+      "header_declaration": "LPPL and/or GPL",
+      "evidence": [
+        "under the LaTeX Project Public License",
+        "under the GNU Public License"
+      ],
+      "note": "Previously unmapped file supplies license alternatives; referenced PGF license terms still need packaging.",
+      "release_clearance": false
+    },
+    {
+      "file": "dehyphn-x-2022-03-16.pat",
+      "sha256": "72e371729891000698d0e29b5514625733e5529ca5d619bc706f69c81778052f",
+      "header_declaration": "MIT",
+      "evidence": [
+        "name: MIT",
+        "Permission is hereby granted"
+      ],
+      "note": "Retain original copyright and permission header.",
+      "release_clearance": false
+    },
+    {
+      "file": "dehyphn-x-2022-03-16.tex",
+      "sha256": "2909d9b18ab2a94854c5c8270eae7b51788d0edb849985fd04fa602d7aa0adc6",
+      "header_declaration": "Explicit permission to use, modify and distribute",
+      "evidence": [
+        "You may freely use, modify and/or distribute this file."
+      ],
+      "note": "Retain original copyright and permission header.",
+      "release_clearance": false
+    },
+    {
+      "file": "dehypht-x-2022-03-16.pat",
+      "sha256": "063c15918921ad5d4a95a73853453929a14df34ced1bd8b9ae1113fc34831e12",
+      "header_declaration": "MIT",
+      "evidence": [
+        "name: MIT",
+        "Permission is hereby granted"
+      ],
+      "note": "Retain original copyright and permission header.",
+      "release_clearance": false
+    },
+    {
+      "file": "dehypht-x-2022-03-16.tex",
+      "sha256": "a25d30636a6b342c6dfd41bde80ab38e500e28236166fc8f1a061a0a4e9f709d",
+      "header_declaration": "Explicit permission to use, modify and distribute",
+      "evidence": [
+        "You may freely use, modify and/or distribute this file."
+      ],
+      "note": "Retain original copyright and permission header.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-cs.tex",
+      "sha256": "37b16173109c9c1a34d04c87eeb4ea8206d55e636c380dbcd72e912b4ca5033a",
+      "header_declaration": "GPL-2.0-or-later",
+      "evidence": [
+        "name: GPL"
+      ],
+      "note": "File-level declaration confirmed. No permissive replacement established; retain as an unresolved distribution-review item.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-id.tex",
+      "sha256": "95bb9f56044f5f4bcceb838224a13d560df0188f0d91543c8d3b4c9a2abfc032",
+      "header_declaration": "GPL version 2",
+      "evidence": [
+        "name: GPL"
+      ],
+      "note": "File-level declaration confirmed. No permissive replacement established; retain as an unresolved distribution-review item.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-mk.tex",
+      "sha256": "3cd8cf3ad015adec006523ba0c087069ee262f06625275ad4a332d3051f655fd",
+      "header_declaration": "GPL, version unspecified in header",
+      "evidence": [
+        "name: GPL"
+      ],
+      "note": "File-level declaration confirmed. No permissive replacement established; retain as an unresolved distribution-review item.",
+      "release_clearance": false
+    },
+    {
+      "file": "hyph-lv.tex",
+      "sha256": "209e0a5b09aaf68517724a2cecc7b7bbd278355ffdd918051ce23110687e3d3c",
+      "header_declaration": "LGPL 2.1 OR GPL 2 or later",
+      "evidence": [
+        "name: GPL"
+      ],
+      "note": "File-level declaration confirmed. No permissive replacement established; retain as an unresolved distribution-review item.",
+      "release_clearance": false
+    }
+  ],
+  "unresolved_examples": [
+    "ckx.map",
+    "tectonic-format-latex.tex"
+  ],
+  "external_provenance": [
+    "unicode-provenance.json",
+    "latex-base-provenance.json"
+  ],
+  "configuration_replacement": "configuration-overrides.json: isolated reviewed bundle replaces the two unattributed configuration files; original production files remain unchanged"
+}

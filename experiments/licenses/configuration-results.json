@@ -1,0 +1,69 @@
+{
+  "scope": "Project-authored empty CID map and explicit XeLaTeX launcher; isolated bundle only",
+  "cases": [
+    {
+      "case": "bibliography",
+      "sha256": "1c4cdcb0db51226dcb77cecadf84932bf0f0bd7771c346138b83b89684fa6613",
+      "unchanged": true
+    },
+    {
+      "case": "core",
+      "sha256": "97449d6141953b01ef72fa4668ae9bd5929e98c6a525bd1387d7dcd751def28e",
+      "unchanged": true
+    },
+    {
+      "case": "diagrams",
+      "sha256": "8422370d5b952eba9120a686b12a07ed400d2762ee0742090d3fc155453dc98b",
+      "unchanged": true
+    },
+    {
+      "case": "fonts",
+      "sha256": "2f6a271acef7c62d7d468e47557b5bd462f9ebcf2fcfa895c48f2c9e40dfa638",
+      "unchanged": true
+    },
+    {
+      "case": "graphics",
+      "sha256": "45ee82c7049c03d56e0844c7d2ed00089e878fb27130df9dc011d1c3e9983e9c",
+      "unchanged": true
+    },
+    {
+      "case": "invoice",
+      "sha256": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7",
+      "unchanged": true
+    },
+    {
+      "case": "languages",
+      "sha256": "76ffe21b2f1d3702ce5730f282f7ee64a4fee9059a1894ed50b4675e67707e9c",
+      "unchanged": true
+    },
+    {
+      "case": "math",
+      "sha256": "07a62435df23e6a937e4cd3c10410ce4b2bf5c41d4abbe3c5a1ea27d21d73c92",
+      "unchanged": true
+    },
+    {
+      "case": "text",
+      "sha256": "8712f58ca84501280dadc124ac662bd17c311c5d63f9335cc814f29c14461f90",
+      "unchanged": true
+    },
+    {
+      "case": "multipage",
+      "sha256": "550a7e9bafcdf43922bd25401793391b2366fc7d75219b6d4d0f1141685b4468",
+      "unchanged": true
+    },
+    {
+      "case": "slovak",
+      "sha256": "6db4fd1ec88f9d496be25f2730183879a1e3532eb5ddaaf2ec59453dcd0b03c2",
+      "unchanged": true
+    }
+  ],
+  "tested_bundle_sha256": "87ccb9a89130a7d9915ba0c8a4e436a94c8e62166916c7eb360d0082c26b31fe",
+  "packaged_bundle_sha256": "c047ad8362bc0eeb3a3f7f69e239bace14e6a453156dcbaee8627f1df5bb1e73",
+  "packaged_root_payload_identical_to_tested_bundle": true,
+  "packaging_only_changes": [
+    "Project MIT notice",
+    "Configuration provenance notice",
+    "Bundle manifest/fingerprint"
+  ],
+  "remaining": "Other TeX data, dependencies and release licensing remain unresolved; not a production release"
+}

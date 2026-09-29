@@ -1,0 +1,57 @@
+{
+  "candidate_sha256": "ed9da95124ba7127cc559ffefa432916dd882d392c3fba9633dcac9ba12b3018",
+  "license_declaration": "MIT",
+  "source": "https://github.com/typst/hypher/blob/d81cc506416bffef2a75ee2dc969d4b41bc36613/patterns/hyph-cs-sojka.tex",
+  "scope": "29 words repeated in four column widths; not a complete language corpus",
+  "cases": [
+    {
+      "column_width_pt": 55,
+      "baseline_sha256": "9a463404cab1182f5c784ebe3fc75c7cdcc31782189b1dbdf574529f952ab8d2",
+      "candidate_sha256": "32061bdc79924e2f74ca2818996d8a0b3dbd2906a2bf77750d4587ea249b43b5",
+      "bytes_match": false,
+      "page_counts": [
+        3,
+        3
+      ],
+      "extracted_text_matches": false,
+      "first_page_different_pixels_144dpi": 9943
+    },
+    {
+      "column_width_pt": 70,
+      "baseline_sha256": "92ab90636d5488f6f1b6f178587099558c4c93306ce9580eeec05700f8e43cbe",
+      "candidate_sha256": "00a500832b641e3984baf8425e4f969c8a0410974d41a7aab60043aa75ac29a6",
+      "bytes_match": false,
+      "page_counts": [
+        2,
+        2
+      ],
+      "extracted_text_matches": false,
+      "first_page_different_pixels_144dpi": 13134
+    },
+    {
+      "column_width_pt": 90,
+      "baseline_sha256": "29f3f76e1d046f72f7ba778c63c470211bc1bf75b6680b6e158c5cf88aea9f0e",
+      "candidate_sha256": "a5fe6a3b61eb514d06531235e786c8d8db72360510ef09af05e27befa585af36",
+      "bytes_match": false,
+      "page_counts": [
+        2,
+        2
+      ],
+      "extracted_text_matches": false,
+      "first_page_different_pixels_144dpi": 3487
+    },
+    {
+      "column_width_pt": 120,
+      "baseline_sha256": "95076e44e8b1c22ce5e5c5e340fc191443a4401f6992ddb2a96858777cc985d7",
+      "candidate_sha256": "4adc8a32ce25cc7faf2d1496de9c3772c25c588b31e0b41d8cea2aa8346e0550",
+      "bytes_match": false,
+      "page_counts": [
+        2,
+        2
+      ],
+      "extracted_text_matches": false,
+      "first_page_different_pixels_144dpi": 80878
+    }
+  ],
+  "decision": "Not adopted: all four layouts differ from the current Czech patterns."
+}

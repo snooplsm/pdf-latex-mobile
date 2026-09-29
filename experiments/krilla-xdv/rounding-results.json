@@ -1,0 +1,53 @@
+{
+  "decision": "Rejected both truncation policies: they regress bibliography and text; restored precise positioning.",
+  "measurements": {
+    "precise": {
+      "backend_sha256": "e2dcb25c7c00a2ddb1e96d57269432bf5bb359e01f6f0069f8a9c1a277d56457",
+      "pixels_144dpi": {
+        "bibliography": 0,
+        "core": 100,
+        "diagrams": 0,
+        "fonts": 66,
+        "graphics": 63,
+        "invoice-png": 901,
+        "invoice": 901,
+        "languages": 0,
+        "math": 0,
+        "multipage": 134,
+        "text": 51
+      }
+    },
+    "truncate_pdf_adjustments": {
+      "backend_sha256": "506fc82fa7064559ef5b1f151129f773d73ce79ced0a48eebcf076d764c7d84c",
+      "pixels_144dpi": {
+        "bibliography": 98,
+        "core": 0,
+        "diagrams": 0,
+        "fonts": 66,
+        "graphics": 63,
+        "invoice-png": 585,
+        "invoice": 585,
+        "languages": 0,
+        "math": 0,
+        "multipage": 54,
+        "text": 153
+      }
+    },
+    "truncate_from_xdv_f64": {
+      "backend_sha256": "2f9afad4cc0baaff29b3840ec6fdf0e83b5b41c334a882de68660d8b6e9afebf",
+      "pixels_144dpi": {
+        "bibliography": 98,
+        "core": 100,
+        "diagrams": 0,
+        "fonts": 66,
+        "graphics": 63,
+        "invoice-png": 552,
+        "invoice": 552,
+        "languages": 0,
+        "math": 0,
+        "multipage": 54,
+        "text": 105
+      }
+    }
+  }
+}

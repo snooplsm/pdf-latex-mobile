@@ -1,0 +1,24 @@
+[package]
+name = "xetex-native-probe"
+version = "0.0.0"
+edition = "2024"
+publish = false
+license = "MIT"
+[workspace]
+[dependencies]
+tectonic = {version = "=0.17.0", default-features = false}
+tectonic_bundles = {version = "0.4", default-features = false}
+tectonic_status_base = "0.2"
+tectonic_bridge_core = "0.5"
+tempfile = "3"
+anyhow = "1"
+krilla-xdv-probe = {path = "../krilla-xdv"}
+[patch.crates-io]
+tectonic = {path = "../../.build/xetex-native-vendor/tectonic"}
+tectonic_engine_xetex = {path = "../../.build/xetex-native-vendor/engine"}
+tectonic_xetex_layout = {path = "../../.build/xetex-native-vendor/layout"}
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "s"
+strip = "debuginfo"
