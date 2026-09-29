@@ -73,7 +73,7 @@ def write_report(artifacts, markdown, json_path, split_root=Path("dist/aar-split
             lines.append(f'| {r["profile"]} | {r["zip_increase_bytes"] / 1_000_000:.2f} | {r["app_increase_bytes"] / 1_000_000:.2f} |')
         lines += ["", f'Baseline: {baseline["zip_bytes"] / 1_000_000:.2f} MB compressed, {baseline["app_bytes"] / 1_000_000:.2f} MB uncompressed.', "",
                   "Local unsigned builds with dead-code stripping. Compressed values use ZIP compression; uncompressed values sum app file sizes. These are measured build comparisons, not App Store download sizes or filesystem allocation. Signing, Apple processing, and app contents can change delivery sizes. See [Apple’s app-size measurement guidance](https://developer.apple.com/documentation/Xcode/reducing-your-app-s-size).", "",
-                  "Reproduce with `python3 tools/ios-sizes.py` (Xcode and XcodeGen required). The probe links and calls the compiler; the baseline uses the same UI without the library. Results include each profile’s TeX assets.", ""]
+                  "Reproduce with `python3 tools/ios-sizes.py --version VERSION` (Xcode and XcodeGen required). The probe links and calls the compiler; the baseline uses the same UI without the library. Results include each profile’s TeX assets.", ""]
     markdown.parent.mkdir(parents=True, exist_ok=True)
     json_path.parent.mkdir(parents=True, exist_ok=True)
     markdown.write_text("\n".join(lines))

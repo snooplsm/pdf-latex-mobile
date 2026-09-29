@@ -1,0 +1,7 @@
+{
+  "source": "language.dat from the pinned original Tectonic bundle",
+  "source_file": "language.dat.upstream",
+  "sha256": "a8a8e36e120beb9a19ffc2ca7c83445a1308ac9602a50cab1128deac14f5bee9",
+  "license": "Public domain, explicitly stated in the retained source header",
+  "modification": "tools/pack.py replaces disabled and dummy pattern loaders; profiles without languages use the project English-only configuration"
+}

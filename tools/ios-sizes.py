@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Measure unsigned arm64 iOS Release app growth against the same UI without LaTeX."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -8,6 +9,9 @@ import subprocess
 import zipfile
 from sizes import write_report
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--version', required=True, help='Android release version to include in the combined report')
+args = parser.parse_args()
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / '.build/ios-size-probe'
 DIST = ROOT / 'dist/ios-size-probe'
@@ -75,5 +79,5 @@ for profile in ('baseline', 'tiny', 'small', 'balanced', 'full'):
 metadata = {'schema': 1, 'xcode': subprocess.check_output(['xcodebuild', '-version'], text=True).strip(),
             'architecture': 'arm64', 'configuration': 'Release', 'signed': False, 'records': records}
 (ROOT / 'dist/ios-sizes.json').write_text(json.dumps(metadata, indent=2) + '\n')
-write_report(list((ROOT / 'dist/aar').glob('*.aar')), ROOT / 'SIZES.md', ROOT / 'dist/sizes.json',
+write_report([ROOT / f'dist/aar/latex-mobile-{profile}-{args.version}.aar' for profile in ('tiny', 'small', 'balanced', 'full')], ROOT / 'SIZES.md', ROOT / 'dist/sizes.json',
              ROOT / 'dist/aar-splits', ROOT / 'dist/ios-sizes.json')

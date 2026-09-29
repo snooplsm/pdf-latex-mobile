@@ -55,6 +55,17 @@ def main():
             for code in DISABLED_HYPHENATION.values():
                 assert not list(bundle.glob(f'hyph-{code}.*'))
                 assert not list(bundle.glob(f'loadhyph-{code}.*'))
+            config_provenance = json.loads((ROOT/'experiments/licenses/language-config-provenance.json').read_text())
+            original_config = ROOT/'experiments/licenses'/config_provenance['source_file']
+            assert sha(original_config.read_bytes()) == config_provenance['sha256']
+            with tempfile.TemporaryDirectory(prefix='lm-config-verification-') as config_temp:
+                config_dir = Path(config_temp)
+                (config_dir/'language.dat').write_bytes(original_config.read_bytes())
+                from pack import disable_restricted_hyphenation
+                disable_restricted_hyphenation(config_dir)
+                if 'languages' not in manifest['features']:
+                    (config_dir/'language.dat').write_text('english hyphen.tex\n=usenglish\n=USenglish\n=american\n')
+                assert (bundle/'language.dat').read_bytes() == (config_dir/'language.dat').read_bytes()
             lines = (bundle/'language.dat').read_text().splitlines()
             for line in lines:
                 fields = line.split()

@@ -25,6 +25,7 @@ for source in sorted((ROOT/'experiments/licenses').glob('*provenance.json')):
     if source.name != 'teckit-provenance.json':
         shutil.copyfile(source, OUT/source.name)
 (OUT/'teckit-provenance.json').unlink(missing_ok=True)
+shutil.copyfile(ROOT/'experiments/licenses/language.dat.upstream', OUT/'language.dat.upstream')
 # Pin the license text too; do not rely on a stale previous output directory.
 mpl_url = 'https://www.mozilla.org/media/MPL/1.1/index.0c5913925d40.txt'
 with urlopen(mpl_url, timeout=60) as response:

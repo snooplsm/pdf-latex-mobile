@@ -40,11 +40,11 @@ Completed:
 
 Remaining distribution review:
 
-- Confirm final notice coverage and configuration provenance. Bundles now include
-  the L3 backend modification identification; final artifact checks and refreshed
-  balanced-profile mobile parity are in progress. The refreshed full profile passes
-  four-way raw PDF equality (Android/iOS, two runs each), SHA-256
+- The refreshed balanced and full profiles pass four-way raw PDF equality
+  (Android/iOS, two runs each), SHA-256
   `fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7`.
+  The language configuration reproduces from its retained public-domain source.
+  Complete the final packaged notice/source review and signed artifact checks.
 - Confirm final source archive, notices and signed Maven artifacts all correspond
   to the final committed revision before publication.
 

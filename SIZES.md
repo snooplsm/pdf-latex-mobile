@@ -8,14 +8,10 @@ Measured compressed AAR downloads, in MB (decimal). Included CPU builds: arm64-v
 
 | Variant | All CPUs | ARMv7 | ARM64 | x86-64 |
 |---|---:|---:|---:|---:|
-| tiny | 12.73 | 4.50 | 4.86 | 5.03 |
-| tiny | 16.04 | 5.85 | 6.31 | 6.60 |
-| small | 12.96 | 4.72 | 5.08 | 5.25 |
-| small | 16.26 | 6.07 | 6.54 | 6.83 |
-| balanced | 16.71 | 6.52 | 6.98 | 7.27 |
-| balanced | 13.49 | 5.26 | 5.62 | 5.79 |
-| full | 31.74 | 12.73 | 13.09 | 13.26 |
-| full | 34.90 | 13.94 | 14.40 | 14.69 |
+| tiny | 16.07 | 5.89 | 6.35 | 6.64 |
+| small | 16.30 | 6.11 | 6.57 | 6.86 |
+| balanced | 16.74 | 6.55 | 7.02 | 7.30 |
+| full | 34.93 | 13.98 | 14.43 | 14.72 |
 
 CPU columns are measured single-architecture AAR builds, including the shared TeX assets and wrapper code. They are not APK split sizes or measured app download increases. A dash means that build has not been measured.
 
@@ -31,13 +27,13 @@ Measured growth over the same app without LaTeX, in MB. ARM64 device Release bui
 
 | Variant | Compressed app increase (MB) | Uncompressed app increase (MB) |
 |---|---:|---:|
-| tiny | 6.78 | 22.03 |
-| small | 7.00 | 22.49 |
-| balanced | 7.45 | 23.50 |
-| full | 14.89 | 39.01 |
+| tiny | 6.81 | 22.16 |
+| small | 7.04 | 22.61 |
+| balanced | 7.48 | 23.63 |
+| full | 14.92 | 39.14 |
 
 Baseline: 0.02 MB compressed, 0.09 MB uncompressed.
 
 Local unsigned builds with dead-code stripping. Compressed values use ZIP compression; uncompressed values sum app file sizes. These are measured build comparisons, not App Store download sizes or filesystem allocation. Signing, Apple processing, and app contents can change delivery sizes. See [Apple’s app-size measurement guidance](https://developer.apple.com/documentation/Xcode/reducing-your-app-s-size).
 
-Reproduce with `python3 tools/ios-sizes.py` (Xcode and XcodeGen required). The probe links and calls the compiler; the baseline uses the same UI without the library. Results include each profile’s TeX assets.
+Reproduce with `python3 tools/ios-sizes.py --version VERSION` (Xcode and XcodeGen required). The probe links and calls the compiler; the baseline uses the same UI without the library. Results include each profile’s TeX assets.
