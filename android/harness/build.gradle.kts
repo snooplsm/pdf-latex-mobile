@@ -9,4 +9,4 @@ android {
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
 }
-dependencies { implementation(project(":library")) }
+dependencies { implementation(project(":library")); implementation("androidx.core:core:1.15.0") }
