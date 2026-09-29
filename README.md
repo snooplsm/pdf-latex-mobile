@@ -28,7 +28,9 @@ let result = try await LaTeXMobile.compile(
 | balanced | small + AMS math, graphics, color, logo invoice |
 | full | balanced + TikZ, OpenType font, languages, BibTeX |
 
-Actual AAR measurements: [SIZES.md](SIZES.md). `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Image and other input files can be passed in the `assets` map (relative filenames to bytes). See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
+Android AARs include `armeabi-v7a` (ARMv7 with NEON), `arm64-v8a`, and `x86_64`; minimum Android 9 / API 28. Use app ABI splits to deliver only the device architecture.
+
+Actual AAR measurements: [SIZES.md](SIZES.md). `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Use Android `compileWithAssets` for mixed file, packaged asset, URI, stream, or byte inputs; `compileWithFiles` for a file map; or the existing `compile` for byte arrays. Swift accepts `assetFiles` (local URLs) or `assets` (Data). Names are relative LaTeX paths. File/stream inputs avoid whole-asset bridge copies (128 assets / 256 MiB maximum); keep source files unchanged during compilation. Tectonic still buffers engine state and PDF output. See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
 
 ```sh
 # macOS build prerequisites: Rust, Xcode, JDK 17+, Android SDK/NDK r29,
@@ -88,4 +90,12 @@ android/gradlew -p android :harness:installBalancedDebug
 python3 tools/prepare-ios.py balanced
 (cd ios && xcodegen generate)
 open ios/LaTeXMobileHarness.xcodeproj  # Run the Harness scheme on a simulator.
+```
+
+```sh
+# All three Android ABIs are built/packaged by default. Optional restricted build:
+ABIS="arm64-v8a" ./tools/build-native.sh android
+python3 tools/release.py --source .build/tex --abis arm64-v8a
+# For local Gradle builds using that restricted set:
+android/gradlew -p android -Pabis=arm64-v8a :harness:assembleBalancedDebug
 ```

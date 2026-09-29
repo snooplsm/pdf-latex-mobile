@@ -32,7 +32,7 @@ class MainActivity : Activity() {
             textSize = 14f
             isVerticalScrollBarEnabled = true
         }
-        var inputAssets = emptyMap<String, ByteArray>()
+        var inputAssets = emptyMap<String, LatexMobile.Asset>()
         val status = TextView(this).apply {
             text = "Ready — offline compilation"
             textSize = 12f
@@ -72,7 +72,7 @@ class MainActivity : Activity() {
                     } else {
                         val extension = if (position == 1) "pdf" else "png"
                         val name = "logo.$extension"
-                        inputAssets = mapOf(name to assets.open("invoice.assets/$name").use { it.readBytes() })
+                        inputAssets = mapOf(name to LatexMobile.Asset.AppAsset("invoice.assets/$name"))
                         source.setText(assets.open("invoice.tex").bufferedReader().use { it.readText() }
                             .replace("logo.pdf", name))
                         if (launchInvoice) {
@@ -115,7 +115,7 @@ class MainActivity : Activity() {
             status.text = "Compiling…"
             executor.execute {
                 val result = runCatching {
-                    val result = LatexMobile.compile(applicationContext, latex, File(File(filesDir, "pdfs").apply { mkdirs() }, "example.pdf"), assets = files)
+                    val result = LatexMobile.compileWithAssets(applicationContext, latex, File(File(filesDir, "pdfs").apply { mkdirs() }, "example.pdf"), assets = files)
                     val bitmap = ParcelFileDescriptor.open(result.pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { fd ->
                         PdfRenderer(fd).use { renderer ->
                             renderer.openPage(0).use { page ->

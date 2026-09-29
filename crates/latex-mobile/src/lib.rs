@@ -25,6 +25,8 @@ pub struct Request {
     pub output_path: PathBuf,
     #[serde(default)]
     pub assets: BTreeMap<String, String>,
+    #[serde(default)]
+    pub asset_files: BTreeMap<String, PathBuf>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -105,6 +107,56 @@ impl Bundle for TracedBundle {
     }
 }
 
+fn validate_asset_name(name: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let path = Path::new(name);
+    if name.is_empty()
+        || name.contains('\\')
+        || name.contains(':')
+        || name.contains('\0')
+        || name
+            .split('/')
+            .any(|part| part.is_empty() || part == "." || part == "..")
+        || !path
+            .components()
+            .all(|part| matches!(part, Component::Normal(_)))
+        || ["main.tex", "main.pdf"].contains(&name)
+    {
+        return Err(format!("invalid asset path: {name}").into());
+    }
+    Ok(())
+}
+
+fn copy_asset_files(
+    root: &Path,
+    files: &BTreeMap<String, PathBuf>,
+    inline: &BTreeMap<String, String>,
+) -> Result<(), Box<dyn std::error::Error>> {
+    use std::io::Read;
+    if files.len() + inline.len() > 128 {
+        return Err("too many assets (maximum 128)".into());
+    }
+    let mut remaining = 256 * 1024 * 1024_u64;
+    for (name, source) in files {
+        validate_asset_name(name)?;
+        if inline.contains_key(name) {
+            return Err(format!("duplicate asset: {name}").into());
+        }
+        let input = std::fs::File::open(source)?;
+        if !input.metadata()?.is_file() {
+            return Err("asset source must be a regular file".into());
+        }
+        let destination = root.join(name);
+        std::fs::create_dir_all(destination.parent().unwrap())?;
+        let mut output = std::fs::File::create(destination)?;
+        let copied = std::io::copy(&mut input.take(remaining + 1), &mut output)?;
+        if copied > remaining {
+            return Err("file assets exceed 256 MiB".into());
+        }
+        remaining -= copied;
+    }
+    Ok(())
+}
+
 fn write_assets(
     root: &Path,
     assets: &BTreeMap<String, String>,
@@ -114,18 +166,8 @@ fn write_assets(
     }
     let mut total = 0;
     for (name, encoded) in assets {
+        validate_asset_name(name)?;
         let path = Path::new(name);
-        if name.is_empty()
-            || name.contains('\\')
-            || name.contains(':')
-            || name.contains('\0')
-            || !path
-                .components()
-                .all(|part| matches!(part, Component::Normal(_)))
-            || ["main.tex", "main.pdf"].contains(&name.as_str())
-        {
-            return Err(format!("invalid asset path: {name}").into());
-        }
         let bytes = base64::engine::general_purpose::STANDARD.decode(encoded)?;
         total += bytes.len();
         if total > 16 * 1024 * 1024 {
@@ -159,6 +201,7 @@ pub fn compile_with_bundle(request: Request, bundle: Box<dyn Bundle>) -> Respons
             .lock()
             .map_err(|_| "engine lock poisoned; restart the host")?;
         let scratch = tempfile::tempdir()?;
+        copy_asset_files(scratch.path(), &request.asset_files, &request.assets)?;
         write_assets(scratch.path(), &request.assets)?;
         // A fresh format cache also records every dependency needed to initialize LaTeX.
         let mut builder = ProcessingSessionBuilder::new_with_security(SecuritySettings::default());
@@ -292,6 +335,7 @@ mod tests {
             bundle_path: temp.path().join("missing"),
             output_path: output.clone(),
             assets: BTreeMap::new(),
+            asset_files: BTreeMap::new(),
         });
         assert!(!result.ok);
         assert_eq!(std::fs::read_to_string(output).unwrap(), "previous");
@@ -327,6 +371,46 @@ mod tests {
             std::fs::read(temp.path().join("images/logo.png")).unwrap(),
             b"hello"
         );
+    }
+
+    #[test]
+    fn file_assets_copy_and_reject_conflicts() {
+        let temp = tempfile::tempdir().unwrap();
+        let source = temp.path().join("original");
+        std::fs::write(&source, b"asset content").unwrap();
+        let scratch = temp.path().join("scratch");
+        let files = BTreeMap::from([("images/logo.pdf".into(), source.clone())]);
+        copy_asset_files(&scratch, &files, &BTreeMap::new()).unwrap();
+        assert_eq!(
+            std::fs::read(scratch.join("images/logo.pdf")).unwrap(),
+            b"asset content"
+        );
+        assert_eq!(std::fs::read(&source).unwrap(), b"asset content");
+        assert!(copy_asset_files(
+            &scratch,
+            &files,
+            &BTreeMap::from([("images/logo.pdf".into(), String::new())])
+        )
+        .is_err());
+        for name in [
+            "../escape",
+            "images/./logo.pdf",
+            "images//logo.pdf",
+            "main.pdf",
+        ] {
+            assert!(copy_asset_files(
+                &scratch,
+                &BTreeMap::from([(name.into(), source.clone())]),
+                &BTreeMap::new()
+            )
+            .is_err());
+        }
+        assert!(copy_asset_files(
+            &scratch,
+            &BTreeMap::from([("dir".into(), temp.path().to_path_buf())]),
+            &BTreeMap::new()
+        )
+        .is_err());
     }
 
     #[test]

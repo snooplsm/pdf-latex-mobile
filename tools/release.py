@@ -11,7 +11,7 @@ from sizes import write_report
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--source", type=Path, required=True)
 parser.add_argument("--version", default="0.1.0")
-parser.add_argument("--abis", default="arm64-v8a")
+parser.add_argument("--abis", default="armeabi-v7a,arm64-v8a,x86_64")
 parser.add_argument("--notices", type=Path)
 args = parser.parse_args()
 config = json.loads((ROOT / "profiles/features.json").read_text())

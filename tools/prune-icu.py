@@ -45,7 +45,8 @@ if "android" in args.target:
     ndk = Path(os.environ["ANDROID_NDK_HOME"])
     platform = "darwin-x86_64" if os.uname().sysname == "Darwin" else "linux-x86_64"
     binary = ndk / f"toolchains/llvm/prebuilt/{platform}/bin"
-    compiler = [str(binary / f"{args.target}28-clang")]
+    clang_target = "armv7a-linux-androideabi" if args.target == "armv7-linux-androideabi" else args.target
+    compiler = [str(binary / f"{clang_target}28-clang")]
     ar = str(binary / "llvm-ar")
 else:
     sdk = "iphonesimulator" if args.target.endswith("-sim") else "iphoneos"

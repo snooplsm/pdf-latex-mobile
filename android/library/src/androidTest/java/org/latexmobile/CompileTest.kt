@@ -43,6 +43,49 @@ class CompileTest {
             PdfRenderer(fd).use { assertEquals(1, it.pageCount) }
         }
     }
+    @Test fun acceptsFileUriStreamAndBytesWithoutBase64() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val file = File(context.cacheDir, "message.tex").apply { writeText("Disk-backed input") }
+        val source = "\\documentclass{article}\\begin{document}\\input{message.tex}\\end{document}"
+        var closed = false
+        val inputs = listOf(
+            LatexMobile.Asset.FileSource(file),
+            LatexMobile.Asset.ContentUri(android.net.Uri.fromFile(file)),
+            LatexMobile.Asset.Bytes("Small byte input".toByteArray()),
+            LatexMobile.Asset.Stream {
+                object : java.io.ByteArrayInputStream("Stream input".toByteArray()) {
+                    override fun close() { closed = true; super.close() }
+                }
+            })
+        inputs.forEach { asset ->
+            val result = LatexMobile.compileWithAssets(context, source, File(context.cacheDir, "inputs.pdf"),
+                mapOf("message.tex" to asset,
+                    "bundle-hash.txt" to LatexMobile.Asset.AppAsset("texbundle/SHA256SUM")))
+            assertTrue(result.bytes > 100)
+        }
+        assertTrue(closed)
+        assertEquals("Disk-backed input", file.readText())
+    }
+
+    @Test fun failedStreamClosesAndRemovesStaging() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val before = context.cacheDir.list().orEmpty().filter { it.startsWith("latex-assets-") }.toSet()
+        var closed = false
+        val output = File(context.cacheDir, "failed-stream.pdf").apply { writeText("previous") }
+        val result = runCatching {
+            LatexMobile.compileWithAssets(context, "unused", output, mapOf("asset" to LatexMobile.Asset.Stream {
+                object : java.io.InputStream() {
+                    override fun read(): Int = throw java.io.IOException("stream failed")
+                    override fun close() { closed = true }
+                }
+            }))
+        }
+        assertTrue(result.isFailure)
+        assertTrue(closed)
+        assertEquals("previous", output.readText())
+        assertEquals(before, context.cacheDir.list().orEmpty().filter { it.startsWith("latex-assets-") }.toSet())
+    }
+
     @Test fun invalidLatexDoesNotReplacePreviousPdf() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val output = File(context.cacheDir, "invalid.pdf").apply { writeText("previous") }

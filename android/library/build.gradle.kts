@@ -17,7 +17,7 @@ android {
         minSdk = 28
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-        ndk { abiFilters += providers.gradleProperty("abis").getOrElse("arm64-v8a").split(",") }
+        ndk { abiFilters += providers.gradleProperty("abis").getOrElse("armeabi-v7a,arm64-v8a,x86_64").split(",") }
     }
     flavorDimensions += "content"
     productFlavors { variants.forEach { create(it) { dimension = "content" } } }
@@ -39,7 +39,7 @@ variants.forEach { variant ->
     tasks.matching { it.name.startsWith("merge${variant.replaceFirstChar(Char::uppercase)}") && it.name.endsWith("NativeLibs") }.configureEach {
         doFirst {
             val profile = if (variant == "full") "full" else "compact"
-            providers.gradleProperty("abis").getOrElse("arm64-v8a").split(",").forEach { abi ->
+            providers.gradleProperty("abis").getOrElse("armeabi-v7a,arm64-v8a,x86_64").split(",").forEach { abi ->
                 check(file("../../dist/native/android/$profile/$abi/liblatex_mobile.so").isFile) { "Run tools/build-native.sh android ($profile, $abi)." }
             }
         }

@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var generatedURL: URL?
     @State private var showPDF = false
     @State private var example = 0
-    @State private var assets: [String: Data] = [:]
+    @State private var assets: [String: URL] = [:]
     private func loadExample() {
         document = nil
         generatedURL = nil
@@ -30,7 +30,7 @@ struct ContentView: View {
             }
             let name = example == 1 ? "logo.pdf" : "logo.png"
             let text = try String(contentsOf: root.appendingPathComponent("invoice.tex"), encoding: .utf8)
-            let logo = try Data(contentsOf: root.appendingPathComponent("invoice.assets/\(name)"))
+            let logo = root.appendingPathComponent("invoice.assets/\(name)")
             source = text.replacingOccurrences(of: "logo.pdf", with: name)
             assets = [name: logo]
             status = "Invoice requires balanced or full"
@@ -55,7 +55,7 @@ struct ContentView: View {
                 Task {
                     do {
                         let output = FileManager.default.temporaryDirectory.appendingPathComponent("example.pdf")
-                        let result = try await LaTeXMobile.compile(input, to: output, assets: files)
+                        let result = try await LaTeXMobile.compile(input, to: output, assetFiles: files)
                         generatedURL = result.pdf
                         document = PDFDocument(url: result.pdf)
                         status = "\(result.bytes) bytes · \(result.elapsedMilliseconds) ms"

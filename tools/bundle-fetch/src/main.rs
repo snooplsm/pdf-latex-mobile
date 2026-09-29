@@ -84,6 +84,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .ok_or("unsupported bundle URL")?;
         let result = latex_mobile::compile_with_bundle(
             latex_mobile::Request {
+                asset_files: Default::default(),
                 source: std::fs::read_to_string(fixture)?,
                 assets: read_assets(Path::new(fixture).with_extension("assets"))?,
                 bundle_path: output.clone(),

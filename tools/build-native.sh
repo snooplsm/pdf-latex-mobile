@@ -10,12 +10,14 @@ case "${1:-}" in
     ;;
   android)
     : "${ANDROID_NDK_HOME:?Set ANDROID_NDK_HOME to Android NDK r29}"
+    export VCPKG_OVERLAY_TRIPLETS="$PWD/tools/triplets"
     host=darwin-x86_64
     [[ $(uname) == Linux ]] && host=linux-x86_64
     toolchain="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$host/bin"
     export PATH="$toolchain:$PATH"
-    for abi in ${ABIS:-arm64-v8a}; do
+    for abi in ${ABIS:-armeabi-v7a arm64-v8a x86_64}; do
       case "$abi" in
+        armeabi-v7a) target=armv7-linux-androideabi; triplet=arm-android; clang=armv7a-linux-androideabi28-clang ;;
         arm64-v8a) target=aarch64-linux-android; triplet=arm64-android; clang=aarch64-linux-android28-clang ;;
         x86_64) target=x86_64-linux-android; triplet=x64-android; clang=x86_64-linux-android28-clang ;;
         *) echo "Unsupported ABI: $abi" >&2; exit 1 ;;
