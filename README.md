@@ -2,6 +2,71 @@
 
 Offline Tectonic library with Android/Kotlin and iOS/Swift harnesses. MIT project code. Only compile trusted LaTeX; shell escape and HTTP are disabled, but this is not a filesystem or CPU sandbox.
 
+## Invoice example
+
+[![Billing invoice with a Northstar company logo](output/pdf/northstar-invoice-preview.png)](output/pdf/northstar-invoice.pdf)
+
+[View the generated PDF](output/pdf/northstar-invoice.pdf) · [Download PDF](output/pdf/northstar-invoice.pdf?raw=true) · [LaTeX source](examples/invoice.tex)
+
+Use **balanced** or **full**. The example embeds a vector PDF logo; a PNG logo is also included. Convert SVG logos to PDF before embedding.
+
+### Android
+
+Copy `examples/invoice.tex` and `examples/invoice.assets/logo.pdf` into your app's `src/main/assets/`, preserving the `invoice.assets` folder. The [Android sample app](android/harness) already packages these files.
+
+```kotlin
+import java.io.File
+import org.latexmobile.LatexMobile
+
+// Run on a worker thread. The logo streams from app assets into temporary storage.
+val source = context.assets.open("invoice.tex").bufferedReader().use { it.readText() }
+val invoice = LatexMobile.compileWithAssets(
+    context,
+    source,
+    File(context.filesDir, "invoice.pdf"),
+    mapOf("logo.pdf" to LatexMobile.Asset.AppAsset("invoice.assets/logo.pdf"))
+)
+// invoice.pdf is the generated file.
+```
+
+After the build setup below, install the sample and choose **Invoice · PDF logo**, then **Generate PDF** → **Open PDF**:
+
+```sh
+android/gradlew -p android :harness:installBalancedDebug
+```
+
+### iOS
+
+Add the `examples` folder to your app's resources as a folder reference, preserving its directory structure. Add the local `ios/LaTeXMobile` Swift package. The [iOS sample app](ios/Harness) already does this.
+
+```swift
+import Foundation
+import LaTeXMobile
+
+let examples = Bundle.main.url(forResource: "examples", withExtension: nil)!
+let source = try String(
+    contentsOf: examples.appendingPathComponent("invoice.tex"), encoding: .utf8)
+let logo = examples.appendingPathComponent("invoice.assets/logo.pdf")
+let invoice = try await LaTeXMobile.compile(
+    source,
+    to: FileManager.default.temporaryDirectory.appendingPathComponent("invoice.pdf"),
+    assetFiles: ["logo.pdf": logo]
+)
+// invoice.pdf is the generated file URL; the logo is read from disk.
+```
+
+After building the native iOS library below, select the profile and open the sample:
+
+```sh
+python3 tools/prepare-ios.py balanced
+(cd ios && xcodegen generate)
+open ios/LaTeXMobileHarness.xcodeproj
+```
+
+Run the **Harness** scheme, choose **Invoice · PDF logo**, then **Generate PDF** → **Open PDF**. Both platforms generate the same PDF bytes; `python3 tools/mobile-parity.py` checks their hashes.
+
+## Library usage
+
 ```kotlin
 // Choose exactly ONE artifact from the Maven Central after publication; local staging is dist/maven.
 implementation("io.github.snooplsm:latex-mobile-tiny:0.1.0")
@@ -31,6 +96,8 @@ let result = try await LaTeXMobile.compile(
 Android AARs include `armeabi-v7a` (ARMv7 with NEON), `arm64-v8a`, and `x86_64`; minimum Android 9 / API 28. Use app ABI splits to deliver only the device architecture.
 
 Actual universal and single-CPU AAR measurements: [SIZES.md](SIZES.md). Regenerate CPU comparisons with `python3 tools/split-sizes.py`. iOS release app growth is in the same report; regenerate with `python3 tools/ios-sizes.py`. `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Use Android `compileWithAssets` for mixed file, packaged asset, URI, stream, or byte inputs; `compileWithFiles` for a file map; or the existing `compile` for byte arrays. Swift accepts `assetFiles` (local URLs) or `assets` (Data). Names are relative LaTeX paths. File/stream inputs avoid whole-asset bridge copies (128 assets / 256 MiB maximum); keep source files unchanged during compilation. Tectonic still buffers engine state and PDF output. See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
+
+## Build and test
 
 ```sh
 # macOS build prerequisites: Rust, Xcode, JDK 17+, Android SDK/NDK r29,
@@ -84,13 +151,6 @@ python3 tools/invoice.py
 # SVG is a design source; convert it to PDF before using it with includegraphics.
 ```
 
-```sh
-# Run the invoice sample apps, then select Invoice · PDF logo or Invoice · PNG logo.
-android/gradlew -p android :harness:installBalancedDebug
-python3 tools/prepare-ios.py balanced
-(cd ios && xcodegen generate)
-open ios/LaTeXMobileHarness.xcodeproj  # Run the Harness scheme on a simulator.
-```
 
 ```sh
 # All three Android ABIs are built/packaged by default. Optional restricted build:
