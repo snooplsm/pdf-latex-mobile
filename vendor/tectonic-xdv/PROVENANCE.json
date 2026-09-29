@@ -1,0 +1,6 @@
+{
+  "upstream": "tectonic_xdv 0.3.0",
+  "license": "MIT",
+  "original_sha256": "32cab0a2d9602bf2475bc91c17d6f1f0afc069f1d3a8701eece027101cad2aa5",
+  "patched_sha256": "f61de7cd9e453202cca71f0f56ca1e734442e4198ba1919e7d54c44fd5bf96e4"
+}

@@ -19,7 +19,8 @@ def visit(key):
         return
     seen.add(key)
     for dependency in nodes[key]['deps']:
-        visit(dependency['pkg'])
+        if any(kind['kind'] != 'dev' for kind in dependency['dep_kinds']):
+            visit(dependency['pkg'])
 visit(next(k for k, p in packages.items() if p['name'] == 'latex-mobile'))
 records = []
 for key in sorted(seen):
@@ -53,10 +54,9 @@ for triplet in ('arm-android', 'arm64-android', 'x64-android', 'arm64-ios-releas
         target = OUT / 'native' / triplet / file.parent.name / 'copyright'
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(file, target)
-report = {'audit_status': 'needs-review', 'cargo_lock_sha256': hashlib.sha256((ROOT / 'Cargo.lock').read_bytes()).hexdigest(),
+forbidden = sorted(p['name'] for key, p in packages.items() if key in seen and p['name'] in {'tectonic_pdf_io', 'tectonic_engine_xdvipdfmx'})
+report = {'forbidden_pdf_dependencies': forbidden, 'teckit_sources_present': any((ROOT / 'vendor/tectonic-engine-xetex/xetex').glob('teckit-*')), 'audit_status': 'needs-review', 'cargo_lock_sha256': hashlib.sha256((ROOT / 'Cargo.lock').read_bytes()).hexdigest(),
           'rust_dependencies_including_build_and_target_dependencies': records,
-          'blockers': ['GPL-2.0-or-later headers in tectonic_pdf_io and tectonic_engine_xdvipdfmx',
-                       'TECkit CPL/LGPL terms and corresponding-source requirements need review',
-                       'TeX/font package notices and source obligations not yet complete']}
+          'blockers': ([f'Forbidden PDF dependencies: {forbidden}'] if forbidden else []) + ['Complete file-level TeX/font license provenance and final artifact/source correspondence review']}
 (OUT / 'INDEX.json').write_text(json.dumps(report, indent=2) + '\n')
 print(f'Collected {len(records)} Rust dependency records and native notices in {OUT}; release audit is incomplete.')

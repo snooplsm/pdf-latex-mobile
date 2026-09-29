@@ -1,0 +1,123 @@
+{
+  "scope": "Host and full-profile ARM64 Android emulator/iOS simulator verification",
+  "comparisons": [
+    {
+      "case": "graphics",
+      "hashes": [
+        "45ee82c7049c03d56e0844c7d2ed00089e878fb27130df9dc011d1c3e9983e9c",
+        "45ee82c7049c03d56e0844c7d2ed00089e878fb27130df9dc011d1c3e9983e9c"
+      ],
+      "equal": true
+    },
+    {
+      "case": "diagrams",
+      "hashes": [
+        "8422370d5b952eba9120a686b12a07ed400d2762ee0742090d3fc155453dc98b",
+        "8422370d5b952eba9120a686b12a07ed400d2762ee0742090d3fc155453dc98b"
+      ],
+      "equal": true
+    },
+    {
+      "case": "languages",
+      "hashes": [
+        "76ffe21b2f1d3702ce5730f282f7ee64a4fee9059a1894ed50b4675e67707e9c",
+        "76ffe21b2f1d3702ce5730f282f7ee64a4fee9059a1894ed50b4675e67707e9c"
+      ],
+      "equal": true
+    },
+    {
+      "case": "bibliography",
+      "hashes": [
+        "1c4cdcb0db51226dcb77cecadf84932bf0f0bd7771c346138b83b89684fa6613",
+        "1c4cdcb0db51226dcb77cecadf84932bf0f0bd7771c346138b83b89684fa6613"
+      ],
+      "equal": true
+    },
+    {
+      "case": "core",
+      "hashes": [
+        "97449d6141953b01ef72fa4668ae9bd5929e98c6a525bd1387d7dcd751def28e",
+        "97449d6141953b01ef72fa4668ae9bd5929e98c6a525bd1387d7dcd751def28e"
+      ],
+      "equal": true
+    },
+    {
+      "case": "text",
+      "hashes": [
+        "8712f58ca84501280dadc124ac662bd17c311c5d63f9335cc814f29c14461f90",
+        "8712f58ca84501280dadc124ac662bd17c311c5d63f9335cc814f29c14461f90"
+      ],
+      "equal": true
+    },
+    {
+      "case": "math",
+      "hashes": [
+        "07a62435df23e6a937e4cd3c10410ce4b2bf5c41d4abbe3c5a1ea27d21d73c92",
+        "07a62435df23e6a937e4cd3c10410ce4b2bf5c41d4abbe3c5a1ea27d21d73c92"
+      ],
+      "equal": true
+    },
+    {
+      "case": "fonts",
+      "hashes": [
+        "2f6a271acef7c62d7d468e47557b5bd462f9ebcf2fcfa895c48f2c9e40dfa638",
+        "2f6a271acef7c62d7d468e47557b5bd462f9ebcf2fcfa895c48f2c9e40dfa638"
+      ],
+      "equal": true
+    },
+    {
+      "case": "invoice",
+      "hashes": [
+        "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7",
+        "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7"
+      ],
+      "equal": true
+    },
+    {
+      "case": "punctuation",
+      "hashes": [
+        "cc42a6c99cd5d6d24bf67cb4b4892bc29432549fd85484535cf1b853cafd5a1e",
+        "cc42a6c99cd5d6d24bf67cb4b4892bc29432549fd85484535cf1b853cafd5a1e"
+      ],
+      "equal": true
+    },
+    {
+      "case": "nfc",
+      "hashes": [
+        "32c6fdb42761fc32c7a3714203b8956f07f998903e99a3e05e7b8c3007eac302",
+        "32c6fdb42761fc32c7a3714203b8956f07f998903e99a3e05e7b8c3007eac302"
+      ],
+      "equal": true
+    },
+    {
+      "case": "nfd",
+      "hashes": [
+        "32c6fdb42761fc32c7a3714203b8956f07f998903e99a3e05e7b8c3007eac302",
+        "32c6fdb42761fc32c7a3714203b8956f07f998903e99a3e05e7b8c3007eac302"
+      ],
+      "equal": true
+    }
+  ],
+  "rust_tests_passed": 16,
+  "limitations": [
+    "Custom compiled TECkit mappings and byte mappings are unsupported",
+    "ICU normalization uses its bundled Unicode version; corpus parity is not exhaustive",
+    "No mobile size savings claimed until rebuilt and measured",
+    "ARMv7/x86-64 and compact-profile TECkit-free mobile builds have not been validated in this run"
+  ],
+  "mobile_invoice": {
+    "profile": "full",
+    "android_abi": "arm64-v8a",
+    "ios_device": "7145214A-5ED5-40A9-B0C9-4DCD575C41D4",
+    "hashes": {
+      "android-1": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7",
+      "android-2": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7",
+      "ios-1": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7",
+      "ios-2": "fa88fcb7566173b3c395683f8bfdab5c11b3e9d4ced4dd069ffa0c930355ccb7"
+    },
+    "source_sha256": "1f338908e723ee8307b86e5e836f4d0c66820e487a5431f516d3f6bd92ec42f0",
+    "logo_sha256": "dbdde457523a7aacc39ead372933148b1eb9563fad7470ea38ea3eba03eefced"
+  },
+  "android_tests_passed": 6,
+  "ios_tests_passed": 4
+}

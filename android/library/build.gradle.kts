@@ -73,7 +73,7 @@ afterEvaluate {
                     artifact(apiJars.getValue(variant))
                     pom {
                         name.set("LaTeX Mobile ($variant)")
-                        description.set("Offline LaTeX to PDF for Android")
+                        description.set("Offline LaTeX to PDF for Android. Original code is MIT; bundled components retain their licenses in assets/texbundle/licenses.")
                         url.set("https://github.com/snooplsm/pdf-latex-mobile")
                         licenses { license { name.set("MIT"); url.set("https://opensource.org/licenses/MIT") } }
                         developers { developer { id.set("snooplsm"); name.set("Ryan G"); url.set("https://github.com/snooplsm") } }
@@ -91,7 +91,12 @@ afterEvaluate {
 }
 
 tasks.withType<Jar>().matching { it.name.endsWith("SourcesJar") }.configureEach {
-    from("../../crates/latex-mobile") { into("native/latex-mobile") }
+    from("../../crates") { into("native/crates") }
+    from("../../vendor") { into("native/vendor") }
+    from(listOf("../../Cargo.toml", "../../Cargo.lock", "../../LICENSE", "../../THIRD_PARTY.md")) { into("native") }
+    from("../../notices") { into("native/notices") }
+    from("../../tools") { into("native/tools"); exclude("**/__pycache__/**") }
+    from("../../experiments/licenses") { into("native/experiments/licenses") }
     from("../../include") { into("native/include") }
 }
 

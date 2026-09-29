@@ -12,6 +12,8 @@ class CompileTest {
     @Test fun exportsParityInvoice() {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val context = instrumentation.targetContext
+        val manifest = JSONObject(context.assets.open("texbundle/manifest.json").bufferedReader().use { it.readText() })
+        org.junit.Assume.assumeTrue("Invoice requires balanced or full", manifest.getJSONArray("features").toString().contains("\"invoice\""))
         val source = instrumentation.context.assets.open("invoice.tex").bufferedReader().use { it.readText() }
         val directory = File(context.filesDir, "parity").apply { mkdirs() }
         val logo = File(directory, "logo.pdf")
@@ -50,6 +52,19 @@ class CompileTest {
                     }
                 }
             }
+        }
+    }
+
+    @Test fun acceptsCustomFontFile() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val manifest = JSONObject(context.assets.open("texbundle/manifest.json").bufferedReader().use { it.readText() })
+        org.junit.Assume.assumeTrue("Custom font fixture requires full", manifest.getJSONArray("features").toString().contains("\"fonts\""))
+        val font = File(context.cacheDir, "CustomerFont.otf")
+        context.assets.open("texbundle/lmroman10-regular.otf").use { input -> font.outputStream().use { input.copyTo(it) } }
+        val source = "\\documentclass{article}\\usepackage{fontspec}\\setmainfont{CustomerFont.otf}\\begin{document}Customer font: Café --- invoice\\end{document}"
+        val result = LatexMobile.compileWithFiles(context, source, File(context.cacheDir, "custom-font.pdf"), mapOf("CustomerFont.otf" to font))
+        ParcelFileDescriptor.open(result.pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { fd ->
+            PdfRenderer(fd).use { assertEquals(1, it.pageCount) }
         }
     }
 

@@ -4,6 +4,9 @@ import PDFKit
 
 final class CompileTests: XCTestCase {
     func testExportsParityInvoice() async throws {
+        let manifestURL = Bundle.module.url(forResource: "manifest", withExtension: "json", subdirectory: "texbundle")!
+        let manifest = try JSONSerialization.jsonObject(with: Data(contentsOf: manifestURL)) as! [String: Any]
+        try XCTSkipUnless((manifest["features"] as! [String]).contains("invoice"), "Invoice requires balanced or full")
         let fixture = Bundle(for: Self.self).url(forResource: "invoice", withExtension: "tex", subdirectory: "examples")!
         let logo = Bundle(for: Self.self).url(forResource: "logo", withExtension: "pdf", subdirectory: "examples/invoice.assets")!
         let source = try String(contentsOf: fixture, encoding: .utf8)
@@ -48,6 +51,18 @@ final class CompileTests: XCTestCase {
                 if name == "invoice" { XCTAssertEqual(pages, 1) }
             }
         }
+    }
+
+    func testCustomFontFile() async throws {
+        let manifestURL = Bundle.module.url(forResource: "manifest", withExtension: "json", subdirectory: "texbundle")!
+        let manifest = try JSONSerialization.jsonObject(with: Data(contentsOf: manifestURL)) as! [String: Any]
+        try XCTSkipUnless((manifest["features"] as! [String]).contains("fonts"), "Custom font fixture requires full")
+        let font = Bundle.module.url(forResource: "lmroman10-regular", withExtension: "otf", subdirectory: "texbundle")!
+        let output = FileManager.default.temporaryDirectory.appendingPathComponent("custom-font.pdf")
+        defer { try? FileManager.default.removeItem(at: output) }
+        let source = #"\documentclass{article}\usepackage{fontspec}\setmainfont{CustomerFont.otf}\begin{document}Customer font: Café --- invoice\end{document}"#
+        _ = try await LaTeXMobile.compile(source, to: output, assetFiles: ["CustomerFont.otf": font])
+        XCTAssertEqual(PDFDocument(url: output)?.pageCount, 1)
     }
 
     func testCreatesReadablePDFOffline() async throws {

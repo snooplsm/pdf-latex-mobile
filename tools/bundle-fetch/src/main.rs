@@ -82,25 +82,53 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for fixture in &args[3..] {
         let bundle = tectonic_bundles::detect_bundle(args[1].clone(), false, None)?
             .ok_or("unsupported bundle URL")?;
-        let result = latex_mobile::compile_with_bundle(
-            latex_mobile::Request {
-                asset_files: Default::default(),
-                source: std::fs::read_to_string(fixture)?,
-                assets: read_assets(Path::new(fixture).with_extension("assets"))?,
-                bundle_path: output.clone(),
-                output_path: output.join("probe.pdf"),
-            },
-            Box::new(Collector {
+        let scratch = tempfile::tempdir()?;
+        for (name, encoded) in read_assets(Path::new(fixture).with_extension("assets"))? {
+            std::fs::write(
+                scratch.path().join(name),
+                base64::engine::general_purpose::STANDARD.decode(encoded)?,
+            )?;
+        }
+        let source = std::fs::read(fixture)?;
+        let mut status = tectonic_status_base::NoopStatusBackend::default();
+        let mut builder = tectonic::driver::ProcessingSessionBuilder::default();
+        builder
+            .primary_input_buffer(&source)
+            .tex_input_name("main.tex")
+            .filesystem_root(scratch.path())
+            .format_cache_path(scratch.path())
+            .format_name("latex")
+            .output_format(tectonic::driver::OutputFormat::Xdv)
+            .do_not_write_output_files()
+            .shell_escape_disabled()
+            .bundle(Box::new(Collector {
                 inner: bundle,
                 output: output.clone(),
-            }),
-        );
-        if !result.ok {
-            return Err(format!("{fixture}: {:?}\n{}", result.error, result.log).into());
+            }));
+        let mut session = builder.create(&mut status)?;
+        session.run(&mut status)?;
+        if !session.into_file_data().contains_key("main.xdv") {
+            return Err(format!("{fixture}: missing XDV output").into());
         }
-        eprintln!("{fixture}: {} PDF bytes", result.pdf_bytes);
+        eprintln!("{fixture}: collected XeTeX dependencies");
     }
-    std::fs::remove_file(output.join("probe.pdf"))?;
+    // Type 1 conversion happens at build time, after collection. Fetch the
+    // verified source fonts used by the renderer's explicit conversion map.
+    let mapping: std::collections::BTreeMap<String, String> = serde_json::from_str(include_str!(
+        "../../../crates/xdv-renderer/font-renames.json"
+    ))?;
+    let mut collector = Collector {
+        inner: tectonic_bundles::detect_bundle(args[1].clone(), false, None)?
+            .ok_or("unsupported bundle URL")?,
+        output: output.clone(),
+    };
+    let mut status = tectonic_status_base::NoopStatusBackend::default();
+    for name in mapping.keys() {
+        match collector.input_open_name(&format!("{name}.pfb"), &mut status) {
+            OpenResult::Ok(_) => (),
+            _ => return Err(format!("missing source font {name}.pfb").into()),
+        }
+    }
     use sha2::{Digest, Sha256};
     let mut paths: Vec<_> = std::fs::read_dir(&output)?
         .map(|entry| entry.map(|e| e.path()))

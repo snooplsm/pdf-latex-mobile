@@ -1,8 +1,10 @@
 # LaTeX Mobile
 
-Offline LaTeX-to-PDF library with Android/Kotlin and iOS/Swift sample apps. **XeTeX + Krilla is the selected replacement backend.** It is currently available as an experimental integration; the default production build still uses the original Tectonic PDF backend.
+Offline LaTeX-to-PDF library with Android/Kotlin and iOS/Swift sample apps. The production build uses **XeTeX + Krilla**, with vendored patches for deterministic mobile output.
 
-**Prerelease status:** not ready for Maven Central publication. The current mobile wrapper tests pass, but original-renderer parity, dependency licensing, production integration, and all four replacement profiles are incomplete. See [final checks](experiments/FINAL_CHECKS.md) and [replacement build examples](experiments/xetex-native/README.md). [Library sizes](SIZES.md) currently describe the original backend.
+**Prerelease status:** `0.1.0-alpha.2` is staged locally, not published to Maven Central. Android/iOS PDF hash checks pass; see [release review](RELEASE_REVIEW.md) for remaining distribution checks. [Library sizes](SIZES.md) measure the current XeTeX + Krilla artifacts, including notices.
+
+The current source uses ICU normalization and built-in TeX punctuation instead of TECkit. Custom `.tec` font mappings are unsupported. Host comparisons and the full-profile ARM64 Android/iOS invoice hash comparison pass.
 
 Project-authored code is MIT-licensed; bundled components have their own licenses. Only compile trusted LaTeX; shell escape and HTTP are disabled, but this is not a filesystem or CPU sandbox.
 
@@ -97,9 +99,11 @@ let result = try await LaTeXMobile.compile(
 | balanced | small + AMS math, graphics, color, logo invoice |
 | full | balanced + TikZ, OpenType font, languages, BibTeX |
 
+`full` disables automatic Czech, Indonesian, Macedonian, Latvian, and Armenian hyphenation to exclude their GPL/LGPL patterns. Unicode text and explicit LaTeX hyphenation hints remain supported; other bundled licenses still apply.
+
 Android AARs include `armeabi-v7a` (ARMv7 with NEON), `arm64-v8a`, and `x86_64`; minimum Android 9 / API 28. Use app ABI splits to deliver only the device architecture.
 
-Actual universal and single-CPU AAR measurements: [SIZES.md](SIZES.md). Regenerate CPU comparisons with `python3 tools/split-sizes.py`. iOS release app growth is in the same report; regenerate with `python3 tools/ios-sizes.py`. `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Use Android `compileWithAssets` for mixed file, packaged asset, URI, stream, or byte inputs; `compileWithFiles` for a file map; or the existing `compile` for byte arrays. Swift accepts `assetFiles` (local URLs) or `assets` (Data). Names are relative LaTeX paths. File/stream inputs avoid whole-asset bridge copies (128 assets / 256 MiB maximum); keep source files unchanged during compilation. Tectonic still buffers engine state and PDF output. See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
+Actual universal and single-CPU AAR measurements: [SIZES.md](SIZES.md). Regenerate CPU comparisons with `python3 tools/split-sizes.py`. iOS release app growth is in the same report; regenerate with `python3 tools/ios-sizes.py`. `full` means all included examples, not all TeX Live. Add representative documents for your packages. Exclusions remove unique data dependencies; tiny/small/balanced also omit ICU legacy encoding tables and native Unicode line-breaking data. Full retains those features. Use Android `compileWithAssets` for mixed file, packaged asset, URI, stream, or byte inputs; `compileWithFiles` for a file map; or the existing `compile` for byte arrays. Swift accepts `assetFiles` (local URLs) or `assets` (Data). Names are relative LaTeX paths. File/stream inputs avoid whole-asset bridge copies (128 assets / 256 MiB maximum); keep source files unchanged during compilation. The engine and renderer still buffer engine state, XDV, and PDF output. See `examples/invoice.tex` and `examples/invoice.assets/logo.pdf`.
 
 ## Build and test
 
@@ -110,6 +114,9 @@ Actual universal and single-CPU AAR measurements: [SIZES.md](SIZES.md). Regenera
 export VCPKG_ROOT="$PWD/.build/vcpkg" TECTONIC_DEP_BACKEND=vcpkg VCPKGRS_TRIPLET=arm64-osx
 cargo run --locked -p bundle-fetch -- \
   https://data1.fullyjustified.net/tlextras-2022.0r0.tar .build/tex examples/*.tex
+python3 -m venv .build/fonttools-venv
+.build/fonttools-venv/bin/pip install fonttools==4.60.2
+.build/fonttools-venv/bin/python tools/prepare-fonts.py --source .build/tex --output .build/tex
 ./tools/build-native.sh host
 
 # Each bundle is recompiled offline after pruning. Optional custom corpus:
@@ -129,7 +136,7 @@ python3 tools/prepare-ios.py tiny
 xcodebuild -project ios/LaTeXMobileHarness.xcodeproj -scheme Harness \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' test
 
-cargo test --locked -p latex-mobile
+cargo test --locked -p latex-mobile -p latex-mobile-xdv
 python3 -m unittest discover -s tools -p 'test_*.py'
 ```
 

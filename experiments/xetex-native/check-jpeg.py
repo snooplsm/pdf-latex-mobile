@@ -14,13 +14,13 @@ for name,dpi,progressive in [('default',None,False),('dpi72',(72,72),False),('dp
  image.save(assets/'picture.jpg',**options)
  source=out/(name+'.tex');source.write_text(r'\documentclass{article}\usepackage{graphicx}\begin{document}JPEG test\par\includegraphics{picture.jpg}\end{document}')
  paths=[]
- for label,binary in [('baseline',root/'target/release/examples/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
-  xdv=out/(name+'-'+label+'.xdv');subprocess.run([str(binary),str(root/'dist/bundles/full/texbundle'),str(source),str(xdv)],check=True,capture_output=True)
+ for label,binary in [('baseline',root/'.build/original-engine/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
+  xdv=out/(name+'-'+label+'.xdv');subprocess.run([str(binary),str(root/'.build/original-bundles/full/texbundle'),str(source),str(xdv)],check=True,capture_output=True)
   paths.append(xdv)
  assert paths[0].read_bytes()==paths[1].read_bytes(),(name,'XDV differs')
  baseline=out/(name+'-baseline.pdf')
- request={'source':source.read_text(),'bundle_path':str(root/'dist/bundles/full/texbundle'),'output_path':str(baseline),'asset_files':{'picture.jpg':str(assets/'picture.jpg')}}
- subprocess.run([str(root/'target/release/lm-compile')],input=json.dumps(request),text=True,check=True,capture_output=True)
+ request={'source':source.read_text(),'bundle_path':str(root/'.build/original-bundles/full/texbundle'),'output_path':str(baseline),'asset_files':{'picture.jpg':str(assets/'picture.jpg')}}
+ subprocess.run([str(root/'.build/original-engine/lm-compile')],input=json.dumps(request),text=True,check=True,capture_output=True)
  pdf=out/(name+'-replacement.pdf');hashes=[]
  for _ in range(2):
   subprocess.run([str(root/'.build/krilla-xdv-target/release/krilla-xdv-probe'),str(paths[1]),str(root/'.build/krilla-fonts'),str(pdf),str(assets)],check=True)

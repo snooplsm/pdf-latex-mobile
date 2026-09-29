@@ -1,0 +1,15 @@
+{
+  "upstream": "krilla 0.8.2",
+  "license": "MIT OR Apache-2.0",
+  "source_sha256": "e5843d33ef184ab5c458025d1b1dc53df6ee6aaf085595ea14604d080b98f8a4",
+  "patched_sha256": "9df4c3a2da4646102028edb3780c3c046baa2de63a4ad4ff7e7d837be4d5f34f",
+  "additional_changes": {
+    "src/stream.rs": "Explicit miniz_oxide 0.8.9 level-6 PDF stream compression; independent of flate2 feature unification",
+    "Cargo.toml": "Pinned miniz_oxide; Hayro xdvipdfmx-compatibility feature"
+  },
+  "patched_files_sha256": {
+    "src/graphics/color.rs": "9df4c3a2da4646102028edb3780c3c046baa2de63a4ad4ff7e7d837be4d5f34f",
+    "src/stream.rs": "ab40db4e9633deaa967633e10cdf42613de647ed88384c941dd630e0a26ea9d2",
+    "Cargo.toml": "12ef3075e44220734b6633f43be54bb17d8fe3e416ea12ab36c271816f6f928a"
+  }
+}

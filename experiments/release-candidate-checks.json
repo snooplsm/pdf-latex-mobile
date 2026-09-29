@@ -1,0 +1,39 @@
+{
+  "version": "0.1.0-alpha.2",
+  "published": false,
+  "evidence": {
+    "custom-font-android-tests": {
+      "log": ".build/custom-font-android-tests.log",
+      "sha256": "46aab061768750ac0605f90e1f211cd040d376ff8bc9a07d60980756aa8c232a"
+    },
+    "custom-font-ios-tests": {
+      "log": ".build/custom-font-ios-tests.log",
+      "sha256": "0ecf8fec6625a0dc1953656a6c1bd2b2773e00f8e4abd0a7525e88aee5796adf"
+    },
+    "release-android-tests": {
+      "log": ".build/release-android-tests.log",
+      "sha256": "a756e968b2c58843a10568bc770a8f0745e7e93d069fbd8d6dc17c0b9a52dfb1"
+    },
+    "release-rust-tests": {
+      "log": ".build/release-rust-tests.log",
+      "sha256": "cb033470101363f010e9049a9b4517b685995386a0b5eaae8eac68a8968c3281"
+    },
+    "release-full-parity": {
+      "log": ".build/release-full-parity.log",
+      "sha256": "b7fc1724e636fa4ffb4f57e19645311b3dc109b3e1822e04a173efd89455eb25"
+    },
+    "release-balanced-parity": {
+      "log": ".build/release-balanced-parity.log",
+      "sha256": "8585bf08b1d19b37900074f0aec99653b71d4f2181a345e57f6c17d3953f94ca"
+    },
+    "release-ios-sizes": {
+      "log": ".build/release-ios-sizes.log",
+      "sha256": "5dde86098a261176b86b2d9b682eb14bc72115d933c1c2aef84c50227246bbb5"
+    },
+    "release-split-sizes": {
+      "log": ".build/release-split-sizes.log",
+      "sha256": "364d6b6303457044d0b6a74190b94a5c89bb251da2d1b575c5cc9a2df5d226eb"
+    }
+  },
+  "remaining": "See RELEASE_REVIEW.md; candidate source and signing finalization are incomplete."
+}

@@ -1,0 +1,8 @@
+{
+  "upstream": "tectonic_xetex_layout 0.3.4",
+  "license": "MIT",
+  "change": "Clear font-id indexed glyph bounds and protrusion caches before every XeTeX run; invoked under global lock",
+  "original_c_api_sha256": "72fdbc2b98301bc3f024471552898a74d0f14a9f33f5ed420bbbd65b0d11edbb",
+  "patched_c_api_sha256": "b48650be041f74752348af297912273d748211a5536e23c56dc01885357487d2",
+  "patched_engine_sha256": "72e37d6b85dc9ad4bc0c4a5f809c301f7c5d81c36c71b6ae630645c0136bdce8"
+}

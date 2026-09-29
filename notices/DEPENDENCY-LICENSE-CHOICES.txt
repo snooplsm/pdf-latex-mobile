@@ -1,0 +1,43 @@
+LaTeX Mobile dependency license choices
+
+Original project code: MIT. This does not relicense third-party components.
+Preserve the notices supplied with the distribution when redistributing it.
+
+TECkit, tectonic_pdf_io, and tectonic_engine_xdvipdfmx are excluded from the
+current production source/build. Historical source-review files referring to
+those components are not descriptions of the current binary dependency set.
+
+For Rust dependencies explicitly offering MIT OR Apache-2.0, select MIT.
+For r-efi, select its MIT alternative, not LGPL. For compound AND expressions,
+all required terms remain applicable. Other components retain their declared
+license; see INDEX.json and the accompanying notice texts.
+
+option-ext 0.2.0: MPL-2.0. Its complete unmodified crate source, including its
+license, is included under sources/option-ext-0.2.0 in this notice directory.
+That source remains available under MPL-2.0; the project's MIT license does
+not replace it or restrict recipients' MPL rights.
+
+FreeType: select the FreeType License (FTL), not its GPL alternative.
+Portions of this software are copyright (C) The FreeType Project
+(www.freetype.org). All rights reserved. See the included FreeType notice
+for individual copyrights and component-specific terms.
+Graphite2: select its LGPL-independent MIT alternative where offered.
+PGF/TikZ: select the LPPL alternative for code carrying that explicit choice.
+Hungarian hyphenation (hyph-hu.tex): select MPL-1.1. The unmodified preferred
+source is distributed directly as texbundle/hyph-hu.tex with its original
+copyright, developer identification and license alternatives intact.
+Hyphenation files explicitly offering MIT alongside another license: select
+MIT. Other pattern files retain their individual terms and original headers.
+
+Czech, Indonesian, Macedonian, Latvian and Armenian automatic hyphenation is
+disabled; their pattern files and loaders are excluded from generated bundles.
+
+Converted AMS fonts: OFL-1.1, with new font names, preserved copyright and
+license metadata. Latin Modern fonts: unmodified, GUST Font License; see the
+included license and matching-source provenance. These terms apply to the
+fonts; they do not relicense original project code.
+
+LaTeX components: preserve their individual LPPL terms. The modified kernel
+and profile trimming are described in LATEX-MODIFICATIONS.txt. Full upstream
+LaTeX base sources are identified there; exact source/version records and
+patches accompany the release source materials.

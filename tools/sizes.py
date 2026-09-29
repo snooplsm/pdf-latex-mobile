@@ -52,7 +52,7 @@ def write_report(artifacts, markdown, json_path, split_root=Path("dist/aar-split
                 if any(r["native_sha256"].get(name) != digest for name, digest in split["native_sha256"].items()):
                     raise ValueError(f"{path}: native libraries do not match universal AAR")
                 split_records[r["artifact"]][abi] = split
-    lines = ["# Library sizes", "", "## Android", "",
+    lines = ["# Library sizes", "", "XeTeX + Krilla, without TECkit. Measurements include packaged dependency notices.", "", "## Android", "",
              "Measured compressed AAR downloads, in MB (decimal). Included CPU builds: " + ", ".join(abis) + ".", "",
              "| Variant | All CPUs | ARMv7 | ARM64 | x86-64 |", "|---|---:|---:|---:|---:|"]
     for r in records:

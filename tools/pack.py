@@ -12,6 +12,34 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 
 
+DISABLED_HYPHENATION = {"czech": "cs", "indonesian": "id", "macedonian": "mk", "latvian": "lv", "armenian": "hy"}
+
+
+def disable_restricted_hyphenation(bundle):
+    """Keep language identifiers, but load no automatic patterns for these languages."""
+    config = bundle / "language.dat"
+    if not config.is_file():
+        return
+    lines = []
+    for line in config.read_text().splitlines():
+        fields = line.split()
+        if fields and (fields[0] in DISABLED_HYPHENATION or
+                       (len(fields) > 1 and fields[1] in ("dumyhyph.tex", "zerohyph.tex"))):
+            line = fields[0] + " lm-nohyphen.tex"
+        lines.append(line)
+    config.write_text("\n".join(lines) + "\n")
+    (bundle / "lm-nohyphen.tex").write_text(
+        "% Copyright 2026 LaTeX Mobile contributors. SPDX-License-Identifier: MIT\n"
+        "% Automatic hyphenation intentionally disabled; explicit hints remain available.\n"
+        "\\endinput\n")
+    for name in ("dumyhyph.tex", "zerohyph.tex"):
+        (bundle / name).unlink(missing_ok=True)
+    for code in DISABLED_HYPHENATION.values():
+        for pattern in (f"hyph-{code}.*", f"loadhyph-{code}.*"):
+            for path in bundle.glob(pattern):
+                path.unlink()
+
+
 def select(config, preset, include=(), exclude=()):
     known = set(config["features"])
     unknown = (set(include) | set(exclude)) - known
@@ -61,6 +89,7 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
         scratch = Path(scratch)
         prepared = scratch / "source"
         shutil.copytree(source, prepared)
+        disable_restricted_hyphenation(prepared)
         if "languages" not in selected:
             (prepared / "language.dat").write_text("english hyphen.tex\n=usenglish\n=USenglish\n=american\n")
         used = set()
@@ -69,6 +98,22 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
             response = run(compiler, fixture.read_text(), prepared, scratch / "probe.pdf", example_assets(fixture))
             used.update(response["files"])
             by_example[str(fixture.relative_to(ROOT)) if fixture.is_relative_to(ROOT) else fixture.name] = response["files"]
+        # Converted fonts retain their own license and source/conversion notice.
+        encodings = [name for name in used if name.endswith(".encoding.json")]
+        if encodings:
+            used.add("AMSFonts-OFL.txt")
+            for name in encodings:
+                used.add(name.removesuffix(".encoding.json") + ".provenance.json")
+        if "latex.ltx" in used:
+            kernel = prepared / "latex.ltx"
+            header = b"% LaTeX Mobile modified distribution: see LATEX-MODIFICATIONS.txt.\n"
+            data = kernel.read_bytes()
+            original = data.removeprefix(header).replace(b"LaTeX Mobile modified \\fmtname", b"\\fmtname")
+            if hashlib.sha256(original).hexdigest() != "70ba1d0d113a986e4966e5a7ebb5afa3fbb17843ec4395bd0187d2aa266b5646":
+                raise ValueError("latex.ltx changed: update its modification notice and source review")
+            kernel.write_bytes(header + original.replace(b"{\\fmtname", b"{LaTeX Mobile modified \\fmtname"))
+            shutil.copyfile(ROOT / "notices/LATEX-MODIFICATIONS.txt", prepared / "LATEX-MODIFICATIONS.txt")
+            used.add("LATEX-MODIFICATIONS.txt")
         used.discard("SHA256SUM")
         output.parent.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=output.parent, prefix=".pack-") as stage:
@@ -87,13 +132,18 @@ def pack(source, output, config, selected, compiler, extra_examples=(), notices=
                 data = file.read_bytes()
                 shutil.copyfile(file, stage / name)
                 records.append({"name": name, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+            if notices:
+                shutil.copytree(notices, stage / "licenses", symlinks=False)
+                for file in sorted((stage / "licenses").rglob("*")):
+                    if file.is_file():
+                        data = file.read_bytes()
+                        records.append({"name": str(file.relative_to(stage)), "bytes": len(data),
+                                        "sha256": hashlib.sha256(data).hexdigest()})
             fingerprint = hashlib.sha256(json.dumps(records, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
             (stage / "SHA256SUM").write_text(fingerprint + "\n")
             # Verify the exact trimmed bundle, with a fresh format cache for each document.
             for fixture in fixtures:
                 run(compiler, fixture.read_text(), stage, scratch / "verify.pdf", example_assets(fixture))
-            if notices:
-                shutil.copytree(notices, stage / "licenses", symlinks=False)
             manifest = {"schema": 1, "features": selected, "bundle_sha256": fingerprint,
                         "payload_bytes": sum(r["bytes"] for r in records), "files": records,
                         "examples": by_example}

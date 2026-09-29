@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from pack import select, safe_file, ROOT
+from pack import select, safe_file, ROOT, disable_restricted_hyphenation
 
 class PackTests(unittest.TestCase):
     def setUp(self):
@@ -27,3 +27,22 @@ class PackTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class HyphenationPolicyTests(unittest.TestCase):
+    def test_disabled_languages_keep_identifiers_without_patterns(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "language.dat").write_text("english hyphen.tex\nczech loadhyph-cs.tex\n=czechalias\nindonesian loadhyph-id.tex\nmacedonian loadhyph-mk.tex\nlatvian loadhyph-lv.tex\narmenian loadhyph-hy.tex\ngerman loadhyph-de.tex\nnohyphenation zerohyph.tex\ndumylang dumyhyph.tex\n")
+            for code in ("cs", "id", "mk", "lv", "hy", "de"):
+                (root / f"hyph-{code}.tex").write_text("patterns")
+                (root / f"loadhyph-{code}.tex").write_text("loader")
+            disable_restricted_hyphenation(root)
+            config = (root / "language.dat").read_text()
+            self.assertEqual(config.count("lm-nohyphen.tex"), 7)
+            self.assertIn("=czechalias", config)
+            self.assertIn("german loadhyph-de.tex", config)
+            self.assertTrue((root / "hyph-de.tex").exists())
+            for code in ("cs", "id", "mk", "lv", "hy"):
+                self.assertFalse((root / f"hyph-{code}.tex").exists())
+                self.assertFalse((root / f"loadhyph-{code}.tex").exists())
+            self.assertNotIn("\\patterns", (root / "lm-nohyphen.tex").read_text())

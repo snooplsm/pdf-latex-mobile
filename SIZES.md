@@ -1,6 +1,6 @@
 # Library sizes
 
-These measurements describe the original Tectonic production backend. XeTeX + Krilla is selected for the replacement, but its latest release artifacts and all four profiles have not yet been measured.
+XeTeX + Krilla, without TECkit. Measurements include packaged dependency notices.
 
 ## Android
 
@@ -9,9 +9,13 @@ Measured compressed AAR downloads, in MB (decimal). Included CPU builds: arm64-v
 | Variant | All CPUs | ARMv7 | ARM64 | x86-64 |
 |---|---:|---:|---:|---:|
 | tiny | 12.73 | 4.50 | 4.86 | 5.03 |
+| tiny | 16.04 | 5.85 | 6.31 | 6.60 |
 | small | 12.96 | 4.72 | 5.08 | 5.25 |
+| small | 16.26 | 6.07 | 6.54 | 6.83 |
+| balanced | 16.71 | 6.52 | 6.98 | 7.27 |
 | balanced | 13.49 | 5.26 | 5.62 | 5.79 |
 | full | 31.74 | 12.73 | 13.09 | 13.26 |
+| full | 34.90 | 13.94 | 14.40 | 14.69 |
 
 CPU columns are measured single-architecture AAR builds, including the shared TeX assets and wrapper code. They are not APK split sizes or measured app download increases. A dash means that build has not been measured.
 
@@ -27,10 +31,10 @@ Measured growth over the same app without LaTeX, in MB. ARM64 device Release bui
 
 | Variant | Compressed app increase (MB) | Uncompressed app increase (MB) |
 |---|---:|---:|
-| tiny | 5.01 | 16.54 |
-| small | 5.23 | 17.00 |
-| balanced | 5.77 | 18.03 |
-| full | 13.27 | 33.68 |
+| tiny | 6.78 | 22.03 |
+| small | 7.00 | 22.49 |
+| balanced | 7.45 | 23.50 |
+| full | 14.89 | 39.01 |
 
 Baseline: 0.02 MB compressed, 0.09 MB uncompressed.
 

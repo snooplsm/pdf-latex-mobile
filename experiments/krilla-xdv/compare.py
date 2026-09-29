@@ -45,11 +45,11 @@ for xdv in sorted(xdv_dir.glob('*.xdv')):
     subprocess.run(cmd, check=True, timeout=60)
     record['repeat_hash_matches'] = first == hashlib.sha256(candidate.read_bytes()).hexdigest()
     baseline = out / (name + '-baseline.pdf')
-    request = {'source': source.read_text(), 'bundle_path': str(root/'dist/bundles/full/texbundle'), 'output_path': str(baseline)}
+    request = {'source': source.read_text(), 'bundle_path': str(root/'.build/original-bundles/full/texbundle'), 'output_path': str(baseline)}
     if name == "invoice-png": request["source"] = request["source"].replace("logo.pdf","logo.png")
     assets = root/"examples"/(source_name+".assets")
     if assets.is_dir(): request["asset_files"] = {p.name:str(p) for p in assets.iterdir() if p.is_file()}
-    baseline_run = subprocess.run([str(root/'target/release/lm-compile')], input=json.dumps(request), text=True, capture_output=True, timeout=60)
+    baseline_run = subprocess.run([str(root/'.build/original-engine/lm-compile')], input=json.dumps(request), text=True, capture_output=True, timeout=60)
     if baseline_run.returncode: raise RuntimeError(f"{name}: {baseline_run.stdout} {baseline_run.stderr}")
     a,b = PdfReader(baseline),PdfReader(candidate)
     record['page_count_matches'] = len(a.pages) == len(b.pages)

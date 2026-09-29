@@ -29,16 +29,16 @@ for name,page,title in cases:
   source_text=source_text.replace(r'\usepackage{graphicx}',r'\usepackage{graphicx}\usepackage{xcolor}').replace(r'\includegraphics',r'\colorbox[rgb]{1,1,0}{\includegraphics').replace(r'{pages.pdf}',r'{pages.pdf}}')
  source.write_text(source_text)
  xdvs=[]
- for label,binary in [('baseline',root/'target/release/examples/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
+ for label,binary in [('baseline',root/'.build/original-engine/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
   xdv=out/(name+'-'+label+'.xdv')
-  result=subprocess.run([str(binary),str(root/'dist/bundles/full/texbundle'),str(source),str(xdv)],capture_output=True,text=True)
+  result=subprocess.run([str(binary),str(root/'.build/original-bundles/full/texbundle'),str(source),str(xdv)],capture_output=True,text=True)
   assert result.returncode==0,(name,label,result.stderr)
   xdvs.append(xdv)
  assert xdvs[0].read_bytes()==xdvs[1].read_bytes(),(name,'XDV mismatch')
  baseline=out/(name+'-baseline.pdf');candidate=out/(name+'-replacement.pdf')
  baseline.write_bytes(b'previous');candidate.write_bytes(b'previous')
- request={'source':source.read_text(),'bundle_path':str(root/'dist/bundles/full/texbundle'),'output_path':str(baseline),'asset_files':{'pages.pdf':str(assets/'pages.pdf')}}
- a=subprocess.run([str(root/'target/release/lm-compile')],input=json.dumps(request),text=True,capture_output=True)
+ request={'source':source.read_text(),'bundle_path':str(root/'.build/original-bundles/full/texbundle'),'output_path':str(baseline),'asset_files':{'pages.pdf':str(assets/'pages.pdf')}}
+ a=subprocess.run([str(root/'.build/original-engine/lm-compile')],input=json.dumps(request),text=True,capture_output=True)
  command=[str(root/'.build/krilla-xdv-target/release/krilla-xdv-probe'),str(xdvs[1]),str(root/'.build/krilla-fonts'),str(candidate),str(assets)]
  b=subprocess.run(command,text=True,capture_output=True)
  if title is None:

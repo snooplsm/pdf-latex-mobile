@@ -1,0 +1,38 @@
+LaTeX Mobile: modified LaTeX base distribution
+
+Based on LaTeX release-2021-11-15-PL1, upstream commit
+6c71902738ec896e508cb580bb2b3152b7ad8bec.
+The original copyright notices and LPPL terms continue to apply.
+
+latex.ltx contains an inherited Tectonic modification: the missing-file
+handler issues a fatal error instead of prompting for a replacement filename.
+The bundled comment attributes this change to Tectonic; we have not identified
+its original patch commit. LaTeX Mobile adds a header identifying this modified
+file and referring to this notice, and prefixes the format banner with
+"LaTeX Mobile modified" to identify the modified distribution when used. These changes do not relicense LaTeX as MIT.
+
+The bundle is a subset selected by the profile's example documents. Its
+manifest.json lists the distributed files. For profiles without the languages
+feature, language.dat is replaced with an English-only configuration.
+For full/language-enabled profiles, Czech, Indonesian, Macedonian, Latvian, and Armenian entries
+load the project-authored empty lm-nohyphen.tex instead of upstream patterns.
+Their original pattern files and loaders are excluded.
+Entries previously using zerohyph.tex or dumyhyph.tex also use the project
+empty loader. No-hyphenation behavior is retained; the diagnostic dumylang
+entry no longer loads the two dummy test patterns.
+
+Complete unmodified upstream sources:
+https://github.com/latex3/latex2e/releases/tag/release-2021-11-15-PL1
+https://github.com/latex3/latex2e/releases/download/release-2021-11-15-PL1/latex-base-ctan.zip
+Archive SHA-256:
+6cf4bd15187ae9c3d430e95376b8fc360eed85985e2bab00b5a85a9f109e0e61
+
+The inherited kernel patch and source comparisons are recorded in
+experiments/licenses/latex-base-latex.ltx.patch and
+experiments/licenses/latex-base-provenance.json in the LaTeX Mobile repository.
+Report issues with this modified distribution to:
+https://github.com/snooplsm/pdf-latex-mobile/issues
+Do not attribute support for these modifications to the LaTeX Project.
+
+This notice addresses the changes above; it is not a statement that all
+third-party distribution obligations have been completed.

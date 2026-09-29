@@ -1,0 +1,6 @@
+{
+  "upstream": "hayro-write 0.7.0",
+  "change": "Explicit miniz_oxide 0.8.9 level-6 compression; opt-in xdvipdfmx-compatible omission of imported page groups",
+  "source_sha256": "7e39a99808a5a5641c41bb5f7a94063e3d3c132e97432393a3159042a572add1",
+  "patched_sha256": "a437a6e5ee661b6669203063a272980358c0b89201574d9acb5ba877ad319c66"
+}

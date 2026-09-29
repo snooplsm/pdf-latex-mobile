@@ -211,7 +211,7 @@ pub fn compile_with_bundle(request: Request, bundle: Box<dyn Bundle>) -> Respons
             .filesystem_root(scratch.path())
             .format_cache_path(scratch.path())
             .format_name("latex")
-            .output_format(OutputFormat::Pdf)
+            .output_format(OutputFormat::Xdv)
             .do_not_write_output_files()
             .shell_escape_disabled()
             .bundle(Box::new(TracedBundle {
@@ -221,10 +221,20 @@ pub fn compile_with_bundle(request: Request, bundle: Box<dyn Bundle>) -> Respons
         let mut session = builder.create(&mut log)?;
         session.run(&mut log)?;
         let mut output = session.into_file_data();
-        let pdf = output
-            .remove("main.pdf")
-            .ok_or("engine did not produce main.pdf")?
+        let xdv = output
+            .remove("main.xdv")
+            .ok_or("engine did not produce main.xdv")?
             .data;
+        let (pdf, renderer_files) = latex_mobile_xdv::render_with_files(
+            std::io::Cursor::new(xdv),
+            &request.bundle_path,
+            Some(scratch.path()),
+        )
+        .map_err(|e| format!("PDF renderer: {e:#}"))?;
+        files
+            .lock()
+            .map_err(|_| "bundle trace lock poisoned")?
+            .extend(renderer_files);
         if !pdf.starts_with(b"%PDF-") {
             return Err("engine returned an invalid PDF header".into());
         }

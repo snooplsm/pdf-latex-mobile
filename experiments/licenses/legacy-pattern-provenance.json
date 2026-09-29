@@ -1,0 +1,157 @@
+{
+  "files": [
+    {
+      "file": "ibyhyph.tex",
+      "archive": "ibycus-babel.zip",
+      "archive_sha256": "ccfce4a3cef1f321c88803592fb76fb79604b3ac3d6d3bf65759d67476a8edf2",
+      "archive_path": "ibycus-babel/ibyhyph.tex",
+      "sha256": "b12db81b0c101b38b5570c21a560e71236dc16ea5540012394a6f700f9b9d59d",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-af.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-af.tex",
+      "sha256": "80a2d5493c62f62f9df6959d4b7867d5a8158efc958d252235e00db81836b0e2",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-pms.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-pms.tex",
+      "sha256": "bbdf4a6a82ffcb11fd4e155c132250bad1815bdd1958f65b0ce8a8b16faeb941",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-fr.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-fr.tex",
+      "sha256": "708975d63ba0777eed42b57046d4514c88170c1c924ec714837870d753bd794d",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-fur.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-fur.tex",
+      "sha256": "6d50da6af4bb9aaf13d4bb26692421056c7af508d71f5e9940eb5b85959182f5",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-uk.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-uk.tex",
+      "sha256": "e41dcb8e394702c3958128cbfe5a9e50ffd22a4a3de72809720fba5b6f8fe73e",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-be.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-be.tex",
+      "sha256": "9a055ed4d781da3111e6522862ac51d50f6670de7cf823de646f1b3bf1676b9f",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    },
+    {
+      "file": "hyph-quote-oc.tex",
+      "archive": "hyph-utf8.zip",
+      "archive_sha256": "ef3c55f7921eb6c1cdbacac2815c005a010473aed4f0c757040eab126a969b6b",
+      "archive_path": "hyph-utf8/tex/patterns/quote/hyph-quote-oc.tex",
+      "sha256": "063fe294c0389c1b17383135a2d109fef2bb9bdc8e018e18113ae615576a60bd",
+      "source_match": "byte-identical",
+      "license_scope": "requires source/generator license mapping; match alone is not clearance"
+    }
+  ],
+  "ibycus_license": {
+    "license": "LPPL",
+    "upstream_revision": "5684c0f51c0b81133db2efbe60a408b4155a3ff5",
+    "upstream_url": "https://github.com/hyphenation/tex-hyphen/blob/5684c0f51c0b81133db2efbe60a408b4155a3ff5/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-grc-x-ibycus.tex",
+    "metadata_sha256": "b9800e9e500b0105aa4d159c7030d5c8ddce6aa61355421901143cde3c83b104",
+    "evidence": "First-party metadata explicitly identifies version 3.0, legacy_patterns: ibyhyph.tex and LPPL; bundled file matches Ibycus-Babel 3.0 archive."
+  },
+  "quote_derivations": [
+    {
+      "file": "hyph-quote-af.tex",
+      "sha256": "80a2d5493c62f62f9df6959d4b7867d5a8158efc958d252235e00db81836b0e2",
+      "source": "hyph-af.tex",
+      "source_sha256": "9c413b121d989ad8f0c95c0a4e4fa3bb78d412404919e04b71f609e10a85099f",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-be.tex",
+      "sha256": "9a055ed4d781da3111e6522862ac51d50f6670de7cf823de646f1b3bf1676b9f",
+      "source": "hyph-be.tex",
+      "source_sha256": "ce0c69d86e03c40bdd0ab9f4535cee2503fe2894590380e45a99974f029cea6f",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-fr.tex",
+      "sha256": "708975d63ba0777eed42b57046d4514c88170c1c924ec714837870d753bd794d",
+      "source": "hyph-fr.tex",
+      "source_sha256": "526cad6fe8f52fcd3caa3fcaf667cb1740cfc14bca198680e00dc343a84594de",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-fur.tex",
+      "sha256": "6d50da6af4bb9aaf13d4bb26692421056c7af508d71f5e9940eb5b85959182f5",
+      "source": "hyph-fur.tex",
+      "source_sha256": "1987a744179d443677258f9ac0ef941fd2673e235aa576c20da64e352c95f6aa",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-it.tex",
+      "sha256": "063fe294c0389c1b17383135a2d109fef2bb9bdc8e018e18113ae615576a60bd",
+      "source": "hyph-it.tex",
+      "source_sha256": "6ce56ed6ed2ca7c0688838e366e6595e0429f984f4fc6e96ec045cebb1e76a47",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-oc.tex",
+      "sha256": "063fe294c0389c1b17383135a2d109fef2bb9bdc8e018e18113ae615576a60bd",
+      "source": "hyph-oc.tex",
+      "source_sha256": "0a968a3588697da7c0ef13f219f45973fc75c08e8ee9253ff1a4bf567167c8fb",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-pms.tex",
+      "sha256": "bbdf4a6a82ffcb11fd4e155c132250bad1815bdd1958f65b0ce8a8b16faeb941",
+      "source": "hyph-pms.tex",
+      "source_sha256": "a5af2db65a7bc27318c3d0300d1a3ef332997a6d447a572aa728e0710ac3243e",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-rm.tex",
+      "sha256": "3af69b37f4b4b0f524d92fbe51262b9983fb4b3ecd62bdabdc4ea70c85167f76",
+      "source": "hyph-rm.tex",
+      "source_sha256": "c413cce7a61040348c271775786c63005050a716b69b11d2483a379d1cf44726",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    },
+    {
+      "file": "hyph-quote-uk.tex",
+      "sha256": "e41dcb8e394702c3958128cbfe5a9e50ffd22a4a3de72809720fba5b6f8fe73e",
+      "source": "hyph-uk.tex",
+      "source_sha256": "05fdacf5a771f5c528dd65f6f67b63fedb6f6caf768902c24ec81676e500966f",
+      "transformation": "Select source patterns containing ASCII apostrophe; replace apostrophe with U+2019. Exact pattern-set equality verified.",
+      "license": "same terms as the identified source pattern file"
+    }
+  ]
+}

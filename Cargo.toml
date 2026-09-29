@@ -1,5 +1,6 @@
 [workspace]
-members = ["crates/latex-mobile", "tools/bundle-fetch"]
+members = ["crates/latex-mobile", "crates/xdv-renderer", "tools/bundle-fetch"]
+exclude = ["vendor/tectonic", "vendor/tectonic-engine-xetex", "vendor/tectonic-xetex-layout", "vendor/krilla", "vendor/hayro-write", "vendor/tectonic-xdv", "experiments/krilla-xdv", "experiments/xetex-native", "experiments/typst-probe"]
 default-members = ["crates/latex-mobile"]
 resolver = "2"
 
@@ -8,3 +9,8 @@ lto = true
 codegen-units = 1
 opt-level = "s"
 strip = "debuginfo"
+
+[patch.crates-io]
+tectonic = { path = "vendor/tectonic" }
+tectonic_engine_xetex = { path = "vendor/tectonic-engine-xetex" }
+tectonic_xetex_layout = { path = "vendor/tectonic-xetex-layout" }

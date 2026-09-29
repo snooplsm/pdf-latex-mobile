@@ -21,12 +21,12 @@ results=[]
 for name,body in cases.items():
  source=out/(name+'.tex');source.write_text(r'\documentclass{article}\usepackage{xcolor}\pagestyle{empty}\begin{document}\noindent '+body+r'\end{document}')
  xdvs=[]
- for label,binary in [('baseline',root/'target/release/examples/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
-  xdv=out/(name+'-'+label+'.xdv');subprocess.run([str(binary),str(root/'dist/bundles/full/texbundle'),str(source),str(xdv)],check=True,capture_output=True,timeout=120);xdvs.append(xdv)
+ for label,binary in [('baseline',root/'.build/original-engine/xdv-probe'),('replacement',root/'.build/xetex-native-target/release/xetex-native-probe')]:
+  xdv=out/(name+'-'+label+'.xdv');subprocess.run([str(binary),str(root/'.build/original-bundles/full/texbundle'),str(source),str(xdv)],check=True,capture_output=True,timeout=120);xdvs.append(xdv)
  assert xdvs[0].read_bytes()==xdvs[1].read_bytes(),name
  baseline=out/(name+'-baseline.pdf');candidate=out/(name+'-replacement.pdf')
- req={'source':source.read_text(),'bundle_path':str(root/'dist/bundles/full/texbundle'),'output_path':str(baseline)}
- subprocess.run([str(root/'target/release/lm-compile')],input=json.dumps(req),text=True,capture_output=True,check=True,timeout=120)
+ req={'source':source.read_text(),'bundle_path':str(root/'.build/original-bundles/full/texbundle'),'output_path':str(baseline)}
+ subprocess.run([str(root/'.build/original-engine/lm-compile')],input=json.dumps(req),text=True,capture_output=True,check=True,timeout=120)
  cmd=[str(root/'.build/krilla-xdv-target/release/krilla-xdv-probe'),str(xdvs[1]),str(root/'.build/krilla-fonts'),str(candidate)]
  subprocess.run(cmd,check=True,capture_output=True);first=candidate.read_bytes();subprocess.run(cmd,check=True,capture_output=True);assert candidate.read_bytes()==first
  readers=[PdfReader(path) for path in (baseline,candidate)];assert len(readers[0].pages)==len(readers[1].pages)
