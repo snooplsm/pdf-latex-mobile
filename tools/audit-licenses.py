@@ -31,7 +31,7 @@ for key in sorted(seen):
     target = OUT / 'rust' / f'{package["name"]}-{package["version"]}'
     found = []
     for file in source.rglob('*'):
-        if file.is_file() and re.match(r'(?i)^(licen[cs]e|copying|copyright|notice)([._-]|$)', file.name):
+        if file.is_file() and re.match(r'(?i)^(licen[cs]e|copying|copyright|notice|authors)([._-]|$)', file.name):
             destination = target / file.relative_to(source)
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, destination)

@@ -15,6 +15,17 @@ def retain(source,label):
 for path in sorted((ROOT/'.build/notices-audit').rglob('*')):
     if path.is_file() and path.name not in ('INDEX.json','VENDORED-SOURCE-HEADERS.txt'):
         retain(path,str(path.relative_to(ROOT/'.build/notices-audit')))
+# Workspace crates sometimes omit upstream root licenses from their Cargo archive.
+workspace_notices = ROOT/'experiments/licenses/rust-workspace-notices'
+for component in json.loads((workspace_notices/'INDEX.json').read_text()):
+    if not component['notices']:
+        raise ValueError('Missing workspace notice: ' + component['package'])
+    for notice in component['notices']:
+        source = workspace_notices/notice['file']
+        if hashlib.sha256(source.read_bytes()).hexdigest() != notice['sha256']:
+            raise ValueError('Workspace notice hash mismatch: ' + str(source))
+        retain(source, component['package']+'-'+component['version']+'/'+notice['upstream_path'])
+shutil.copyfile(workspace_notices/'INDEX.json', OUT/'rust-workspace-notice-provenance.json')
 # Some Tectonic crates distribute their MIT notice at the workspace root.
 retain(ROOT/'vendor/tectonic/LICENSE','Tectonic workspace MIT notice')
 retain(ROOT/'LICENSE','LaTeX Mobile MIT notice')

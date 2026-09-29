@@ -1,4 +1,7 @@
-# XeTeX + Krilla final checks
+# Historical XeTeX + Krilla experiment checks
+
+This records the pre-integration experiment. Current production release evidence
+and remaining checks are in [RELEASE_REVIEW.md](../RELEASE_REVIEW.md).
 
 **Result: not ready to publish.** Selected-backend checks are complete enough to identify failing and unverified release requirements; they do not certify full parity or licensing clearance.
 
