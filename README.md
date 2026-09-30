@@ -2,7 +2,7 @@
 
 Offline LaTeX-to-PDF library with Android/Kotlin and iOS/Swift sample apps. The production build uses **XeTeX + Krilla**, with vendored patches for deterministic mobile output.
 
-**Prerelease status:** `0.1.0-alpha.2` has passed Sonatype validation; publication is being finalized. Android/iOS PDF hash checks pass; see [release review](RELEASE_REVIEW.md) for evidence and coverage limits. [Library sizes](SIZES.md) measure the current XeTeX + Krilla artifacts, including notices.
+**Prerelease status:** [`0.1.0-alpha.2`](https://github.com/snooplsm/pdf-latex-mobile/releases/tag/v0.1.0-alpha.2) is available on GitHub and Maven Central. Android/iOS PDF hash checks pass; see [release review](RELEASE_REVIEW.md) for evidence and coverage limits. [Library sizes](SIZES.md) measure the current XeTeX + Krilla artifacts, including notices.
 
 The current source uses ICU normalization and built-in TeX punctuation instead of TECkit. Custom `.tec` font mappings are unsupported. Host comparisons and the full-profile ARM64 Android/iOS invoice hash comparison pass.
 
@@ -85,6 +85,8 @@ val result = LatexMobile.compile(context,
     """\documentclass{article}\begin{document}Hello!\end{document}""",
     File(context.filesDir, "hello.pdf"))
 ```
+
+For iOS, download `latex-mobile-ios-PROFILE-0.1.0-alpha.2.zip` from the [release](https://github.com/snooplsm/pdf-latex-mobile/releases/tag/v0.1.0-alpha.2), unzip it, and add the `LaTeXMobile` folder as a local Swift package.
 
 ```swift
 let result = try await LaTeXMobile.compile(

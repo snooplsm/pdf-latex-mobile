@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0-alpha.2",
+  "tag": "v0.1.0-alpha.2",
+  "source_commit": "928b2cc",
+  "sonatype_deployment": "78db58a1-8597-42ad-96ac-0ffa45795a17",
+  "state": "PUBLISHED",
+  "github": "https://github.com/snooplsm/pdf-latex-mobile/releases/tag/v0.1.0-alpha.2",
+  "maven": [
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-tiny/0.1.0-alpha.2/latex-mobile-tiny-0.1.0-alpha.2.pom",
+      "sha256": "1271dfbc091aaf50ba030bdd70a630056a870084480c50c12b2926ee0cfb6611"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-tiny/0.1.0-alpha.2/latex-mobile-tiny-0.1.0-alpha.2.aar",
+      "sha256": "920320a6dc95e501db5fa66014335b8724980e5a0e041c88cc7428c55d091e98"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-tiny/0.1.0-alpha.2/latex-mobile-tiny-0.1.0-alpha.2-sources.jar",
+      "sha256": "b5ebcaf85a16cc3f56ee3d65e3c409e47ef181f129a6033a9775a36802f0b808"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-tiny/0.1.0-alpha.2/latex-mobile-tiny-0.1.0-alpha.2-javadoc.jar",
+      "sha256": "948c13e9dfa8569594d22c9e04930e77fee9fa9b6207208c889a727acb428250"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-small/0.1.0-alpha.2/latex-mobile-small-0.1.0-alpha.2.pom",
+      "sha256": "d42a02d118816356ef42452a1a378e208dea04f57c0da800792a2832a89cfc26"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-small/0.1.0-alpha.2/latex-mobile-small-0.1.0-alpha.2.aar",
+      "sha256": "37b6ff8f0e1b45863356cd74a68025c0a3311618d8d882fd6d98c45f6d1cd4c5"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-small/0.1.0-alpha.2/latex-mobile-small-0.1.0-alpha.2-sources.jar",
+      "sha256": "b5ebcaf85a16cc3f56ee3d65e3c409e47ef181f129a6033a9775a36802f0b808"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-small/0.1.0-alpha.2/latex-mobile-small-0.1.0-alpha.2-javadoc.jar",
+      "sha256": "948c13e9dfa8569594d22c9e04930e77fee9fa9b6207208c889a727acb428250"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-balanced/0.1.0-alpha.2/latex-mobile-balanced-0.1.0-alpha.2.pom",
+      "sha256": "c1f8dffaf2bc5e4b2663a477181ce270927b19237d838e3902ab80dc90bf6c39"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-balanced/0.1.0-alpha.2/latex-mobile-balanced-0.1.0-alpha.2.aar",
+      "sha256": "a49765ccddcf82e3cc3d9a46a6b66b3d4b4969cb8f0b64eacfd918520e132d40"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-balanced/0.1.0-alpha.2/latex-mobile-balanced-0.1.0-alpha.2-sources.jar",
+      "sha256": "b5ebcaf85a16cc3f56ee3d65e3c409e47ef181f129a6033a9775a36802f0b808"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-balanced/0.1.0-alpha.2/latex-mobile-balanced-0.1.0-alpha.2-javadoc.jar",
+      "sha256": "76816e74d2469cf663c17a6b40b118fa8f774bb97dbe7c1f1437d5ffa4fcbd42"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-full/0.1.0-alpha.2/latex-mobile-full-0.1.0-alpha.2.pom",
+      "sha256": "5dd3db364af2b83fb491baf2082bb36f54fd815bca0b84c80341c0159f5039f5"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-full/0.1.0-alpha.2/latex-mobile-full-0.1.0-alpha.2.aar",
+      "sha256": "d6f9200811de5d5189c75d3c818c618570ea465b88dc562bbbab360e2ba72794"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-full/0.1.0-alpha.2/latex-mobile-full-0.1.0-alpha.2-sources.jar",
+      "sha256": "b5ebcaf85a16cc3f56ee3d65e3c409e47ef181f129a6033a9775a36802f0b808"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/snooplsm/latex-mobile-full/0.1.0-alpha.2/latex-mobile-full-0.1.0-alpha.2-javadoc.jar",
+      "sha256": "948c13e9dfa8569594d22c9e04930e77fee9fa9b6207208c889a727acb428250"
+    }
+  ],
+  "github_assets": {
+    "latex-mobile-ios-balanced-0.1.0-alpha.2.zip": "sha256:3127eb5b09e996fef7ae76b284e1129582d9fb42f3cb6b1a927e7366768eb90b",
+    "latex-mobile-ios-full-0.1.0-alpha.2.zip": "sha256:484a9c2b4acbed4f76d5ee6aaf88cccbaf1ad531da40aef2c5a1b507c3841d0a",
+    "latex-mobile-ios-small-0.1.0-alpha.2.zip": "sha256:d77d6be30f8219595820ef4a3ac1a95c3180dc26b6b42c97b247c8a41c00d25d",
+    "latex-mobile-ios-tiny-0.1.0-alpha.2.zip": "sha256:7ba3952ee57d7770d8f1696fd36d66f80529459e777cf45f41f210107b0535b5",
+    "latex-mobile-balanced-0.1.0-alpha.2.aar": "sha256:a49765ccddcf82e3cc3d9a46a6b66b3d4b4969cb8f0b64eacfd918520e132d40",
+    "latex-mobile-full-0.1.0-alpha.2.aar": "sha256:d6f9200811de5d5189c75d3c818c618570ea465b88dc562bbbab360e2ba72794",
+    "latex-mobile-small-0.1.0-alpha.2.aar": "sha256:37b6ff8f0e1b45863356cd74a68025c0a3311618d8d882fd6d98c45f6d1cd4c5",
+    "latex-mobile-tiny-0.1.0-alpha.2.aar": "sha256:920320a6dc95e501db5fa66014335b8724980e5a0e041c88cc7428c55d091e98",
+    "latex-mobile-0.1.0-alpha.2-sources.tar.gz": "sha256:e2294aa4412065bef1e7d3e69d5d2ea51d17a64beab8f32aca0ab7028bf670c3",
+    "release-SHA256SUMS.txt": "sha256:fe434a5df7001750f34770d3f5edc994005bcab57e424f220cc38608d4d255fc"
+  }
+}
